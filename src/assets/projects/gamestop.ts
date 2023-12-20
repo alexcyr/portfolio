@@ -35,6 +35,24 @@ export const gamestop: Project = {
 			size: Size.md,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: "https://source.unsplash.com/featured/400x400",
+					alt: "img alt",
+					caption: "optional caption",
+				},
+				{
+					type: MediaType.image,
+					src: "https://source.unsplash.com/featured/400x400",
+					alt: "img alt 2",
+					caption: "optional caption",
+				},
+			],
+		},
+		{
 			type: ContentType.title,
 			title: "NFT Marketplace",
 			size: Size.md,

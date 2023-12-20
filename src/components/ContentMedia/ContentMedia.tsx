@@ -1,6 +1,12 @@
 import { Media } from "types/media";
 import styled from "styled-components";
 import { MediaType } from "types/mediaType";
+import { useState, useEffect } from "react";
+
+const Image = styled.img`
+	width: 100%;
+	cursor: zoom-in;
+`;
 
 const ContentMediaWrapper = styled.div`
 	${({ theme }) => theme.flexCenter};
@@ -8,8 +14,33 @@ const ContentMediaWrapper = styled.div`
 	width: 100%;
 `;
 
-const Image = styled.img`
-	width: 100%;
+const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
+	${({ theme }) => theme.flexCenter};
+	flex-direction: column;
+	display: none;
+	background: ${({ theme }) => theme.color.surface1};
+
+	${({ $fullscreen }) =>
+		$fullscreen
+			? `
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		${Image} {
+			cursor: zoom-out;
+			width:100%;
+    height:100%;
+    object-fit: contain;
+			
+		}
+	`
+			: ""};
 `;
 
 const Video = styled.video`
@@ -22,12 +53,22 @@ const Iframe = styled.iframe`
 
 const Caption = styled.span`
 	font-family: ${({ theme }) => theme.text.family.body};
-	font-size: ${({ theme }) => theme.text.size.s12};
+	font-size: ${({ theme }) => theme.text.size.s14};
 	font-weight: ${({ theme }) => theme.text.weight.light};
+	color: ${({theme}) => theme.color.primary1};
+	margin: ${({theme}) => `${theme.space.s4} 0`};
 `;
 
 export const ContentMedia = ({ type, src, alt, caption }: Media) => {
 	let content;
+	const [fullscreen, setFullscreen] = useState(false);
+
+	useEffect(() => {
+		const minimize = () => setFullscreen(false);
+		window.addEventListener("scroll", minimize);
+
+		return () => window.removeEventListener("scroll", minimize);
+	}, []);
 
 	if (type === MediaType.image) {
 		content = <Image src={src} alt={alt} />;
@@ -38,9 +79,28 @@ export const ContentMedia = ({ type, src, alt, caption }: Media) => {
 	}
 
 	return (
-		<ContentMediaWrapper>
+		<ContentMediaWrapper
+			onClick={() => {
+				setFullscreen((prev) => !prev);
+				console.log("click");
+			}}
+		>
 			{content}
-			{caption && <Caption>{caption}</Caption>}
+			{caption && (
+				<Caption>
+					{fullscreen.toString()} {caption}
+				</Caption>
+			)}
+			{fullscreen && (
+				<FullscreenWrapper $fullscreen={fullscreen}>
+					{content}
+					{caption && (
+						<Caption>
+							{fullscreen.toString()} {caption}
+						</Caption>
+					)}
+				</FullscreenWrapper>
+			)}
 		</ContentMediaWrapper>
 	);
 };

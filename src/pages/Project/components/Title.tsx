@@ -10,6 +10,7 @@ const TitleMedium = styled.h2``;
 const TitleSmall = styled.h3``;
 
 const TextWrapper = styled.div`
+	${({ theme }) => theme.pageWidth};
 	max-width: 800px;
 	margin: 0 auto;
 `;

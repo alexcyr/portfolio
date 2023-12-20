@@ -5,6 +5,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const StyledText = styled(Markdown)<{ size: Size }>`
+	${({ theme }) => theme.pageWidth};
 	font-weight: ${({ theme }) => theme.text.weight.light};
 	font-family: ${({ theme }) => theme.text.family.body};
 	margin: 0 auto;
