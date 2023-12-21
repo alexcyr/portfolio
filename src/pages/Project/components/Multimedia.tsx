@@ -8,18 +8,17 @@ const MultimediaWrapper = styled.div<{ size: Size }>`
 	gap: ${({ theme }) => theme.space.s16};
 	margin: 0 auto;
 
-	${({ size }) => {
+	${({ size, theme }) => {
 		if (size === Size.sm) {
 			return `
-				${({ theme }) => theme.pageWidth};
+				${theme.pageWidth};
 
         max-width: 800px;
       `;
 		} else if (size === Size.md) {
-			return `
-				${({ theme }) => theme.pageWidth};
+			return `${theme.pageWidth};
 
-        max-width: 900px;
+       	 max-width: 900px;
       `;
 		} else {
 			return `

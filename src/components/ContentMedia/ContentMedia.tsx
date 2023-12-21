@@ -55,8 +55,8 @@ const Caption = styled.span`
 	font-family: ${({ theme }) => theme.text.family.body};
 	font-size: ${({ theme }) => theme.text.size.s14};
 	font-weight: ${({ theme }) => theme.text.weight.light};
-	color: ${({theme}) => theme.color.primary1};
-	margin: ${({theme}) => `${theme.space.s4} 0`};
+	color: ${({ theme }) => theme.color.primary1};
+	margin: ${({ theme }) => `${theme.space.s4} 0`};
 `;
 
 export const ContentMedia = ({ type, src, alt, caption }: Media) => {

@@ -1,0 +1,46 @@
+import { ContentType } from "types/contentType";
+import { MediaType } from "types/mediaType";
+import { Project } from "types/project";
+import { Size } from "types/size";
+
+export const scribbleStacks: Project = {
+	id: "scribble-stacks",
+	title: "Scribble Stacks",
+	description: `Built with Swift for iOS and powered by the Firebase API, Scribble Stacks is a collaborative multiplayer drawing game, blending Pictionary and Telephone . Players take turns drawing or phrasing, passing their creations in a cycle, causing the drawing outcome to naturally evolve each round.`,
+	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	info: {},
+	pageContent: [
+		{
+			type: ContentType.title,
+			title: "Scribble Stacks",
+			size: Size.lg,
+		},
+		{
+			type: ContentType.text,
+			text: `Built with Swift for iOS and powered by the Firebase API, Scribble Stacks is a collaborative multiplayer drawing game, blending Pictionary and Telephone . Players take turns drawing or phrasing, passing their creations in a cycle, causing the drawing outcome to naturally evolve each round.`,
+			size: Size.lg,
+		},
+		{
+			type: ContentType.text,
+			text: `Features include team invites via Google Invites, the ability to unlock themed wordpacks using in-game coins, and a versatile gameplay structure allowing for team play, public games, and local pass-and-play sessions. `,
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: `While the launch was not as successful as I’d hoped, it holds a special place in my journey from designer to developer, playing a key role in securing my first coding job. The process of crafting "Scribble Stacks" was, above all, a fun and fulfilling experience that contributed to my growth in the world of development.`,
+			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.video,
+					src: "/video.mp4",
+					alt: "video description",
+					caption: "optional caption",
+				},
+			],
+		},
+	],
+};

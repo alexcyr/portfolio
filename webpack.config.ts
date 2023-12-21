@@ -33,6 +33,10 @@ const webpackConfig = (env): Configuration => ({
 				},
 				exclude: /dist/,
 			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif|webp|webm)$/i,
+				type: "asset/resource",
+			},
 		],
 	},
 	plugins: [

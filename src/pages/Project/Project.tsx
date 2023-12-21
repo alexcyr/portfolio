@@ -1,4 +1,4 @@
-import projectDict from "assets/projectDict";
+import projectDict from "assets/data/projectDict";
 import { Navigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { ContentType } from "types/contentType";

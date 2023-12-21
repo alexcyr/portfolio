@@ -2,6 +2,7 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
+import NavigateImg from "assets/images/ford_1.jpg";
 
 export const ford: Project = {
 	id: "ford",
@@ -32,6 +33,18 @@ export const ford: Project = {
 			type: ContentType.text,
 			text: "We built an interactive mapping solution using svg maintenance floorplans as a base, powered by LeafletJs. To make a richer experience, I parsed the svgs, extracting rooms and mapping to known entities, to paint interactive layers on top of the base floorplans. Employees can search for conference rooms or other key landmarks. We piloted this as a large touchscreen in the lobby of our building, and also available to access on the web and on the go.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.image,
+					src: NavigateImg,
+					alt: "navigate wayfinding kiosk",
+					caption: "Demoing our wayfinding prototype",
+				},
+			],
 		},
 		{
 			type: ContentType.title,

@@ -1,5 +1,5 @@
 import * as Styled from "./Home.styled";
-import pageData from "assets/pageData";
+import pageData from "assets/data/pageData";
 import Section from "./components/Section";
 
 export function Home() {
