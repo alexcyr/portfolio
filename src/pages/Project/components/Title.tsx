@@ -5,7 +5,9 @@ import { Size } from "types/size";
 
 const TitleLarge = styled.h1``;
 
-const TitleMedium = styled.h2``;
+const TitleMedium = styled.h2`
+	margin-top: ${({ theme }) => theme.space.s48};
+`;
 
 const TitleSmall = styled.h3``;
 

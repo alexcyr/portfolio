@@ -9,7 +9,12 @@ const MultimediaWrapper = styled.div<{ size: Size }>`
 	margin: 0 auto;
 
 	${({ size, theme }) => {
-		if (size === Size.sm) {
+		if (size === Size.xs) {
+			return `
+				${theme.pageWidth};
+        		max-width: 600px;
+      `;
+		} else if (size === Size.sm) {
 			return `
 				${theme.pageWidth};
 

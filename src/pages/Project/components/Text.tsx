@@ -20,7 +20,9 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 		} else if (size === Size.md) {
 			return `
         font-size: ${theme.text.size.s21};
-        line-height: ${theme.space.s28};
+		line-height: ${theme.space.s28};
+		margin: ${theme.space.s20} auto ${theme.space.s56} auto;
+
       `;
 		} else {
 			return `

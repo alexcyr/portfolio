@@ -55,6 +55,7 @@ const StyleLink = styled(Link)`
 	&:focus {
 		${Title} {
 			text-decoration: underline;
+			text-decoration-thickness: 2px;
 		}
 
 		${PreviewWrapper} {

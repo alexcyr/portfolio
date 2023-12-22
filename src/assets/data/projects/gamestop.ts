@@ -2,6 +2,25 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
+import NFTHeaderVid from "assets/video/nft-header.mp4";
+import NFTTeaserVid from "assets/video/nft-teaser.mp4";
+import NFTRunnerVid from "assets/video/nft-runner.mp4";
+import NFTDarkMode from "assets/video/nft-dark.mp4";
+import GSHeaderVid from "assets/video/gs-header.mp4";
+import NFTPDP from "assets/video/nft-pdp.mp4";
+import NFTCollection from "assets/images/nft-collection.jpg";
+import NFTExplore from "assets/images/nft-explore.jpg";
+import NFTGames from "assets/images/nft-games.jpg";
+
+import NFTHeaderPoster from "assets/images/nft-header-poster.jpg";
+import NFTTeaserPoster from "assets/images/nft-teaser-poster.jpg";
+import NFTRunerPoster from "assets/images/nft-runner-poster.jpg";
+import NFTDarkPoster from "assets/images/nft-dark-poster.jpg";
+import NFTPDPPoster from "assets/images/nft-pdp-poster.jpg";
+import GSHeaderOld from "assets/images/gs-header-old.jpg";
+import GSHeaderPoster from "assets/images/gs-header-poster.jpg";
+import GSShopMyStore from "assets/images/gs-shop-my-store.jpg";
+import GSSameDay from "assets/images/gs-same-day-delivery.jpg";
 
 export const gamestop: Project = {
 	id: "gamestop",
@@ -25,6 +44,19 @@ export const gamestop: Project = {
 			size: Size.lg,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.video,
+					src: NFTHeaderVid,
+					alt: "nft marketplace header",
+					autoplay: true,
+					posterSrc: NFTHeaderPoster,
+				},
+			],
+		},
+		{
 			type: ContentType.title,
 			title: "NFT Teaser Site",
 			size: Size.md,
@@ -39,19 +71,24 @@ export const gamestop: Project = {
 			size: Size.md,
 			media: [
 				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt",
-					caption: "optional caption",
+					type: MediaType.video,
+					src: NFTTeaserVid,
+					alt: "nft teaser site",
+					caption: "NFT Teaser Site",
+					autoplay: true,
+					posterSrc: NFTTeaserPoster,
 				},
 				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt 2",
-					caption: "optional caption",
+					type: MediaType.video,
+					src: NFTRunnerVid,
+					alt: "bannanya runner game",
+					caption: "Bannanya Runner game easter-egg",
+					autoplay: true,
+					posterSrc: NFTRunerPoster,
 				},
 			],
 		},
+
 		{
 			type: ContentType.title,
 			title: "NFT Marketplace",
@@ -61,6 +98,53 @@ export const gamestop: Project = {
 			type: ContentType.text,
 			text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.video,
+					src: NFTDarkMode,
+					alt: "nft dark/light mode",
+					caption: "Dark/Light Mode",
+					autoplay: true,
+					posterSrc: NFTDarkPoster,
+				},
+				{
+					type: MediaType.video,
+					src: NFTPDP,
+					alt: "product detail page",
+					caption: "Product Detail Page",
+					autoplay: true,
+					posterSrc: NFTPDPPoster,
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: NFTCollection,
+					alt: "nft collection page",
+					caption: "Collection Page",
+				},
+				{
+					type: MediaType.image,
+					src: NFTExplore,
+					alt: "nft explore",
+					caption: "Explore NFTs",
+				},
+				{
+					type: MediaType.image,
+					src: NFTGames,
+					alt: "nft games",
+					caption: "NFT Games",
+					autoplay: true,
+				},
+			],
 		},
 		{
 			type: ContentType.title,
@@ -86,59 +170,36 @@ export const gamestop: Project = {
 			size: Size.md,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.iframe,
+					src: "https://www.gstop-content.com/ipfs/QmSzmoQCZbQZXdEH5EKnj9MZrT2sCiauVVXLH5ULt4HkYr",
+					alt: "Buck: The Album",
+					caption: "Buck: The Album",
+				},
+			],
+		},
+		{
 			type: ContentType.title,
 			title: "Ecommerce Team",
 			size: Size.md,
 		},
 		{
 			type: ContentType.text,
-			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. While here I've build initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find items close to them that available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
+			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. While here I've helped to build initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find items close to them that available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
 			size: Size.md,
 		},
 		{
-			type: ContentType.text,
-			text: "Lorem **ipsum** dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+			type: ContentType.multimedia,
 			size: Size.sm,
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.lg,
 			media: [
 				{
 					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt",
-					caption: "optional caption",
-				},
-				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt 2",
-					caption: "optional caption",
-				},
-				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt 3",
-					caption: "optional caption",
-				},
-			],
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.md,
-			media: [
-				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt",
-					caption: "optional caption",
-				},
-				{
-					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
-					alt: "img alt 2",
-					caption: "optional caption",
+					src: GSHeaderOld,
+					alt: "gamestop header old",
+					caption: "OLD GameStop Header",
 				},
 			],
 		},
@@ -148,23 +209,43 @@ export const gamestop: Project = {
 			media: [
 				{
 					type: MediaType.video,
-					src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-					alt: "vid",
-					caption: "optional caption",
+					src: GSHeaderVid,
+					alt: "gamestop header new",
+					caption: "NEW Header w/ Hiding Sub-Nav and Rotating Dismissable Banners",
+					autoplay: true,
+					posterSrc: GSHeaderPoster,
 				},
 			],
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
+			size: Size.md,
 			media: [
 				{
-					type: MediaType.iframe,
-					src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&danger=ignored",
-					alt: "iframe",
-					caption: "optional caption",
+					type: MediaType.image,
+					src: GSShopMyStore,
+					alt: "gamestop shop my store",
+					caption: "Shop My Store - In-store Pickup",
+				},
+				{
+					type: MediaType.image,
+					src: GSSameDay,
+					alt: "gamestop same day delivery",
+					caption: "Same Day Delivery",
 				},
 			],
 		},
+		// {
+		// 	type: ContentType.multimedia,
+		// 	size: Size.xs,
+		// 	media: [
+		// 		{
+		// 			type: MediaType.iframe,
+		// 			src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&danger=ignored",
+		// 			alt: "iframe",
+		// 			caption: "optional caption",
+		// 		},
+		// 	],
+		// },
 	],
 };

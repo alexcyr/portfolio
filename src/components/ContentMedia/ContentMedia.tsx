@@ -2,6 +2,8 @@ import { Media } from "types/media";
 import styled from "styled-components";
 import { MediaType } from "types/mediaType";
 import { useState, useEffect } from "react";
+import { Video } from "components/Video/Video";
+import { Iframe } from "components/Iframe/Iframe";
 
 const Image = styled.img`
 	width: 100%;
@@ -10,15 +12,15 @@ const Image = styled.img`
 
 const ContentMediaWrapper = styled.div`
 	${({ theme }) => theme.flexCenter};
+	gap: ${({ theme }) => theme.space.s16};
 	flex-direction: column;
-	width: 100%;
+	flex: 1;
 `;
 
 const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 	${({ theme }) => theme.flexCenter};
 	flex-direction: column;
-	display: none;
-	background: ${({ theme }) => theme.color.surface1};
+	width: 100%;
 
 	${({ $fullscreen }) =>
 		$fullscreen
@@ -31,6 +33,8 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: ${({ theme }) => theme.color.surface1};
+
 
 		${Image} {
 			cursor: zoom-out;
@@ -43,14 +47,6 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 			: ""};
 `;
 
-const Video = styled.video`
-	width: 100%;
-`;
-
-const Iframe = styled.iframe`
-	width: 100%;
-`;
-
 const Caption = styled.span`
 	font-family: ${({ theme }) => theme.text.family.body};
 	font-size: ${({ theme }) => theme.text.size.s14};
@@ -59,48 +55,31 @@ const Caption = styled.span`
 	margin: ${({ theme }) => `${theme.space.s4} 0`};
 `;
 
-export const ContentMedia = ({ type, src, alt, caption }: Media) => {
-	let content;
+export const ContentMedia = (media: Media) => {
 	const [fullscreen, setFullscreen] = useState(false);
+	const { type, src, alt, caption } = media;
+	let content;
 
 	useEffect(() => {
 		const minimize = () => setFullscreen(false);
 		window.addEventListener("scroll", minimize);
-
 		return () => window.removeEventListener("scroll", minimize);
 	}, []);
 
 	if (type === MediaType.image) {
-		content = <Image src={src} alt={alt} />;
+		content = <Image loading="lazy" src={src} alt={alt} />;
 	} else if (type === MediaType.video) {
-		content = <Video src={src} title={alt} autoPlay muted loop controls />;
+		content = <Video {...media} />;
 	} else {
-		content = <Iframe src={src} title={alt} />;
+		content = <Iframe {...media} />;
 	}
 
 	return (
-		<ContentMediaWrapper
-			onClick={() => {
-				setFullscreen((prev) => !prev);
-				console.log("click");
-			}}
-		>
-			{content}
-			{caption && (
-				<Caption>
-					{fullscreen.toString()} {caption}
-				</Caption>
-			)}
-			{fullscreen && (
-				<FullscreenWrapper $fullscreen={fullscreen}>
-					{content}
-					{caption && (
-						<Caption>
-							{fullscreen.toString()} {caption}
-						</Caption>
-					)}
-				</FullscreenWrapper>
-			)}
+		<ContentMediaWrapper onClick={() => setFullscreen((prev) => !prev)}>
+			<FullscreenWrapper $fullscreen={fullscreen}>
+				{content}
+				{caption && <Caption>{caption}</Caption>}
+			</FullscreenWrapper>
 		</ContentMediaWrapper>
 	);
 };
