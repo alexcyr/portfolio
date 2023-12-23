@@ -32,10 +32,35 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: Boolean; flipGrid: bo
 	}}
 	margin: 16px auto 48px auto;
 
-	${({ isGrid, flipGrid }) => `
-		flex-direction: column;
+	${({ isGrid, flipGrid }) =>
+		isGrid
+			? flipGrid
+				? `
+				display: grid;
+				grid-template-areas: 
+						"a a c"
+						"b  b c";
+						
 
-	`}
+`
+				: `				
+				display: grid;
+				grid-template-areas: 
+				"a a c c"
+						"b b c c";
+				div:nth-child(1) {
+					grid-area: a;
+				}
+				div:nth-child(2) {
+					grid-area: b;
+				}
+				div:nth-child(3) {
+					grid-area: c;
+					display: flex;
+				}
+
+`
+			: ""}
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		margin: 16px auto;
@@ -47,9 +72,9 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: Boolean; flipGrid: bo
       `}
 `;
 
-export const Multimedia = ({ media, size }: MultiMediaProps) => {
+export const Multimedia = ({ media, size, isGrid, flipGrid }: MultiMediaProps) => {
 	return (
-		<MultimediaWrapper size={size}>
+		<MultimediaWrapper size={size} isGrid={isGrid} flipGrid={flipGrid}>
 			{media.map((item) => (
 				<ContentMedia key={item.alt} {...item} />
 			))}

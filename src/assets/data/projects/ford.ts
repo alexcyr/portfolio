@@ -2,11 +2,11 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
-import NavigateImg from "assets/images/ford_1.jpg";
-import FordSpaceBookingImg from "assets/images/ford-space-booking.jpg";
+import NavigateImg from "assets/images/ford/ford_1.jpg";
+import FordSpaceBookingImg from "assets/images/ford/ford-space-booking.jpg";
 
-import FordCovidChartImg from "assets/images/ford-covid-chart.jpg";
-import FordCovidSurveyImg from "assets/images/ford-covid-survey.jpg";
+import FordCovidChartImg from "assets/images/ford/ford-covid-chart.jpg";
+import FordCovidSurveyImg from "assets/images/ford/ford-covid-survey.jpg";
 
 export const ford: Project = {
 	id: "ford",
@@ -68,7 +68,8 @@ export const ford: Project = {
 				{
 					type: MediaType.image,
 					src: FordSpaceBookingImg,
-					alt: "space booking",
+					alt: "space booking desktop and navigate mobile",
+					caption: "Space Booking and Navigate",
 				},
 			],
 		},
@@ -89,7 +90,8 @@ export const ford: Project = {
 				{
 					type: MediaType.image,
 					src: FordCovidChartImg,
-					alt: "covid 19 screening survey",
+					alt: "covid 19 screening badge",
+					caption: "Daily Email Badge",
 				},
 			],
 		},
@@ -101,6 +103,7 @@ export const ford: Project = {
 					type: MediaType.image,
 					src: FordCovidSurveyImg,
 					alt: "covid 19 screening survey",
+					caption: "Covid Survey",
 				},
 			],
 		},

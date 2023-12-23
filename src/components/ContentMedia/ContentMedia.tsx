@@ -8,16 +8,20 @@ import { Iframe } from "components/Iframe/Iframe";
 const Image = styled.img`
 	width: 100%;
 	cursor: zoom-in;
+	height: 100%;
+	object-fit: cover;
 `;
 
 const ContentMediaWrapper = styled.div`
 	width: 100%;
+	display: flex;
 	flex: 1;
 `;
 
 const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 	${({ theme }) => theme.flexCenter};
 	flex-direction: column;
+	flex: 1;
 	width: 100%;
 
 	${({ theme }) => theme.flexCenter};

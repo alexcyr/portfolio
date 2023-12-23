@@ -3,6 +3,12 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import ShrineHeader from "assets/images/shrine/shrine-header.jpg";
+
+import FreightImg1 from "assets/images/shrine/shrine-freight-1.png";
+import FreightImg2 from "assets/images/shrine/shrine-freight-2.png";
+import FreightImg3 from "assets/images/shrine/shrine-freight-3.jpg";
+
 export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
@@ -24,6 +30,17 @@ export const shrine: Project = {
 			size: Size.lg,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: ShrineHeader,
+					alt: "shrine main image",
+				},
+			],
+		},
+		{
 			type: ContentType.title,
 			title: "Freightroll",
 			size: Size.md,
@@ -32,6 +49,32 @@ export const shrine: Project = {
 			type: ContentType.text,
 			text: "Freightroll is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
 			size: Size.md,
+		},
+
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			isGrid: true,
+			media: [
+				{
+					type: MediaType.image,
+					src: FreightImg1,
+					alt: "video description",
+					caption: "optional caption",
+				},
+				{
+					type: MediaType.image,
+					src: FreightImg2,
+					alt: "video description",
+					caption: "optional caption",
+				},
+				{
+					type: MediaType.image,
+					src: FreightImg3,
+					alt: "video description",
+					caption: "optional caption",
+				},
+			],
 		},
 		{
 			type: ContentType.title,

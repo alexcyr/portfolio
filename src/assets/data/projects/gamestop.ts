@@ -2,25 +2,25 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
-import NFTHeaderVid from "assets/video/nft-header.mp4";
-import NFTTeaserVid from "assets/video/nft-teaser.mp4";
-import NFTRunnerVid from "assets/video/nft-runner.mp4";
-import NFTDarkMode from "assets/video/nft-dark.mp4";
-import GSHeaderVid from "assets/video/gs-header.mp4";
-import NFTPDP from "assets/video/nft-pdp.mp4";
-import NFTCollection from "assets/images/nft-collection.jpg";
-import NFTExplore from "assets/images/nft-explore.jpg";
-import NFTGames from "assets/images/nft-games.jpg";
+import NFTHeaderVid from "assets/video/gamestop/nft-header.mp4";
+import NFTTeaserVid from "assets/video/gamestop/nft-teaser.mp4";
+import NFTRunnerVid from "assets/video/gamestop/nft-runner.mp4";
+import NFTDarkMode from "assets/video/gamestop/nft-dark.mp4";
+import GSHeaderVid from "assets/video/gamestop/gs-header.mp4";
+import NFTPDP from "assets/video/gamestop/nft-pdp.mp4";
+import NFTCollection from "assets/images/gamestop/nft-collection.jpg";
+import NFTExplore from "assets/images/gamestop/nft-explore.jpg";
+import NFTGames from "assets/images/gamestop/nft-games.jpg";
 
-import NFTHeaderPoster from "assets/images/nft-header-poster.jpg";
-import NFTTeaserPoster from "assets/images/nft-teaser-poster.jpg";
-import NFTRunerPoster from "assets/images/nft-runner-poster.jpg";
-import NFTDarkPoster from "assets/images/nft-dark-poster.jpg";
-import NFTPDPPoster from "assets/images/nft-pdp-poster.jpg";
-import GSHeaderOld from "assets/images/gs-header-old.jpg";
-import GSHeaderPoster from "assets/images/gs-header-poster.jpg";
-import GSShopMyStore from "assets/images/gs-shop-my-store.jpg";
-import GSSameDay from "assets/images/gs-same-day-delivery.jpg";
+import NFTHeaderPoster from "assets/images/gamestop/nft-header-poster.jpg";
+import NFTTeaserPoster from "assets/images/gamestop/nft-teaser-poster.jpg";
+import NFTRunerPoster from "assets/images/gamestop/nft-runner-poster.jpg";
+import NFTDarkPoster from "assets/images/gamestop/nft-dark-poster.jpg";
+import NFTPDPPoster from "assets/images/gamestop/nft-pdp-poster.jpg";
+import GSHeaderOld from "assets/images/gamestop/gs-header-old.jpg";
+import GSHeaderPoster from "assets/images/gamestop/gs-header-poster.jpg";
+import GSShopMyStore from "assets/images/gamestop/gs-shop-my-store.jpg";
+import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
 
 export const gamestop: Project = {
 	id: "gamestop",
