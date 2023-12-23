@@ -9,11 +9,24 @@ import FreightImg1 from "assets/images/shrine/shrine-freight-1.png";
 import FreightImg2 from "assets/images/shrine/shrine-freight-2.png";
 import FreightImg3 from "assets/images/shrine/shrine-freight-3.jpg";
 
+import WantifyImg1 from "assets/images/shrine/wantify-1.jpg";
+import WantifyImg2 from "assets/images/shrine/wantify-2.jpg";
+import WantifyImg3 from "assets/images/shrine/wantify-3.jpg";
+import WantifyFull from "assets/images/shrine/wantify-full.jpg";
+
+import BudRunner1 from "assets/images/shrine/budrunner-1.jpg";
+import BudRunner2 from "assets/images/shrine/budrunner-2.jpg";
+import BudRunner3 from "assets/images/shrine/budrunner-3.jpg";
+
+import PlainSight1 from "assets/images/shrine/plainsight-1.jpg";
+import PlainSight2 from "assets/images/shrine/plainsight-2.jpg";
+import PlainSight3 from "assets/images/shrine/plainsight-3.jpg";
+
 export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
 	description:
-		"Frontend and mobile app developer, as well as designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
+		"Frontend and mobile app developer/designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
 	previewMedia: { type: MediaType.video, src: "", alt: "" },
 	info: {
 		date: "Mar 2018 - March 2019",
@@ -26,7 +39,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Frontend and mobile app developer, as well as designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
+			text: "Frontend and mobile app developer/designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
 			size: Size.lg,
 		},
 		{
@@ -47,7 +60,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Freightroll is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
+			text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
 			size: Size.md,
 		},
 
@@ -83,8 +96,112 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Wantify provides the inside scoop for all your local shopping needs. On this project I worked on branding, app design, ios development and front-end development. Wantify consists of a consumer side mobile app, and a merchant side web app. Merchants can post news and deals that can be seen in the app. Consumers can add and message merchants. There were a lot of people involved in this project working on everything from back-end api, sign-in with keycloak, a messaging service, stripe integration, and auto adding users through email invites.",
+			text: "[Wantify](https://www.wantify.com/) provides the inside scoop for all your local shopping needs. On this project I worked on branding, app design, ios development and front-end development. Wantify consists of a consumer side mobile app, and a merchant side web app. Merchants can post news and deals that can be seen in the app. Consumers can add and message merchants. There were a lot of people involved in this project working on everything from back-end api, sign-in with keycloak, a messaging service, stripe integration, and auto adding users through email invites.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.image,
+					src: WantifyImg1,
+					alt: "video description",
+					caption: "List View",
+				},
+				{
+					type: MediaType.image,
+					src: WantifyImg2,
+					alt: "video description",
+					caption: "Map View",
+				},
+				{
+					type: MediaType.image,
+					src: WantifyImg3,
+					alt: "video description",
+					caption: "Map View",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.image,
+					src: WantifyFull,
+					alt: "video description",
+					caption: "Merchant Portal & Store Page",
+				},
+			],
+		},
+		{
+			type: ContentType.title,
+			title: "BudRunner",
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: "Invision Prototype Designs",
+			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.image,
+					src: BudRunner1,
+					alt: "video description",
+					caption: "List View",
+				},
+				{
+					type: MediaType.image,
+					src: BudRunner2,
+					alt: "video description",
+					caption: "Map View",
+				},
+				{
+					type: MediaType.image,
+					src: BudRunner3,
+					alt: "video description",
+					caption: "Map View",
+				},
+			],
+		},
+		{
+			type: ContentType.title,
+			title: "Plain Sight",
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: "UI design and React Native development [Website](https://plainsightevents.com/)",
+			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.image,
+					src: PlainSight1,
+					alt: "video description",
+					caption: "List View",
+				},
+				{
+					type: MediaType.image,
+					src: PlainSight2,
+					alt: "video description",
+					caption: "Map View",
+				},
+				{
+					type: MediaType.image,
+					src: PlainSight3,
+					alt: "video description",
+					caption: "Map View",
+				},
+			],
 		},
 		{
 			type: ContentType.title,
