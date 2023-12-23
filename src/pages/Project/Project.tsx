@@ -9,6 +9,8 @@ import { Project } from "types/project";
 import { Title as TitleProps } from "types/title";
 import { Text as TextProps } from "types/text";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
+import { Section as SectionProps } from "types/section";
+import { Section } from "./components/Section";
 
 const ProjectWrapper = styled.div``;
 
@@ -20,8 +22,17 @@ export function Project() {
 		return <Navigate to="/" replace />;
 	}
 
-	const getComponentByType = (content: TitleProps | TextProps | MultiMediaProps, index) => {
-		if (content.type === ContentType.title) {
+	const getComponentByType = (
+		content: TitleProps | TextProps | MultiMediaProps | SectionProps,
+		index,
+	) => {
+		if (content.type === ContentType.section) {
+			return (
+				<Section key={`${index}-${content.type}`} {...content}>
+					{content.content.map((item, i) => getComponentByType(item, i))}
+				</Section>
+			);
+		} else if (content.type === ContentType.title) {
 			return <Title key={`${index}-${content.type}`} {...content} />;
 		} else if (content.type === ContentType.text) {
 			return <Text key={`${index}-${content.type}`} {...content} />;
