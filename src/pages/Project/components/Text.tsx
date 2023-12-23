@@ -15,19 +15,21 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 		if (size === Size.sm) {
 			return `
         font-size: ${theme.text.size.s16};
-        line-height: ${theme.space.s20};
+		line-height: ${theme.space.s20};
       `;
 		} else if (size === Size.md) {
 			return `
         font-size: ${theme.text.size.s21};
 		line-height: ${theme.space.s28};
-		margin: ${theme.space.s20} auto ${theme.space.s56} auto;
+		margin: ${theme.space.s20} auto ${theme.space.s72} auto;
 
       `;
 		} else {
 			return `
         font-size: ${theme.text.size.s28};
-        line-height: ${theme.space.s36};
+		line-height: ${theme.space.s36};
+		margin: ${theme.space.s20} auto ${theme.space.s72} auto;
+
       `;
 		}
 	}}

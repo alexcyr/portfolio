@@ -30,7 +30,6 @@ const MultimediaWrapper = styled.div<{ size: Size }>`
       `;
 		}
 	}}
-	
 	margin: 16px auto;
 
 	${({ theme }) => theme.mediaWidth.upToMedium`
