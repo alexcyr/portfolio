@@ -2,7 +2,11 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
-import NavigateImg from "assets/images/ford_1.jpg";
+import NavigateImg from "assets/images/ford/ford_1.jpg";
+import FordSpaceBookingImg from "assets/images/ford/ford-space-booking.jpg";
+
+import FordCovidChartImg from "assets/images/ford/ford-covid-chart.jpg";
+import FordCovidSurveyImg from "assets/images/ford/ford-covid-survey.jpg";
 
 export const ford: Project = {
 	id: "ford",
@@ -25,18 +29,25 @@ export const ford: Project = {
 			size: Size.lg,
 		},
 		{
-			type: ContentType.title,
-			title: "Navigate",
+			type: ContentType.section,
 			size: Size.md,
+			content: [
+				{
+					type: ContentType.title,
+					title: "Navigate",
+					size: Size.md,
+				},
+				{
+					type: ContentType.text,
+					text: "We built an interactive mapping solution using svg maintenance floorplans as a base, powered by LeafletJs. To make a richer experience, I parsed the svgs, extracting rooms and mapping to known entities, to paint interactive layers on top of the base floorplans. Employees can search for conference rooms or other key landmarks. We piloted this as a large touchscreen in the lobby of our building, and also available to access on the web and on the go.",
+					size: Size.md,
+				},
+			],
 		},
-		{
-			type: ContentType.text,
-			text: "We built an interactive mapping solution using svg maintenance floorplans as a base, powered by LeafletJs. To make a richer experience, I parsed the svgs, extracting rooms and mapping to known entities, to paint interactive layers on top of the base floorplans. Employees can search for conference rooms or other key landmarks. We piloted this as a large touchscreen in the lobby of our building, and also available to access on the web and on the go.",
-			size: Size.md,
-		},
+
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
+			size: Size.md,
 			media: [
 				{
 					type: MediaType.image,
@@ -47,14 +58,33 @@ export const ford: Project = {
 			],
 		},
 		{
-			type: ContentType.title,
-			title: "Space Booking",
+			type: ContentType.section,
 			size: Size.md,
+			content: [
+				{
+					type: ContentType.title,
+					title: "Space Booking",
+					size: Size.md,
+				},
+				{
+					type: ContentType.text,
+					text: "The existing method for booking rooms consisted of checking if rooms were available one by one, so we wanted ease friction by letting employees choose from a list of available rooms. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was no where near scalable for all the building in Ford. Later we added integration with Office 365 so that requests for room availability happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
+					size: Size.md,
+				},
+			],
 		},
+
 		{
-			type: ContentType.text,
-			text: "The existing method for booking rooms consisted of checking if rooms were available one by one, so we wanted ease friction by letting employees choose from a list of available rooms. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was no where near scalable for all the building in Ford. Later we added integration with Office 365 so that requests for room availability happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
+			type: ContentType.multimedia,
 			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: FordSpaceBookingImg,
+					alt: "space booking desktop and navigate mobile",
+					caption: "Space Booking and Navigate",
+				},
+			],
 		},
 		{
 			type: ContentType.title,
@@ -72,9 +102,21 @@ export const ford: Project = {
 			media: [
 				{
 					type: MediaType.image,
-					src: "https://source.unsplash.com/featured/400x400",
+					src: FordCovidChartImg,
+					alt: "covid 19 screening badge",
+					caption: "Daily Email Badge",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.image,
+					src: FordCovidSurveyImg,
 					alt: "covid 19 screening survey",
-					caption: "optional caption",
+					caption: "Covid Survey",
 				},
 			],
 		},

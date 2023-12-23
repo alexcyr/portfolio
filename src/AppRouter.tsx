@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop/ScrollToTop";
 import Home from "pages/Home/Home";
-import Project from "pages/Project/Project";
 import NavBar from "components/NavBar/NavBar";
+import { Project } from "pages/Project/Project";
 
 export const AppRouter = () => (
 	<BrowserRouter>

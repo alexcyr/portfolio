@@ -8,19 +8,30 @@ import { Iframe } from "components/Iframe/Iframe";
 const Image = styled.img`
 	width: 100%;
 	cursor: zoom-in;
+	height: 100%;
+	object-fit: cover;
 `;
 
 const ContentMediaWrapper = styled.div`
-	${({ theme }) => theme.flexCenter};
-	gap: ${({ theme }) => theme.space.s16};
-	flex-direction: column;
+	width: 100%;
+	display: flex;
 	flex: 1;
 `;
 
 const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 	${({ theme }) => theme.flexCenter};
 	flex-direction: column;
+	flex: 1;
 	width: 100%;
+
+	${({ theme }) => theme.flexCenter};
+	flex-direction: column;
+
+	gap: ${({ theme }) => theme.space.s16};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		margin: 16px auto;
+	`}
 
 	${({ $fullscreen }) =>
 		$fullscreen
