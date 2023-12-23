@@ -33,7 +33,7 @@ const StyledText = styled(Markdown)<{ size: Size }>`
       `;
 		}
 	}}
-
+	
 	p {
 		color: ${({ theme }) => theme.color.primary2};
 	}

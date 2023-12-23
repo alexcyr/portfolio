@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Size } from "types/size";
 
-const MultimediaWrapper = styled.div<{ size: Size }>`
+const MultimediaWrapper = styled.div<{ size: Size; isGrid: Boolean; flipGrid: boolean }>`
 	display: flex;
 	gap: ${({ theme }) => theme.space.s16};
 
@@ -30,7 +30,17 @@ const MultimediaWrapper = styled.div<{ size: Size }>`
       `;
 		}
 	}}
-	margin: 16px auto;
+	margin: 16px auto 48px auto;
+
+	${({ isGrid, flipGrid }) => `
+		flex-direction: column;
+
+	`}
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		margin: 16px auto;
+
+	`}
 
 	${({ theme }) => theme.mediaWidth.upToMedium`
         padding: 0;

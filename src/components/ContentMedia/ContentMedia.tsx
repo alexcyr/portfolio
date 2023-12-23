@@ -11,9 +11,7 @@ const Image = styled.img`
 `;
 
 const ContentMediaWrapper = styled.div`
-	${({ theme }) => theme.flexCenter};
-	gap: ${({ theme }) => theme.space.s16};
-	flex-direction: column;
+	width: 100%;
 	flex: 1;
 `;
 
@@ -21,6 +19,15 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 	${({ theme }) => theme.flexCenter};
 	flex-direction: column;
 	width: 100%;
+
+	${({ theme }) => theme.flexCenter};
+	flex-direction: column;
+
+	gap: ${({ theme }) => theme.space.s16};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		margin: 16px auto;
+	`}
 
 	${({ $fullscreen }) =>
 		$fullscreen
