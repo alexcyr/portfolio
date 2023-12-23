@@ -193,7 +193,7 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
+			size: Size.md,
 			media: [
 				{
 					type: MediaType.image,
@@ -205,7 +205,7 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
+			size: Size.md,
 			media: [
 				{
 					type: MediaType.video,

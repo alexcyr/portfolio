@@ -6,7 +6,6 @@ import { Size } from "types/size";
 const MultimediaWrapper = styled.div<{ size: Size }>`
 	display: flex;
 	gap: ${({ theme }) => theme.space.s16};
-	margin: 0 auto;
 
 	${({ size, theme }) => {
 		if (size === Size.xs) {
@@ -31,6 +30,12 @@ const MultimediaWrapper = styled.div<{ size: Size }>`
       `;
 		}
 	}}
+	
+	margin: 16px auto;
+
+	${({ theme }) => theme.mediaWidth.upToMedium`
+        padding: 0;
+      `}
 `;
 
 export const Multimedia = ({ media, size }: MultiMediaProps) => {
