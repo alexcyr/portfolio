@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Size } from "types/size";
 
-const MultimediaWrapper = styled.div<{ size: Size; isGrid: Boolean; flipGrid: boolean }>`
+const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: boolean }>`
 	display: flex;
 	gap: ${({ theme }) => theme.space.s16};
 

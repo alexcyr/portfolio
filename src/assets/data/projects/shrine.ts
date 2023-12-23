@@ -22,6 +22,19 @@ import PlainSight1 from "assets/images/shrine/plainsight-1.jpg";
 import PlainSight2 from "assets/images/shrine/plainsight-2.jpg";
 import PlainSight3 from "assets/images/shrine/plainsight-3.jpg";
 
+import HotDogApp from "assets/images/shrine/hotdog-app.webp";
+import FlowerApp from "assets/images/shrine/flower-app.webp";
+import TodoListApp from "assets/images/shrine/todo-app.webp";
+import WeatherApp from "assets/images/shrine/weather-app.webp";
+
+import ARDicePoster from "assets/images/shrine/ar-dice-poster.jpg";
+import ARPokePoster from "assets/images/shrine/ar-poke-poster.jpg";
+import ARRulerPoster from "assets/images/shrine/ar-ruler-poster.jpg";
+
+import ARDiceVid from "assets/video/shrine/ar-dice.mp4";
+import ARPokeVid from "assets/video/shrine/ar-poke.mp4";
+import ARRulerVid from "assets/video/shrine/ar-ruler.mp4";
+
 export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
@@ -225,13 +238,61 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.lg,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.image,
+					src: WeatherApp,
+					alt: "weather app",
+					caption: "Weather",
+				},
+				{
+					type: MediaType.image,
+					src: TodoListApp,
+					alt: "todo list app",
+					caption: "Todo List",
+				},
+				{
+					type: MediaType.image,
+					src: HotDogApp,
+					alt: "Hotdog/Not Hotdog ml app",
+					caption: "Hotdog/Not Hotdog",
+				},
+				{
+					type: MediaType.image,
+					src: FlowerApp,
+					alt: "Flower ML Classification app",
+					caption: "Flower ML Classification",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
 			media: [
 				{
 					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					src: ARDiceVid,
+					alt: "AR Dice",
+					caption: "AR Dice",
+					posterSrc: ARDicePoster,
+					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: ARRulerVid,
+					alt: "AR Ruler",
+					caption: "AR Ruler",
+					posterSrc: ARRulerPoster,
+					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: ARPokeVid,
+					alt: "AR Poke",
+					caption: "AR Poke",
+					posterSrc: ARPokePoster,
+					autoplay: true,
 				},
 			],
 		},
