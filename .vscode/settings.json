@@ -2,11 +2,5 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"editor.formatOnSave": true,
 	"files.autoSave": "onFocusChange",
-	"files.autoSaveDelay": 500,
-
-	"editor.quickSuggestions": {
-		"other": false,
-		"comments": false,
-		"strings": false
-	}
+	"files.autoSaveDelay": 500
 }

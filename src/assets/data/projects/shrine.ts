@@ -3,7 +3,8 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
-import ShrineHeader from "assets/images/shrine/shrine-header.jpg";
+import ShrineHeader from "assets/video/shrine/shrine-header.mp4";
+import ShrineHeaderPoster from "assets/images/shrine/shrine-header-poster.jpg";
 
 import FreightImg1 from "assets/images/shrine/shrine-freight-1.png";
 import FreightImg2 from "assets/images/shrine/shrine-freight-2.png";
@@ -21,6 +22,11 @@ import BudRunner3 from "assets/images/shrine/budrunner-3.jpg";
 import PlainSight1 from "assets/images/shrine/plainsight-1.jpg";
 import PlainSight2 from "assets/images/shrine/plainsight-2.jpg";
 import PlainSight3 from "assets/images/shrine/plainsight-3.jpg";
+
+import ShrineMenuVid from "assets/video/shrine/shrine-menu.mp4";
+import ShrineMenuPoster from "assets/images/shrine/shrine-menu-poster.jpg";
+import ShrineTransitionVid from "assets/video/shrine/shrine-transition.mp4";
+import ShrineTransitionPoster from "assets/images/shrine/shrine-transition-poster.jpg";
 
 import HotDogApp from "assets/images/shrine/hotdog-app.webp";
 import FlowerApp from "assets/images/shrine/flower-app.webp";
@@ -60,9 +66,11 @@ export const shrine: Project = {
 			size: Size.lg,
 			media: [
 				{
-					type: MediaType.image,
+					type: MediaType.video,
 					src: ShrineHeader,
 					alt: "shrine main image",
+					posterSrc: ShrineHeaderPoster,
+					autoplay: true,
 				},
 			],
 		},
@@ -120,13 +128,13 @@ export const shrine: Project = {
 					type: MediaType.image,
 					src: WantifyImg1,
 					alt: "video description",
-					caption: "List View",
+					caption: "Startup",
 				},
 				{
 					type: MediaType.image,
 					src: WantifyImg2,
 					alt: "video description",
-					caption: "Map View",
+					caption: "List View",
 				},
 				{
 					type: MediaType.image,
@@ -145,6 +153,42 @@ export const shrine: Project = {
 					src: WantifyFull,
 					alt: "video description",
 					caption: "Merchant Portal & Store Page",
+				},
+			],
+		},
+		{
+			type: ContentType.title,
+			title: "Shrine Dev Website",
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: "While working at Shrine Development, it was decided their site needed a little touch up. Some of the important goals were to showcase a portfolio of work, provide plenty of content regarding Shrine's work ethics, and include multiple points for lead generation. On this project I was able to tackle everything from design to development, as well as content.",
+			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.video,
+					src: ShrineMenuVid,
+					alt: "shrine menu pages",
+					posterSrc: ShrineMenuPoster,
+					autoplay: true,
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.video,
+					src: ShrineTransitionVid,
+					alt: "shrine transition ",
+					posterSrc: ShrineTransitionPoster,
+					autoplay: true,
 				},
 			],
 		},
@@ -215,16 +259,6 @@ export const shrine: Project = {
 					caption: "Map View",
 				},
 			],
-		},
-		{
-			type: ContentType.title,
-			title: "Shrine Dev Website",
-			size: Size.md,
-		},
-		{
-			type: ContentType.text,
-			text: "While working at Shrine Development, it was decided their site needed a little touch up. Some of the important goals were to showcase a portfolio of work, provide plenty of content regarding Shrine's work ethics, and include multiple points for lead generation. On this project I was able to tackle everything from design to development, as well as content.",
-			size: Size.md,
 		},
 		{
 			type: ContentType.title,

@@ -3,9 +3,13 @@ import { Title as TitleProps } from "types/title";
 import styled from "styled-components";
 import { Size } from "types/size";
 
-const TitleLarge = styled.h1``;
+const TitleLarge = styled.h1`
+	font-size: ${({ theme }) => theme.text.size.s56};
+`;
 
 const TitleMedium = styled.h2`
+	font-size: ${({ theme }) => theme.text.size.s32};
+
 	margin-top: ${({ theme }) => theme.space.s72};
 `;
 

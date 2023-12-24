@@ -50,8 +50,8 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 		${Image} {
 			cursor: zoom-out;
 			width:100%;
-    height:100%;
-    object-fit: contain;
+			height:100%;
+			object-fit: contain;
 			
 		}
 	`
