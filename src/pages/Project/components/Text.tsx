@@ -31,7 +31,7 @@ const StyledText = styled(Markdown)<{ size: Size }>`
         font-size: ${theme.text.size.s28};
 		line-height: 42px;
 		letter-spacing: 1px;
-		margin: ${theme.space.s20} auto ${theme.space.s20} auto;
+		margin: ${theme.space.s20} auto ${theme.space.s72} auto;
 
       `;
 		}

@@ -1,3 +1,5 @@
+// import Logo from "components/Logo/Logo";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const STRINGS = {
@@ -10,6 +12,15 @@ const NavBarWrapper = styled.div`
 	justify-content: space-between;
 `;
 
+const StyleLink = styled(Link)`
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: ${({ theme }) => theme.color.primary1};
+	}
+`;
+
 const SiteName = styled.h1`
 	color: ${({ theme }) => theme.color.primary1};
 	font-family: ${({ theme }) => theme.text.family.title};
@@ -19,7 +30,12 @@ const SiteName = styled.h1`
 export const NavBar = () => {
 	return (
 		<NavBarWrapper>
-			<SiteName>{STRINGS.siteName}</SiteName>
+			<StyleLink to="/">
+				<SiteName>
+					{/* <Logo /> */}
+					{STRINGS.siteName}
+				</SiteName>
+			</StyleLink>
 		</NavBarWrapper>
 	);
 };

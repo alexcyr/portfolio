@@ -14,8 +14,8 @@ const Image = styled.img`
 
 const ContentMediaWrapper = styled.div`
 	width: 100%;
-	display: flex;
-	flex: 1;
+	/* display: flex;
+	flex: 1; */
 `;
 
 const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
@@ -50,8 +50,8 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 		${Image} {
 			cursor: zoom-out;
 			width:100%;
-    height:100%;
-    object-fit: contain;
+			height:100%;
+			object-fit: contain;
 			
 		}
 	`

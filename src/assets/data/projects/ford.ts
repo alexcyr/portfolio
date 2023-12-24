@@ -2,6 +2,8 @@ import { ContentType } from "types/contentType";
 import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
+import FordBanner from "assets/images/ford/ford-banner.jpeg";
+
 import NavigateImg from "assets/images/ford/ford_1.jpg";
 import FordSpaceBookingImg from "assets/images/ford/ford-space-booking.jpg";
 
@@ -27,6 +29,17 @@ export const ford: Project = {
 			type: ContentType.text,
 			text: "Fullstack developer working on internal web applications to help employees throughout their day at work such as building navigation, room booking, and during quarantine built a COVID-19 screening survey with regional localization that supported 83k daily users as they returned to work. All of our apps were made with AngularJS frontends and Java Spring Boot backends.",
 			size: Size.lg,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: FordBanner,
+					alt: "ford logo banner",
+				},
+			],
 		},
 		{
 			type: ContentType.section,
