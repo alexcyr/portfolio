@@ -5,6 +5,7 @@ import { Size } from "types/size";
 
 const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: boolean }>`
 	display: flex;
+	align-items: center;
 	gap: ${({ theme }) => theme.space.s16};
 
 	${({ size, theme }) => {

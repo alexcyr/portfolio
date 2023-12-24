@@ -10,14 +10,14 @@ import AllStar from "assets/images/midnite-oil/tigers-all-star.jpg";
 import KROD from "assets/images/midnite-oil/tigers-krod.jpg";
 
 import Paws1 from "assets/images/midnite-oil/tigers-paws1.jpg";
-import Paws2 from "assets/images/midnite-oil/tigers-paws2.jpg";
+// import Paws2 from "assets/images/midnite-oil/tigers-paws2.jpg";
 import Paws3 from "assets/images/midnite-oil/tigers-paws3.jpg";
 import Paws4 from "assets/images/midnite-oil/tigers-paws4.jpg";
 
 import KKITG1 from "assets/images/midnite-oil/tigers-kkitg1.jpg";
-import KKITG2 from "assets/images/midnite-oil/tigers-kkitg2.jpg";
-import KKITG3 from "assets/images/midnite-oil/tigers-kkitg3.jpg";
-import KKITG4 from "assets/images/midnite-oil/tigers-kkitg4.jpg";
+// import KKITG2 from "assets/images/midnite-oil/tigers-kkitg2.jpg";
+// import KKITG3 from "assets/images/midnite-oil/tigers-kkitg3.jpg";
+// import KKITG4 from "assets/images/midnite-oil/tigers-kkitg4.jpg";
 
 import DBLeftWall from "assets/images/midnite-oil/db-wall-left.jpg";
 import DBRightWall from "assets/images/midnite-oil/db-wall-right.jpg";
@@ -35,7 +35,7 @@ import RoakLive from "assets/images/midnite-oil/roak-live1.jpg";
 import RoakPowerboat from "assets/images/midnite-oil/roak-powerboat.jpg";
 
 import BaggerDaves from "assets/images/midnite-oil/bd-ad.jpg";
-import AIGiftcard from "assets/images/midnite-oil/ai-gift-card.jpg";
+// import AIGiftcard from "assets/images/midnite-oil/ai-gift-card.jpg";
 
 export const midniteOil: Project = {
 	id: "midnite-oil",

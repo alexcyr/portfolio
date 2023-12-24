@@ -14,8 +14,8 @@ const Image = styled.img`
 
 const ContentMediaWrapper = styled.div`
 	width: 100%;
-	display: flex;
-	flex: 1;
+	/* display: flex;
+	flex: 1; */
 `;
 
 const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
