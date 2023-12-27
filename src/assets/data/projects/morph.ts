@@ -3,6 +3,8 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import Morph1 from "assets/images/morph/morph_1.jpeg";
+
 export const morph: Project = {
 	id: "morph",
 	title: "Morph",
@@ -21,21 +23,20 @@ export const morph: Project = {
 			size: Size.lg,
 		},
 		{
-			type: ContentType.text,
-			text: `Morph demands quick reactions and decision-making, providing a challenging and rapidly replayable adventure. My role in the project involved learning Maya to construct dynamic levels and design vibrant bonus skins for the in-game shop. Crafting user experiences through meticulous testing ensures that Morph, despite its concise development period, delivers an engaging and enjoyable gameplay experience.`,
-			size: Size.md,
-		},
-		{
 			type: ContentType.multimedia,
 			size: Size.lg,
 			media: [
 				{
-					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					type: MediaType.image,
+					src: Morph1,
+					alt: "morph loop",
 				},
 			],
+		},
+		{
+			type: ContentType.text,
+			text: `Morph demands quick reactions and decision-making, providing a challenging and rapidly replayable adventure. My role in the project involved learning Maya to construct dynamic levels and design vibrant bonus skins for the in-game shop. Crafting user experiences through meticulous testing ensures that Morph, despite its concise development period, delivers an engaging and enjoyable gameplay experience.`,
+			size: Size.md,
 		},
 	],
 };

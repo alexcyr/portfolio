@@ -3,6 +3,9 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import GameVid from "assets/video/black-star/capture.mp4";
+import GameScreen from "assets/images/black-star/screen.jpg";
+
 export const blackStar: Project = {
 	id: "blackStar",
 	title: "Black Star",
@@ -22,13 +25,18 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.lg,
+			size: Size.xs,
 			media: [
 				{
+					type: MediaType.image,
+					src: GameScreen,
+					alt: "black star game screen",
+				},
+				{
 					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					src: GameVid,
+					alt: "black star game capture",
+					autoplay: true,
 				},
 			],
 		},
