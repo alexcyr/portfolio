@@ -5,7 +5,7 @@ import { Size } from "types/size";
 import MidniteOilBanner from "assets/images/midnite-oil/midnite-oil-banner.jpeg";
 
 import Shirt from "assets/images/midnite-oil/tigers-shirt.jpg";
-import JV2k from "assets/images/midnite-oil/tigers-JV2k.jpg";
+import JV2k from "assets/images/midnite-oil/tigers-jv2k.jpg";
 import AllStar from "assets/images/midnite-oil/tigers-all-star.jpg";
 import KROD from "assets/images/midnite-oil/tigers-krod.jpg";
 
@@ -84,13 +84,13 @@ export const midniteOil: Project = {
 			media: [
 				{
 					type: MediaType.image,
-					src: AllStar,
-					alt: "Miguel Cabrera 2016 all star",
+					src: KROD,
+					alt: "K-Rod 500 hits",
 				},
 				{
 					type: MediaType.image,
-					src: KROD,
-					alt: "K-Rod 500 hits",
+					src: AllStar,
+					alt: "Miguel Cabrera 2016 all star",
 				},
 			],
 		},

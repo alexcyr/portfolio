@@ -3,6 +3,8 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import CogniteBanner from "assets/images/cognite/cognite-labs-banner.jpeg";
+
 import CleanDash from "assets/images/cognite/30clean_dash.jpeg";
 import CleanLogin from "assets/images/cognite/30clean_login.jpeg";
 
@@ -37,6 +39,17 @@ export const cogniteLabs: Project = {
 			type: ContentType.text,
 			text: "As a frontend developer and designer at Cognite Labs, I specialized in crafting web apps and static pages for businesses spanning local and diverse markets. I played a pivotal role in implementing marketing sales funnels, elevating online presence, and enhancing lead generation. My work highlighted the seamless integration of design and development, delivering impactful digital solutions.",
 			size: Size.lg,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: CogniteBanner,
+					alt: "cognite labs header",
+				},
+			],
 		},
 		{
 			type: ContentType.title,

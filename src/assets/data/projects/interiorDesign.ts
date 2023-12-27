@@ -3,6 +3,8 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import RoomVid from "assets/video/interior/interior-capture.mp4";
+
 export const interiorDesign: Project = {
 	id: "interior-design",
 	title: "interiordesignideasforho.me",
@@ -23,6 +25,18 @@ export const interiorDesign: Project = {
 			type: ContentType.text,
 			text: "Embarking on the mission to turn an idea into a passive income stream through affiliate marketing led to the creation of interiordesignideasforho.me. This unique website offers an immersive exploration of interior design styles, seamlessly connecting users with carefully selected products from Wayfair through affiliate links.",
 			size: Size.lg,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.video,
+					src: RoomVid,
+					alt: "interior room capture banner",
+					autoplay: true,
+				},
+			],
 		},
 		{
 			type: ContentType.title,
