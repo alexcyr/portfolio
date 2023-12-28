@@ -3,6 +3,14 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import Banner from "assets/images/washi/banner.jpg";
+import Poster from "assets/images/washi/promo-1.jpeg";
+import Program from "assets/images/washi/promo-2.jpg";
+import Shirt1 from "assets/images/washi/shirt-1.png";
+import Shirt2 from "assets/images/washi/shirt-2.jpg";
+import Shirt3 from "assets/images/washi/shirt-3.jpeg";
+import Shirt4 from "assets/images/washi/shirt-4.jpeg";
+
 export const washiCon: Project = {
 	id: "washi-con",
 	title: "Washi Con",
@@ -22,19 +30,76 @@ export const washiCon: Project = {
 			size: Size.lg,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: Banner,
+					alt: "washi banner",
+				},
+			],
+		},
+		{
 			type: ContentType.text,
 			text: "The designs captured the spirit of the convention, blending elements of Japanese culture with the whimsical nature of anime. Through vibrant and imaginative compositions, the illustrations aimed to resonate with attendees and become a memorable emblem of each Washi Con edition.",
 			size: Size.md,
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.lg,
+			size: Size.xs,
 			media: [
 				{
-					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					type: MediaType.image,
+					src: Poster,
+					alt: "washi poster",
+				},
+				{
+					type: MediaType.image,
+					src: Program,
+					alt: "washi program",
+				},
+			],
+		},
+		{
+			type: ContentType.title,
+			title: "Yearly shirt designs",
+			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			isGrid: true,
+			media: [
+				{
+					type: MediaType.image,
+					src: Shirt1,
+					alt: "washi shirt 2016",
+					caption: "2016",
+				},
+				{
+					type: MediaType.image,
+					src: Shirt3,
+					alt: "washi shirt 2018",
+					caption: "2018",
+				},
+				{
+					type: MediaType.image,
+					src: Shirt2,
+					alt: "washi shirt 2017",
+					caption: "2017",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.image,
+					src: Shirt4,
+					alt: "washi shirt 2019",
+					caption: "2019",
 				},
 			],
 		},

@@ -4,6 +4,14 @@ import { Project } from "types/project";
 import { Size } from "types/size";
 
 import RoomVid from "assets/video/interior/interior-capture.mp4";
+import VidPoster from "assets/images/interior/banner-poster.jpg";
+import EditMode from "assets/images/interior/interior-design-8.jpg";
+import Content1 from "assets/images/interior/interior-design-1.jpg";
+import Content2 from "assets/images/interior/interior-design-2.jpg";
+
+import Content3 from "assets/images/interior/interior-design-3.jpg";
+import Content4 from "assets/images/interior/interior-design-4.jpg";
+import Content5 from "assets/images/interior/interior-design-5.jpg";
 
 export const interiorDesign: Project = {
 	id: "interior-design",
@@ -35,9 +43,27 @@ export const interiorDesign: Project = {
 					src: RoomVid,
 					alt: "interior room capture banner",
 					autoplay: true,
+					posterSrc: VidPoster,
 				},
 			],
 		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: Content1,
+					alt: "interior room selection",
+				},
+				{
+					type: MediaType.image,
+					src: Content2,
+					alt: "interior room 2",
+				},
+			],
+		},
+
 		{
 			type: ContentType.title,
 			title: "Efficient Pipeline",
@@ -49,6 +75,18 @@ export const interiorDesign: Project = {
 			size: Size.md,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.image,
+					src: EditMode,
+					alt: "interior room edit mode",
+				},
+			],
+		},
+
+		{
 			type: ContentType.title,
 			title: "SEO and Content Driven Marketing",
 			size: Size.md,
@@ -57,6 +95,33 @@ export const interiorDesign: Project = {
 			type: ContentType.text,
 			text: "A strong strategy for SEO is important for any affiliate marketing venture. To facilitate easier crawling of a single-page application, I devised a strategy that involved creating distinct entry routes for each product, and from that generated each as individual HTML pages during deployment. Concurrently, a content-driven approach was embraced, featuring the development of a dedicated markdown blog with interior design insights. Additionally, an Instagram page was established to enhance visual appeal.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			media: [
+				{
+					type: MediaType.image,
+					src: Content3,
+					alt: "interior room product page",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: Content4,
+					alt: "interior room blog home",
+				},
+				{
+					type: MediaType.image,
+					src: Content5,
+					alt: "interior room blog page",
+				},
+			],
 		},
 		{
 			type: ContentType.multimedia,
