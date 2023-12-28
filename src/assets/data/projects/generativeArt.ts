@@ -3,6 +3,8 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import GenArtVid from "assets/video/genart/banner.mp4";
+
 export const generativeArt: Project = {
 	id: "generative-art",
 	title: "Generative Art",
@@ -29,9 +31,9 @@ export const generativeArt: Project = {
 			media: [
 				{
 					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					src: GenArtVid,
+					alt: "gen art banner",
+					autoplay: true
 				},
 			],
 		},
