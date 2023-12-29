@@ -111,7 +111,7 @@ export const ford: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.md,
+			size: Size.xs,
 			media: [
 				{
 					type: MediaType.image,

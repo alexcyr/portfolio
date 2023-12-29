@@ -3,6 +3,9 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import Banner from "assets/video/slider-diner/banner.mp4";
+import BannerPoster from "assets/images/slider-diner/banner-poster.jpg";
+
 export const sliderDiner: Project = {
 	id: "slider-diner",
 	title: "Slider Diner",
@@ -27,9 +30,10 @@ export const sliderDiner: Project = {
 			media: [
 				{
 					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					src: Banner,
+					alt: "slider danner banner",
+					posterSrc: BannerPoster,
+					autoplay: true,
 				},
 			],
 		},
