@@ -3,11 +3,11 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
-import Cyber1 from 'assets/images/cyber/cyber_1.png';
+import Cyber1 from "assets/images/cyber/cyber_1.png";
 
-import Cyber2 from 'assets/images/cyber/cyber_2.png';
-import Cyber3 from 'assets/images/cyber/cyber_3.png';
-import Cyber4 from 'assets/images/cyber/cyber_4.png';
+import Cyber2 from "assets/images/cyber/cyber_2.png";
+import Cyber3 from "assets/images/cyber/cyber_3.png";
+import Cyber4 from "assets/images/cyber/cyber_4.png";
 
 export const cyberSlice: Project = {
 	id: "cyber-slice",
