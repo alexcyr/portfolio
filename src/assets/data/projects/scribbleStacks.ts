@@ -3,6 +3,14 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
+import Banner from "assets/images/scribble/banner.jpg";
+import Scribble1 from "assets/images/scribble/scribble1.jpg";
+import Scribble2 from "assets/images/scribble/scribble2.jpg";
+import Scribble3 from "assets/images/scribble/scribble3.jpg";
+import Scribble4 from "assets/images/scribble/scribble4.jpg";
+import Scribble5 from "assets/images/scribble/scribble5.jpg";
+import Scribble6 from "assets/images/scribble/scribble6.jpg";
+
 export const scribbleStacks: Project = {
 	id: "scribble-stacks",
 	title: "Scribble Stacks",
@@ -21,9 +29,42 @@ export const scribbleStacks: Project = {
 			size: Size.lg,
 		},
 		{
+			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: Banner,
+					alt: "scribble banner",
+				},
+			],
+		},
+		{
 			type: ContentType.text,
 			text: `Features include team invites via Google Invites, the ability to unlock themed wordpacks using in-game coins, and a versatile gameplay structure allowing for team play, public games, and local pass-and-play sessions. `,
 			size: Size.md,
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.md,
+			media: [
+				{
+					type: MediaType.image,
+					src: Scribble4,
+
+					alt: "scribble banner",
+				},
+				{
+					type: MediaType.image,
+					src: Scribble1,
+					alt: "scribble banner",
+				},
+				{
+					type: MediaType.image,
+					src: Scribble3,
+					alt: "scribble banner",
+				},
+			],
 		},
 		{
 			type: ContentType.text,
@@ -32,13 +73,22 @@ export const scribbleStacks: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.lg,
+			size: Size.md,
 			media: [
 				{
-					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					type: MediaType.image,
+					src: Scribble2,
+					alt: "scribble banner",
+				},
+				{
+					type: MediaType.image,
+					src: Scribble5,
+					alt: "scribble banner",
+				},
+				{
+					type: MediaType.image,
+					src: Scribble6,
+					alt: "scribble banner",
 				},
 			],
 		},

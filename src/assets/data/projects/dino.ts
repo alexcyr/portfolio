@@ -25,15 +25,26 @@ export const dino: Project = {
 			text: `As the contributor responsible for all 2D assets, including textures and icons, the most intriguing aspect of the project was envisioning and bringing the game's diverse levels to life. Players traverse environments that range from cascading waterfalls to the Earth's crust, with bubbling lava below. The project aimed to explore and implement varied level dynamics to enhance the fast pace combat.`,
 			size: Size.md,
 		},
+		// {
+		// 	type: ContentType.multimedia,
+		// 	size: Size.lg,
+		// 	media: [
+		// 		{
+		// 			type: MediaType.video,
+		// 			src: "/video.mp4",
+		// 			alt: "video description",
+		// 			caption: "optional caption",
+		// 		},
+		// 	],
+		// },
 		{
 			type: ContentType.multimedia,
-			size: Size.lg,
+			size: Size.sm,
 			media: [
 				{
-					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
+					type: MediaType.embed,
+					src: `<iframe width="560" height="315" src="https://www.youtube.com/embed/wQ2Q_jWHskM?si=O7wDXwJ4bJqbkp8M" title="Dinofightinsaurs trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+					alt: "dinofightinsaurs trailer",
 				},
 			],
 		},

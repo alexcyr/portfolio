@@ -81,6 +81,8 @@ export const ContentMedia = (media: Media) => {
 		content = <Image loading="lazy" src={src} alt={alt} />;
 	} else if (type === MediaType.video) {
 		content = <Video {...media} />;
+	} else if (type === MediaType.embed) {
+		content = <div dangerouslySetInnerHTML={{ __html: src }} />;
 	} else {
 		content = <Iframe {...media} />;
 	}
