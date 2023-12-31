@@ -10,6 +10,7 @@ import { generativeArt } from "./projects/generativeArt";
 import { interiorDesign } from "./projects/interiorDesign";
 import { midniteOil } from "./projects/midniteOil";
 import { morph } from "./projects/morph";
+import { scribbleStacks } from "./projects/scribbleStacks";
 import { shrine } from "./projects/shrine";
 import { sliderDiner } from "./projects/sliderDiner";
 import { washiCon } from "./projects/washiCon";
@@ -30,4 +31,5 @@ export default {
 	[cyberSlice.id]: cyberSlice,
 	[galCiv.id]: galCiv,
 	[morph.id]: morph,
+	[scribbleStacks.id]: scribbleStacks,
 };
