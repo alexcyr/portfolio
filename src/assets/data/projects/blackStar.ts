@@ -49,15 +49,13 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `
-				-Each player is dealt three cards
-				-A player can play any card that matches the board shape and color
-				-Black stars are wild and can be played on any shape
-				-Remove cards remove any opponent tile that are not already in a sequence
-				-Objective is to make rows of three tiles
-				-Player with the most rows wins when there are no moves left
-				-If the game is tied, a sudden death round with the first to make a row wins.
-			`,
+			text: `1. Each player is dealt three cards  
+2. A player can play any card that matches the board shape and color  
+3. Black stars are wild and can be played on any shape  
+4. Remove cards remove any opponent tile that are not already in a sequence  
+5. Objective is to make rows of three tiles  
+6. Player with the most rows wins when there are no moves left  
+7. If the game is tied, a sudden death round with the first to make a row wins.`,
 			size: Size.md,
 		},
 		{
@@ -67,8 +65,7 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
-			isGrid: true,
+			size: Size.md,
 			media: [
 				{
 					type: MediaType.video,
@@ -80,19 +77,19 @@ export const blackStar: Project = {
 				},
 				{
 					type: MediaType.video,
-					src: VictoryVid,
-					alt: "black star victory screen",
-					caption: "Sudden Death Victory",
-					autoplay: true,
-					posterSrc: VictoryPoster,
-				},
-				{
-					type: MediaType.video,
 					src: RemoveVid,
 					alt: "black star remove card",
 					caption: "Remove Card",
 					posterSrc: RemovePoster,
 					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: VictoryVid,
+					alt: "black star victory screen",
+					caption: "Sudden Death Victory",
+					autoplay: true,
+					posterSrc: VictoryPoster,
 				},
 			],
 		},

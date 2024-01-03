@@ -3,10 +3,14 @@ import { MediaType } from "types/mediaType";
 import { Project } from "types/project";
 import { Size } from "types/size";
 
-import Cyber1 from "assets/images/cyber/cyber_1.png";
+import Banner from "assets/images/cyber/banner.jpg";
+import AceVid from "assets/video/cyber/ace.mp4";
+import AcePoster from "assets/images/cyber/ace-poster.jpg";
+
+import FlythroughVid from "assets/video/cyber/flythrough.mp4";
+import FlythroughPoster from "assets/images/cyber/flythrough-poster.jpg";
 
 import Cyber2 from "assets/images/cyber/cyber_2.png";
-import Cyber3 from "assets/images/cyber/cyber_3.png";
 import Cyber4 from "assets/images/cyber/cyber_4.png";
 
 export const cyberSlice: Project = {
@@ -28,6 +32,17 @@ export const cyberSlice: Project = {
 		},
 		{
 			type: ContentType.multimedia,
+			size: Size.lg,
+			media: [
+				{
+					type: MediaType.image,
+					src: Banner,
+					alt: "cyber banner",
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
 			size: Size.sm,
 			media: [
 				{
@@ -42,14 +57,18 @@ export const cyberSlice: Project = {
 			size: Size.md,
 			media: [
 				{
-					type: MediaType.image,
-					src: Cyber1,
-					alt: "cyber 1",
+					type: MediaType.video,
+					src: FlythroughVid,
+					alt: "cyber flythrough",
+					posterSrc: FlythroughPoster,
+					autoplay: true,
 				},
 				{
-					type: MediaType.image,
-					src: Cyber2,
-					alt: "cyber 2",
+					type: MediaType.video,
+					src: AceVid,
+					alt: "cyber hole-in-one",
+					posterSrc: AcePoster,
+					autoplay: true,
 				},
 			],
 		},
@@ -59,8 +78,8 @@ export const cyberSlice: Project = {
 			media: [
 				{
 					type: MediaType.image,
-					src: Cyber3,
-					alt: "cyber 3",
+					src: Cyber2,
+					alt: "cyber 2",
 				},
 				{
 					type: MediaType.image,
