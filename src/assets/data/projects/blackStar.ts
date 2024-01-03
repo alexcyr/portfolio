@@ -65,8 +65,7 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.sm,
-			isGrid: true,
+			size: Size.md,
 			media: [
 				{
 					type: MediaType.video,
@@ -78,19 +77,19 @@ export const blackStar: Project = {
 				},
 				{
 					type: MediaType.video,
-					src: VictoryVid,
-					alt: "black star victory screen",
-					caption: "Sudden Death Victory",
-					autoplay: true,
-					posterSrc: VictoryPoster,
-				},
-				{
-					type: MediaType.video,
 					src: RemoveVid,
 					alt: "black star remove card",
 					caption: "Remove Card",
 					posterSrc: RemovePoster,
 					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: VictoryVid,
+					alt: "black star victory screen",
+					caption: "Sudden Death Victory",
+					autoplay: true,
+					posterSrc: VictoryPoster,
 				},
 			],
 		},
