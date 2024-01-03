@@ -146,27 +146,27 @@ export const gamestop: Project = {
 				},
 			],
 		},
-		{
-			type: ContentType.title,
-			title: "Internal Tools",
-			size: Size.md,
-		},
+		// {
+		// 	type: ContentType.title,
+		// 	title: "Internal Tools",
+		// 	size: Size.md,
+		// },
+		// {
+		// 	type: ContentType.text,
+		// 	text: "After the initial launch we needed a way to screen nfts minted by our creators as content was being minted in breach of our Terms of Service. We ended up building a pipeline for the content team to moderate nfts as were created, allowing them to flag or reject certain fields before they were minted. Soon after that, we realized it wasn't scalable to have devs updating the homepage manually, so we built a portal to do timed update releases of featured content on the homepage.",
+		// 	size: Size.md,
+		// },
+		// {
+		// 	type: ContentType.title,
+		// 	title: "Cool Mentions",
+		// 	size: Size.md,
+		// },
 		{
 			type: ContentType.text,
-			text: "After the initial launch we needed a way to screen nfts minted by our creators as content was being minted in breach of our Terms of Service. We ended up building a pipeline for the content team to moderate nfts as were created, allowing them to flag or reject certain fields before they were minted. Soon after that, we realized it wasn't scalable to have devs updating the homepage manually, so we built a portal to do timed update releases of featured content on the homepage.",
-			size: Size.md,
-		},
-		{
-			type: ContentType.title,
-			title: "Cool Mentions",
-			size: Size.md,
-		},
-		{
-			type: ContentType.text,
-			text: `One of most exciting perks of this job was the variety of work I was able to do in this position: 
-				- I got to work in Unity 3D to build a game, showcasing the use of nfts as keys for unlockable assets (see Buckled In: A Bunny in Space for more info).
-				- I got to make background music to enrich a number of GameStops own NFT drops
-				- The coolest was I got to ghost produce the music and build the interactive elements for The Buck Album which sold out the first night of release. (3D art by Emily Switzer)`,
+			text: `One of most exciting perks of this job was the variety of work I was able to do in this position:  
+- I got to work in Unity 3D to build a game, showcasing the use of nfts as keys for unlockable assets (see Buckled In: A Bunny in Space for more info).  
+- I got to make background music to enrich a number of GameStops own NFT drops  
+- The coolest was I got to ghost produce the music and build the interactive elements for The Buck Album which sold out the first night of release. (3D art by Emily Switzer)`,
 			size: Size.md,
 		},
 		{
