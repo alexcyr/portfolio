@@ -10,10 +10,7 @@ import AcePoster from "assets/images/cyber/ace-poster.jpg";
 import FlythroughVid from "assets/video/cyber/flythrough.mp4";
 import FlythroughPoster from "assets/images/cyber/flythrough-poster.jpg";
 
-import Cyber1 from "assets/images/cyber/cyber_1.png";
-
 import Cyber2 from "assets/images/cyber/cyber_2.png";
-import Cyber3 from "assets/images/cyber/cyber_3.png";
 import Cyber4 from "assets/images/cyber/cyber_4.png";
 
 export const cyberSlice: Project = {
