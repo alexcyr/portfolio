@@ -40,6 +40,16 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 	p {
 		color: ${({ theme }) => theme.color.primary2};
 	}
+
+	ol,
+	ul {
+		padding-inline-start: 24px;
+		color: ${({ theme }) => theme.color.primary2};
+	}
+
+	li {
+		margin: ${({ theme }) => `${theme.space.s16} 0`};
+	}
 `;
 
 export const Text = ({ text, size }: TextProps) => {
