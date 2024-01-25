@@ -6,6 +6,18 @@ import { Size } from "types/size";
 import Banner from "assets/video/slider-diner/banner.mp4";
 import BannerPoster from "assets/images/slider-diner/banner-poster.jpg";
 
+import LevelSelect from "assets/video/slider-diner/level-select.mp4";
+import LevelSelectPoster from "assets/images/slider-diner/level-select-poster.jpg";
+
+import Stars from "assets/video/slider-diner/stars.mp4";
+import StarsPoster from "assets/images/slider-diner/stars-poster.jpg";
+
+import Fail from "assets/video/slider-diner/fail.mp4";
+import FailPoster from "assets/images/slider-diner/fail-poster.jpg";
+
+import World from "assets/video/slider-diner/world-load.mp4";
+import WorldPoster from "assets/images/slider-diner/world-poster.jpg";
+
 export const sliderDiner: Project = {
 	id: "slider-diner",
 	title: "Slider Diner",
@@ -33,6 +45,48 @@ export const sliderDiner: Project = {
 					src: Banner,
 					alt: "slider danner banner",
 					posterSrc: BannerPoster,
+					autoplay: true,
+				},
+			],
+		},
+
+		{
+			type: ContentType.multimedia,
+			size: Size.xs,
+			isGrid: true,
+			media: [
+				{
+					type: MediaType.video,
+					src: LevelSelect,
+					alt: "level select",
+					posterSrc: LevelSelectPoster,
+					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: Fail,
+					alt: "food swipe fail",
+					posterSrc: FailPoster,
+					autoplay: true,
+				},
+				{
+					type: MediaType.video,
+					src: Stars,
+					alt: "three stars",
+					posterSrc: StarsPoster,
+					autoplay: true,
+				},
+			],
+		},
+		{
+			type: ContentType.multimedia,
+			size: Size.sm,
+			media: [
+				{
+					type: MediaType.video,
+					src: World,
+					alt: "world dev view",
+					posterSrc: WorldPoster,
 					autoplay: true,
 				},
 			],

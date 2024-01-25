@@ -164,9 +164,9 @@ export const gamestop: Project = {
 		{
 			type: ContentType.text,
 			text: `One of most exciting perks of this job was the variety of work I was able to do in this position:  
-- I got to work in Unity 3D to build a game, showcasing the use of nfts as keys for unlockable assets (see Buckled In: A Bunny in Space for more info).  
-- I got to make background music to enrich a number of GameStops own NFT drops  
-- The coolest was I got to ghost produce the music and build the interactive elements for The Buck Album which sold out the first night of release. (3D art by Emily Switzer)`,
+- worked in Unity 3D to build a game, showcasing the use of nfts as keys for unlockable assets (see [Buckled In: A Bunny in Space](/project/buckled-in))
+- made background music to enrich a number of GameStops own NFT drops  
+- ghost produced the music and built the interactive elements for The Buck Album which sold out the first night of release (3D art by Emily Switzer)`,
 			size: Size.md,
 		},
 		{
@@ -196,22 +196,10 @@ export const gamestop: Project = {
 			size: Size.md,
 			media: [
 				{
-					type: MediaType.image,
-					src: GSHeaderOld,
-					alt: "gamestop header old",
-					caption: "OLD GameStop Header",
-				},
-			],
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.md,
-			media: [
-				{
 					type: MediaType.video,
 					src: GSHeaderVid,
 					alt: "gamestop header new",
-					caption: "NEW Header w/ Hiding Sub-Nav and Rotating Dismissable Banners",
+					caption: "Header w/ Hiding Sub-Nav and Rotating Dismissable Banners",
 					autoplay: true,
 					posterSrc: GSHeaderPoster,
 				},

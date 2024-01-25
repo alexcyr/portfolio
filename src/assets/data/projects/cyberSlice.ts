@@ -57,17 +57,15 @@ export const cyberSlice: Project = {
 			size: Size.md,
 			media: [
 				{
+					type: MediaType.image,
+					src: Cyber4,
+					alt: "cyber 4",
+				},
+				{
 					type: MediaType.video,
 					src: FlythroughVid,
 					alt: "cyber flythrough",
 					posterSrc: FlythroughPoster,
-					autoplay: true,
-				},
-				{
-					type: MediaType.video,
-					src: AceVid,
-					alt: "cyber hole-in-one",
-					posterSrc: AcePoster,
 					autoplay: true,
 				},
 			],
@@ -77,14 +75,16 @@ export const cyberSlice: Project = {
 			size: Size.md,
 			media: [
 				{
-					type: MediaType.image,
-					src: Cyber2,
-					alt: "cyber 2",
+					type: MediaType.video,
+					src: AceVid,
+					alt: "cyber hole-in-one",
+					posterSrc: AcePoster,
+					autoplay: true,
 				},
 				{
 					type: MediaType.image,
-					src: Cyber4,
-					alt: "cyber 4",
+					src: Cyber2,
+					alt: "cyber 2",
 				},
 			],
 		},
