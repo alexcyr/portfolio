@@ -48,6 +48,7 @@ export const cogniteLabs: Project = {
 					type: MediaType.image,
 					src: CogniteBanner,
 					alt: "cognite labs header",
+					preload: true,
 				},
 			],
 		},

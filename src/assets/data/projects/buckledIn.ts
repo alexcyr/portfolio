@@ -39,6 +39,7 @@ export const buckledIn: Project = {
 					type: MediaType.image,
 					src: BuckBanner,
 					alt: "buckled in banner",
+					preload: true,
 				},
 			],
 		},

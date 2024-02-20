@@ -71,6 +71,7 @@ export const shrine: Project = {
 					alt: "shrine main image",
 					posterSrc: ShrineHeaderPoster,
 					autoplay: true,
+					preload: true,
 				},
 			],
 		},

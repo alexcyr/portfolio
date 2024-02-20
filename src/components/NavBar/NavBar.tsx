@@ -1,4 +1,5 @@
 // import Logo from "components/Logo/Logo";
+import { ThemeToggle } from "components/ThemeToggle/ThemeToggle";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -10,6 +11,7 @@ const NavBarWrapper = styled.div`
 	${({ theme }) => theme.pageWidth};
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 `;
 
 const StyleLink = styled(Link)`
@@ -36,6 +38,7 @@ export const NavBar = () => {
 					{STRINGS.siteName}
 				</SiteName>
 			</StyleLink>
+			<ThemeToggle />
 		</NavBarWrapper>
 	);
 };

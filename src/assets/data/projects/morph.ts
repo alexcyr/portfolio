@@ -37,6 +37,7 @@ export const morph: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "morph loop",
+					preload: true,
 				},
 			],
 		},

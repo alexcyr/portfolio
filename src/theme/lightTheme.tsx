@@ -6,8 +6,8 @@ export const lightColors: ThemeColor = {
 	surface2: "",
 	surface3: "",
 	primary1: "#151515",
-	primary2: "",
-	primary3: "",
+	primary2: "#2c2c2c",
+	primary3: "#4f4f4f",
 };
 
 export const lightTheme: Theme = {

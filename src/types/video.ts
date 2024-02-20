@@ -8,4 +8,5 @@ export interface Video {
 	autoplay?: boolean;
 	controls?: boolean;
 	posterSrc?: string;
+	preload?: boolean;
 }

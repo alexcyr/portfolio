@@ -40,6 +40,7 @@ export const generativeArt: Project = {
 					alt: "gen art banner",
 					autoplay: true,
 					posterSrc: VidPoster,
+					preload: true,
 				},
 			],
 		},

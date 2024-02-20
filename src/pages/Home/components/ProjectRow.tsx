@@ -21,12 +21,19 @@ const DescriptionWrapper = styled.div`
 	transition: grid-template-rows 0.25s ease-in-out;
 	display: grid;
 	grid-template-rows: 0fr;
-	transition-delay: 0.25s;
 `;
 
 const Title = styled.h3`
 	font-size: ${({ theme }) => theme.text.size.s48};
 	margin: 0;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		font-size: ${theme.text.size.s32};
+	`}
+
+	${({ theme }) => theme.mediaWidth.upToExtraSmall`
+		font-size: ${theme.text.size.s24};
+	`}
 `;
 
 const Description = styled.p`
@@ -45,6 +52,10 @@ const TextWrapper = styled.div``;
 const ProjectRowWrapper = styled.div`
 	${({ theme }) => theme.flexRowNoWrap};
 	padding: ${({ theme }) => `${theme.space.s16} 0`};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		padding: ${theme.space.s8} 0;
+	`}
 `;
 
 const StyleLink = styled(Link)`
@@ -55,7 +66,7 @@ const StyleLink = styled(Link)`
 	&:focus {
 		${Title} {
 			text-decoration: underline;
-			text-decoration-thickness: 2px;
+			text-decoration-thickness: 4px;
 		}
 
 		${PreviewWrapper} {
@@ -65,6 +76,7 @@ const StyleLink = styled(Link)`
 
 		${DescriptionWrapper} {
 			grid-template-rows: 1fr;
+			transition-delay: 0.33s;
 		}
 	}
 `;

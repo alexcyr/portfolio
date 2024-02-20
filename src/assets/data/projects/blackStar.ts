@@ -39,6 +39,7 @@ export const blackStar: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "black star icon banner",
+					preload: true,
 				},
 			],
 		},

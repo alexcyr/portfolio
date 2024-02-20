@@ -3,6 +3,7 @@ import ScrollToTop from "components/ScrollToTop/ScrollToTop";
 import Home from "pages/Home/Home";
 import NavBar from "components/NavBar/NavBar";
 import { Project } from "pages/Project/Project";
+import { Footer } from "components/Footer/Footer";
 
 export const AppRouter = () => (
 	<BrowserRouter>
@@ -12,6 +13,7 @@ export const AppRouter = () => (
 			<Route path="project/:id" element={<Project />} />
 		</Routes>
 		<ScrollToTop />
+		<Footer />
 	</BrowserRouter>
 );
 

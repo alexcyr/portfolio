@@ -7,7 +7,7 @@ export const darkColors: ThemeColor = {
 	surface3: "",
 	primary1: "#d3d3d3",
 	primary2: "#a8a8a8",
-	primary3: "",
+	primary3: "#666",
 };
 
 export const darkTheme: Theme = {

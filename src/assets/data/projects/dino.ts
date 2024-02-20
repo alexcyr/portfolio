@@ -35,6 +35,7 @@ export const dino: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "dino banner",
+					preload: true,
 				},
 			],
 		},

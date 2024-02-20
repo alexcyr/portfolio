@@ -38,6 +38,7 @@ export const cyberSlice: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "cyber banner",
+					preload: true,
 				},
 			],
 		},

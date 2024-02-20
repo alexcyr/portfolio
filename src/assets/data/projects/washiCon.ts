@@ -37,12 +37,13 @@ export const washiCon: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "washi banner",
+					preload: true,
 				},
 			],
 		},
 		{
 			type: ContentType.text,
-			text: "The designs captured the spirit of the convention, blending elements of Japanese culture with the whimsical nature of anime. Through vibrant and imaginative compositions, the illustrations aimed to resonate with attendees and become a memorable emblem of each Washi Con edition.",
+			text: "The designs were meant to capture the spirit of the convention, blending elements of Japanese culture with the whimsical nature of anime. Through vibrant and imaginative compositions, the illustrations aimed to interest attendees and become a memorable emblem of each Washi Con edition.",
 			size: Size.md,
 		},
 		{

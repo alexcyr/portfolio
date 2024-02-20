@@ -17,7 +17,6 @@ import NFTTeaserPoster from "assets/images/gamestop/nft-teaser-poster.jpg";
 import NFTRunerPoster from "assets/images/gamestop/nft-runner-poster.jpg";
 import NFTDarkPoster from "assets/images/gamestop/nft-dark-poster.jpg";
 import NFTPDPPoster from "assets/images/gamestop/nft-pdp-poster.jpg";
-import GSHeaderOld from "assets/images/gamestop/gs-header-old.jpg";
 import GSHeaderPoster from "assets/images/gamestop/gs-header-poster.jpg";
 import GSShopMyStore from "assets/images/gamestop/gs-shop-my-store.jpg";
 import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
@@ -53,6 +52,7 @@ export const gamestop: Project = {
 					alt: "nft marketplace header",
 					autoplay: true,
 					posterSrc: NFTHeaderPoster,
+					preload: true,
 				},
 			],
 		},
