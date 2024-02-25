@@ -17,13 +17,15 @@ const StyledButton = styled.button`
 		outline: 1px solid ${({ theme }) => theme.color.primary1};
 	}
 `;
+
 const IconWrapper = styled.div`
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
 	position: relative;
 `;
-const SunIcon = styled.div<{ active: boolean }>`
+
+const IconBase = styled.div<{ active: boolean }>`
 	transition: all 0.5s ease-in-out;
 	height: 100%;
 	aspect-ratio: 1 / 1;
@@ -35,28 +37,19 @@ const SunIcon = styled.div<{ active: boolean }>`
 		width: 100%;
 		height: 100%;
 	}
+`;
 
+const SunIcon = styled(IconBase)`
 	${({ active, theme }) => `
         transform: translateX(${active ? "0" : "-100%"}) scale(${active ? 1 : 0}) rotate(${
 		active ? 0 : "-90deg"
 	});
         left: ${active ? "0" : "100%"};
         color: ${theme.color.primary1};
-        
     `};
 `;
 
-const MoonIcon = styled.div<{ active: boolean }>`
-	position: absolute;
-	transition: all 0.5s ease-in-out;
-	height: 100%;
-	aspect-ratio: 1 / 1;
-	left: 0;
-	top: 0;
-	& svg {
-		width: 100%;
-		height: 100%;
-	}
+const MoonIcon = styled(IconBase)`
 	${({ active, theme }) => `
         transform: translateX(${active ? "-100%" : "0"}) scale(${active ? 1 : 0}) rotate(${
 		active ? 0 : "90deg"
@@ -89,7 +82,7 @@ export const ThemeToggle = () => {
 
 	return (
 		<StyledButton
-			title={`Toggle Theme: ${theme === ThemeName.dark ? ThemeName.light : ThemeName.dark}`}
+			title={`toggle ${theme === ThemeName.dark ? ThemeName.light : ThemeName.dark} theme`}
 			onClick={() => setTheme(theme === ThemeName.dark ? ThemeName.light : ThemeName.dark)}
 		>
 			<IconWrapper>

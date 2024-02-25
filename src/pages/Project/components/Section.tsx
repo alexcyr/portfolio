@@ -5,13 +5,23 @@ import { Size } from "types/size";
 
 const SectionWrapper = styled.div<{ size: Size }>`
 	${({ size, theme }) => {
+		if (size === Size.xs) {
+			return `
+                margin: 16px auto;
+            `;
+		}
+		if (size === Size.sm) {
+			return `
+                margin: 32px auto;
+            `;
+		}
 		if (size === Size.md) {
 			return `
-                margin: 120px auto;
+                margin: 64px auto;
             `;
 		}
 		return `
-                margin: ${theme.space.s72} auto;
+                margin: 128px auto;
             `;
 	}}
 `;

@@ -1,5 +1,5 @@
 export enum Size {
-	xs = "sx",
+	xs = "xs",
 	sm = "sm",
 	md = "md",
 	lg = "lg",

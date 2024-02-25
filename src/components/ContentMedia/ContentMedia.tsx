@@ -88,7 +88,9 @@ export const ContentMedia = (media: Media) => {
 	}
 
 	return (
-		<ContentMediaWrapper onClick={() => setFullscreen((prev) => !prev)}>
+		<ContentMediaWrapper
+			onClick={() => type !== MediaType.iframe && setFullscreen((prev) => !prev)}
+		>
 			<FullscreenWrapper $fullscreen={fullscreen}>
 				{content}
 				{caption && <Caption>{caption}</Caption>}

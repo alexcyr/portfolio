@@ -75,42 +75,55 @@ export const shrine: Project = {
 				},
 			],
 		},
-		{
-			type: ContentType.title,
-			title: "Freightroll",
-			size: Size.md,
-		},
-		{
-			type: ContentType.text,
-			text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
-			size: Size.md,
-		},
 
 		{
-			type: ContentType.multimedia,
-			size: Size.sm,
-			isGrid: true,
-			media: [
+			type: ContentType.section,
+			size: Size.lg,
+			content: [
 				{
-					type: MediaType.image,
-					src: FreightImg1,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.title,
+					title: "Freightroll",
+					size: Size.md,
 				},
 				{
-					type: MediaType.image,
-					src: FreightImg2,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.text,
+					text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
+					size: Size.md,
 				},
 				{
-					type: MediaType.image,
-					src: FreightImg3,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.section,
+					size: Size.md,
+					content: [
+						{
+							type: ContentType.multimedia,
+							size: Size.sm,
+							isGrid: true,
+							media: [
+								{
+									type: MediaType.image,
+									src: FreightImg1,
+									alt: "video description",
+									caption: "optional caption",
+								},
+								{
+									type: MediaType.image,
+									src: FreightImg2,
+									alt: "video description",
+									caption: "optional caption",
+								},
+								{
+									type: MediaType.image,
+									src: FreightImg3,
+									alt: "video description",
+									caption: "optional caption",
+								},
+							],
+						},
+					],
 				},
 			],
 		},
+
 		{
 			type: ContentType.title,
 			title: "Wantify",
