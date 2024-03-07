@@ -39,6 +39,7 @@ export const cyberSlice: Project = {
 					src: Banner,
 					alt: "cyber banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

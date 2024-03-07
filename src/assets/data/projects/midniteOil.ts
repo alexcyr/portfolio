@@ -19,9 +19,6 @@ import KKITG1 from "assets/images/midnite-oil/tigers-kkitg1.jpg";
 // import KKITG3 from "assets/images/midnite-oil/tigers-kkitg3.jpg";
 // import KKITG4 from "assets/images/midnite-oil/tigers-kkitg4.jpg";
 
-import DBLeftWall from "assets/images/midnite-oil/db-wall-left.jpg";
-import DBRightWall from "assets/images/midnite-oil/db-wall-right.jpg";
-
 import DBTech from "assets/images/midnite-oil/db-tech.jpg";
 import DBAYCEW from "assets/images/midnite-oil/db-aycew.jpg";
 import DBTimesSquare from "assets/images/midnite-oil/db-ad.jpg";
@@ -66,6 +63,7 @@ export const midniteOil: Project = {
 					src: MidniteOilBanner,
 					alt: "midnite oil logo banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},
@@ -194,29 +192,6 @@ export const midniteOil: Project = {
 					type: MediaType.image,
 					src: TechSticker,
 					alt: "D&B Tech Sticker",
-				},
-			],
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.lg,
-			media: [
-				{
-					type: MediaType.image,
-					src: DBLeftWall,
-					alt: "Woodbridge Coming Soon Left Wall",
-				},
-			],
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.lg,
-			media: [
-				{
-					type: MediaType.image,
-					src: DBRightWall,
-					alt: "Woodbridge Coming Soon Right Wall",
-					caption: "Woodbridge Wall Signage",
 				},
 			],
 		},

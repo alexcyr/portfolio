@@ -7,7 +7,7 @@ export const THEME_STORAGE_KEY = "theme-mode";
 
 export const ThemeContext = createContext({
 	theme: ThemeName.dark,
-	setTheme: (name: ThemeName) => {},
+	setTheme: (_name: ThemeName) => undefined,
 });
 
 const useThemeStore = () => {

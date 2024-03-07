@@ -38,6 +38,7 @@ export const washiCon: Project = {
 					src: Banner,
 					alt: "washi banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

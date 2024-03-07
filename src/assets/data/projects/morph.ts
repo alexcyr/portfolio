@@ -38,6 +38,7 @@ export const morph: Project = {
 					src: Banner,
 					alt: "morph loop",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

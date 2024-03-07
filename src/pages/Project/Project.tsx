@@ -17,7 +17,7 @@ const ProjectWrapper = styled.div``;
 
 export const IframeContext = createContext({
 	iframeId: "",
-	setIframeId: (is: string) => {},
+	setIframeId: (_id: string) => undefined,
 });
 
 export function Project() {
@@ -52,7 +52,7 @@ export function Project() {
 	return (
 		<ProjectWrapper>
 			<IframeContext.Provider
-				value={{ iframeId: activeIframe, setIframeId: (id) => setActiveIframe(id) }}
+				value={{ iframeId: activeIframe, setIframeId: (activeId) => setActiveIframe(activeId) }}
 			>
 				{projectInfo.pageContent.map((content, index) => getComponentByType(content, index))}
 			</IframeContext.Provider>

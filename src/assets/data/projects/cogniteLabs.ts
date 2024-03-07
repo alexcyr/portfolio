@@ -49,6 +49,7 @@ export const cogniteLabs: Project = {
 					src: CogniteBanner,
 					alt: "cognite labs header",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

@@ -53,6 +53,7 @@ export const gamestop: Project = {
 					autoplay: true,
 					posterSrc: NFTHeaderPoster,
 					preload: true,
+					disable: true,
 				},
 			],
 		},

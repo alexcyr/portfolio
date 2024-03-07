@@ -41,6 +41,7 @@ export const generativeArt: Project = {
 					autoplay: true,
 					posterSrc: VidPoster,
 					preload: true,
+					disable: true,
 				},
 			],
 		},

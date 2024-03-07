@@ -40,6 +40,7 @@ export const blackStar: Project = {
 					src: Banner,
 					alt: "black star icon banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

@@ -12,6 +12,8 @@ const StyledButton = styled.button`
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
 	outline: 1px solid transparent;
+	flex-shrink: 0;
+	margin-left: 4px;
 
 	&:hover {
 		outline: 1px solid ${({ theme }) => theme.color.primary1};

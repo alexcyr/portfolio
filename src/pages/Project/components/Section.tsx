@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Size } from "types/size";
 
 const SectionWrapper = styled.div<{ size: Size }>`
-	${({ size, theme }) => {
+	${({ size }) => {
 		if (size === Size.xs) {
 			return `
                 margin: 16px auto;

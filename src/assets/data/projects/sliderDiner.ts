@@ -47,6 +47,7 @@ export const sliderDiner: Project = {
 					posterSrc: BannerPoster,
 					autoplay: true,
 					preload: true,
+					disable: true,
 				},
 			],
 		},

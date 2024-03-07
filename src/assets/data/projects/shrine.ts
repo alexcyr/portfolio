@@ -72,6 +72,7 @@ export const shrine: Project = {
 					posterSrc: ShrineHeaderPoster,
 					autoplay: true,
 					preload: true,
+					disable: true,
 				},
 			],
 		},
@@ -247,7 +248,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "UI design and React Native development [Website](https://plainsightevents.com/)",
+			text: "UI design and React Native development",
 			size: Size.md,
 		},
 		{

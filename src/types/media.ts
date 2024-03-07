@@ -6,4 +6,5 @@ export interface Media {
 	alt: string;
 	caption?: string;
 	preload?: boolean;
+	disable?: boolean;
 }

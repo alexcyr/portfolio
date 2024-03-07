@@ -40,11 +40,22 @@ const Description = styled.p`
 	/* max-width: calc(100% - ${PREVIEW_WIDTH}); */
 	margin: 0;
 	overflow: hidden;
-	font-size: ${({ theme }) => theme.text.size.s18};
-	max-width: 800px;
+	font-size: ${({ theme }) => theme.text.size.s24};
+	max-width: 860px;
 	color: ${({ theme }) => theme.color.primary2};
-	line-height: 24px;
+	line-height: 36px;
 	margin-top: ${({ theme }) => theme.space.s8};
+
+	// Truncate text
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+			font-size: ${theme.text.size.s18};
+			line-height: 24px;
+	`}
 `;
 
 const TextWrapper = styled.div``;

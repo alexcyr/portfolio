@@ -39,6 +39,7 @@ export const ford: Project = {
 					src: FordBanner,
 					alt: "ford logo banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

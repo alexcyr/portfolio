@@ -18,7 +18,7 @@ const ContentMediaWrapper = styled.div`
 	flex: 1; */
 `;
 
-const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
+const FullscreenWrapper = styled.div<{ $fullscreen: boolean; disable: boolean }>`
 	${({ theme }) => theme.flexCenter};
 	flex-direction: column;
 	flex: 1;
@@ -56,6 +56,16 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean }>`
 		}
 	`
 			: ""};
+
+	${({ disable }) =>
+		disable
+			? `
+		${Image} {
+			cursor: default;
+			pointer-events: none;	
+		}
+	`
+			: ""};
 `;
 
 const Caption = styled.span`
@@ -68,7 +78,7 @@ const Caption = styled.span`
 
 export const ContentMedia = (media: Media) => {
 	const [fullscreen, setFullscreen] = useState(false);
-	const { type, src, alt, caption, preload } = media;
+	const { type, src, alt, caption, preload, disable } = media;
 	let content;
 
 	useEffect(() => {
@@ -89,9 +99,9 @@ export const ContentMedia = (media: Media) => {
 
 	return (
 		<ContentMediaWrapper
-			onClick={() => type !== MediaType.iframe && setFullscreen((prev) => !prev)}
+			onClick={() => type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)}
 		>
-			<FullscreenWrapper $fullscreen={fullscreen}>
+			<FullscreenWrapper $fullscreen={fullscreen} disable={disable}>
 				{content}
 				{caption && <Caption>{caption}</Caption>}
 			</FullscreenWrapper>

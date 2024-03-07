@@ -36,6 +36,7 @@ export const scribbleStacks: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "scribble banner",
+					disable: true,
 				},
 			],
 		},

@@ -40,6 +40,7 @@ export const buckledIn: Project = {
 					src: BuckBanner,
 					alt: "buckled in banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},

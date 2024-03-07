@@ -36,6 +36,7 @@ export const dino: Project = {
 					src: Banner,
 					alt: "dino banner",
 					preload: true,
+					disable: true,
 				},
 			],
 		},
