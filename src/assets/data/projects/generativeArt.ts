@@ -40,6 +40,8 @@ export const generativeArt: Project = {
 					alt: "gen art banner",
 					autoplay: true,
 					posterSrc: VidPoster,
+					preload: true,
+					disable: true,
 				},
 			],
 		},
@@ -54,26 +56,33 @@ export const generativeArt: Project = {
 			size: Size.md,
 		},
 		{
-			type: ContentType.multimedia,
+			type: ContentType.section,
 			size: Size.md,
-			media: [
+			content: [
 				{
-					type: MediaType.image,
-					src: Block2,
-					alt: "gen block 2",
-				},
-				{
-					type: MediaType.image,
-					src: Block1,
-					alt: "gen block 1",
-				},
-				{
-					type: MediaType.image,
-					src: Block3,
-					alt: "gen block 3",
+					type: ContentType.multimedia,
+					size: Size.sm,
+					media: [
+						{
+							type: MediaType.image,
+							src: Block2,
+							alt: "gen block 2",
+						},
+						{
+							type: MediaType.image,
+							src: Block1,
+							alt: "gen block 1",
+						},
+						{
+							type: MediaType.image,
+							src: Block3,
+							alt: "gen block 3",
+						},
+					],
 				},
 			],
 		},
+
 		{
 			type: ContentType.multimedia,
 			size: Size.md,

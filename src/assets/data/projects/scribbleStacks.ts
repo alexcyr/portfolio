@@ -36,6 +36,7 @@ export const scribbleStacks: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "scribble banner",
+					disable: true,
 				},
 			],
 		},
@@ -52,23 +53,23 @@ export const scribbleStacks: Project = {
 					type: MediaType.image,
 					src: Scribble4,
 
-					alt: "scribble banner",
+					alt: "scribble 4",
 				},
 				{
 					type: MediaType.image,
 					src: Scribble1,
-					alt: "scribble banner",
+					alt: "scribble 1",
 				},
 				{
 					type: MediaType.image,
 					src: Scribble3,
-					alt: "scribble banner",
+					alt: "scribble 3",
 				},
 			],
 		},
 		{
 			type: ContentType.text,
-			text: `While the launch was not as successful as I’d hoped, it holds a special place in my journey from designer to developer, playing a key role in securing my first coding job. The process of crafting "Scribble Stacks" was, above all, a fun and fulfilling experience that contributed to my growth in the world of development.`,
+			text: `While the launch was not as successful as I'd hoped, it holds a special place in my journey from designer to developer, playing a key role in securing my first coding job. The process of crafting "Scribble Stacks" was, above all, a fun and fulfilling experience that contributed to my growth in the world of development.`,
 			size: Size.md,
 		},
 		{
@@ -78,17 +79,17 @@ export const scribbleStacks: Project = {
 				{
 					type: MediaType.image,
 					src: Scribble2,
-					alt: "scribble banner",
+					alt: "scribble 2",
 				},
 				{
 					type: MediaType.image,
 					src: Scribble5,
-					alt: "scribble banner",
+					alt: "scribble 5",
 				},
 				{
 					type: MediaType.image,
 					src: Scribble6,
-					alt: "scribble banner",
+					alt: "scribble 6",
 				},
 			],
 		},

@@ -18,14 +18,17 @@ import { washiCon } from "./projects/washiCon";
 export default {
 	sections: [
 		{
+			id: "professional-work",
 			label: "professional work",
 			projects: [gamestop, ford, shrine, midniteOil, cogniteLabs],
 		},
 		{
+			id: "side-projects",
 			label: "side projects",
 			projects: [generativeArt, interiorDesign, washiCon],
 		},
 		{
+			id: "games",
 			label: "games",
 			projects: [
 				buckledIn,

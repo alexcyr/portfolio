@@ -71,45 +71,60 @@ export const shrine: Project = {
 					alt: "shrine main image",
 					posterSrc: ShrineHeaderPoster,
 					autoplay: true,
+					preload: true,
+					disable: true,
 				},
 			],
-		},
-		{
-			type: ContentType.title,
-			title: "Freightroll",
-			size: Size.md,
-		},
-		{
-			type: ContentType.text,
-			text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
-			size: Size.md,
 		},
 
 		{
-			type: ContentType.multimedia,
-			size: Size.sm,
-			isGrid: true,
-			media: [
+			type: ContentType.section,
+			size: Size.lg,
+			content: [
 				{
-					type: MediaType.image,
-					src: FreightImg1,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.title,
+					title: "Freightroll",
+					size: Size.md,
 				},
 				{
-					type: MediaType.image,
-					src: FreightImg2,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.text,
+					text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
+					size: Size.md,
 				},
 				{
-					type: MediaType.image,
-					src: FreightImg3,
-					alt: "video description",
-					caption: "optional caption",
+					type: ContentType.section,
+					size: Size.md,
+					content: [
+						{
+							type: ContentType.multimedia,
+							size: Size.sm,
+							isGrid: true,
+							media: [
+								{
+									type: MediaType.image,
+									src: FreightImg1,
+									alt: "video description",
+									caption: "optional caption",
+								},
+								{
+									type: MediaType.image,
+									src: FreightImg2,
+									alt: "video description",
+									caption: "optional caption",
+								},
+								{
+									type: MediaType.image,
+									src: FreightImg3,
+									alt: "video description",
+									caption: "optional caption",
+								},
+							],
+						},
+					],
 				},
 			],
 		},
+
 		{
 			type: ContentType.title,
 			title: "Wantify",
@@ -233,7 +248,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "UI design and React Native development [Website](https://plainsightevents.com/)",
+			text: "UI design and React Native development",
 			size: Size.md,
 		},
 		{

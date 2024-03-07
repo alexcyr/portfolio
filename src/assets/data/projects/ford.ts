@@ -38,6 +38,8 @@ export const ford: Project = {
 					type: MediaType.image,
 					src: FordBanner,
 					alt: "ford logo banner",
+					preload: true,
+					disable: true,
 				},
 			],
 		},

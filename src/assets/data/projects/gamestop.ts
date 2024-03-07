@@ -17,7 +17,6 @@ import NFTTeaserPoster from "assets/images/gamestop/nft-teaser-poster.jpg";
 import NFTRunerPoster from "assets/images/gamestop/nft-runner-poster.jpg";
 import NFTDarkPoster from "assets/images/gamestop/nft-dark-poster.jpg";
 import NFTPDPPoster from "assets/images/gamestop/nft-pdp-poster.jpg";
-import GSHeaderOld from "assets/images/gamestop/gs-header-old.jpg";
 import GSHeaderPoster from "assets/images/gamestop/gs-header-poster.jpg";
 import GSShopMyStore from "assets/images/gamestop/gs-shop-my-store.jpg";
 import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
@@ -53,6 +52,8 @@ export const gamestop: Project = {
 					alt: "nft marketplace header",
 					autoplay: true,
 					posterSrc: NFTHeaderPoster,
+					preload: true,
+					disable: true,
 				},
 			],
 		},
@@ -67,85 +68,104 @@ export const gamestop: Project = {
 			size: Size.md,
 		},
 		{
-			type: ContentType.multimedia,
+			type: ContentType.section,
 			size: Size.md,
-			media: [
+			content: [
 				{
-					type: MediaType.video,
-					src: NFTTeaserVid,
-					alt: "nft teaser site",
-					caption: "NFT Teaser Site",
-					autoplay: true,
-					posterSrc: NFTTeaserPoster,
-				},
-				{
-					type: MediaType.video,
-					src: NFTRunnerVid,
-					alt: "bannanya runner game",
-					caption: "Bannanya Runner game easter-egg",
-					autoplay: true,
-					posterSrc: NFTRunerPoster,
+					type: ContentType.multimedia,
+					size: Size.md,
+					media: [
+						{
+							type: MediaType.video,
+							src: NFTTeaserVid,
+							alt: "nft teaser site",
+							caption: "NFT Teaser Site",
+							autoplay: true,
+							posterSrc: NFTTeaserPoster,
+						},
+						{
+							type: MediaType.video,
+							src: NFTRunnerVid,
+							alt: "bannanya runner game",
+							caption: "Bannanya Runner game easter-egg",
+							autoplay: true,
+							posterSrc: NFTRunerPoster,
+						},
+					],
 				},
 			],
 		},
 
 		{
-			type: ContentType.title,
-			title: "NFT Marketplace",
-			size: Size.md,
-		},
-		{
-			type: ContentType.text,
-			text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
-			size: Size.md,
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.md,
-			media: [
+			type: ContentType.section,
+			size: Size.lg,
+			content: [
 				{
-					type: MediaType.video,
-					src: NFTDarkMode,
-					alt: "nft dark/light mode",
-					caption: "Dark/Light Mode",
-					autoplay: true,
-					posterSrc: NFTDarkPoster,
+					type: ContentType.title,
+					title: "NFT Marketplace",
+					size: Size.md,
 				},
 				{
-					type: MediaType.video,
-					src: NFTPDP,
-					alt: "product detail page",
-					caption: "Product Detail Page",
-					autoplay: true,
-					posterSrc: NFTPDPPoster,
+					type: ContentType.text,
+					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
+					size: Size.md,
 				},
 			],
 		},
 		{
-			type: ContentType.multimedia,
+			type: ContentType.section,
 			size: Size.md,
-			media: [
+			content: [
 				{
-					type: MediaType.image,
-					src: NFTCollection,
-					alt: "nft collection page",
-					caption: "Collection Page",
+					type: ContentType.multimedia,
+					size: Size.md,
+					media: [
+						{
+							type: MediaType.video,
+							src: NFTDarkMode,
+							alt: "nft dark/light mode",
+							caption: "Dark/Light Mode",
+							autoplay: true,
+							posterSrc: NFTDarkPoster,
+						},
+						{
+							type: MediaType.video,
+							src: NFTPDP,
+							alt: "product detail page",
+							caption: "Product Detail Page",
+							autoplay: true,
+							posterSrc: NFTPDPPoster,
+						},
+					],
 				},
 				{
-					type: MediaType.image,
-					src: NFTExplore,
-					alt: "nft explore",
-					caption: "Explore NFTs",
-				},
-				{
-					type: MediaType.image,
-					src: NFTGames,
-					alt: "nft games",
-					caption: "NFT Games",
-					autoplay: true,
+					type: ContentType.multimedia,
+					size: Size.md,
+					media: [
+						{
+							type: MediaType.image,
+							src: NFTCollection,
+							alt: "nft collection page",
+							caption: "Collection Page",
+						},
+						{
+							type: MediaType.image,
+							src: NFTExplore,
+							alt: "nft explore",
+							caption: "Explore NFTs",
+						},
+						{
+							type: MediaType.image,
+							src: NFTGames,
+							alt: "nft games",
+							caption: "NFT Games",
+							autoplay: true,
+						},
+					],
 				},
 			],
 		},
+
 		// {
 		// 	type: ContentType.title,
 		// 	title: "Internal Tools",

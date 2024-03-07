@@ -35,6 +35,8 @@ export const galCiv: Project = {
 					type: MediaType.image,
 					src: Banner,
 					alt: "gal civ III banner",
+					preload: true,
+					disable: true,
 				},
 			],
 		},

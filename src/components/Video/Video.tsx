@@ -17,7 +17,7 @@ const VideoPoster = styled.img`
 	width: 100%;
 `;
 
-export const Video = ({ src, alt, posterSrc, autoplay, controls }: VideoType) => {
+export const Video = ({ src, alt, posterSrc, autoplay, controls, preload }: VideoType) => {
 	const { ref, inView } = useInView();
 
 	return (
@@ -27,7 +27,7 @@ export const Video = ({ src, alt, posterSrc, autoplay, controls }: VideoType) =>
 					<source src={src} type="video/mp4" />
 				</VideoVid>
 			) : null}
-			{posterSrc && <VideoPoster src={posterSrc} loading="lazy" />}
+			{posterSrc && <VideoPoster src={posterSrc} loading={preload ? "eager" : "lazy"} />}
 		</VideoWrapper>
 	);
 };

@@ -11,12 +11,19 @@ import { Text as TextProps } from "types/text";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Section as SectionProps } from "types/section";
 import { Section } from "./components/Section";
+import { createContext, useState } from "react";
 
 const ProjectWrapper = styled.div``;
+
+export const IframeContext = createContext({
+	iframeId: "",
+	setIframeId: (_id: string) => undefined,
+});
 
 export function Project() {
 	const { id } = useParams();
 	const projectInfo = projectDict[id];
+	const [activeIframe, setActiveIframe] = useState("");
 
 	if (!projectInfo) {
 		return <Navigate to="/" replace />;
@@ -44,7 +51,11 @@ export function Project() {
 
 	return (
 		<ProjectWrapper>
-			{projectInfo.pageContent.map((content, index) => getComponentByType(content, index))}
+			<IframeContext.Provider
+				value={{ iframeId: activeIframe, setIframeId: (activeId) => setActiveIframe(activeId) }}
+			>
+				{projectInfo.pageContent.map((content, index) => getComponentByType(content, index))}
+			</IframeContext.Provider>
 		</ProjectWrapper>
 	);
 }

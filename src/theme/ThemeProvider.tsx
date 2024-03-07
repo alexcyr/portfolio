@@ -1,11 +1,16 @@
-import { useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 import { theme as styledTheme } from "./theme.styled";
 import { ThemeName } from "types/theme";
 
 export const THEME_STORAGE_KEY = "theme-mode";
 
-const useThemeMode = () => {
+export const ThemeContext = createContext({
+	theme: ThemeName.dark,
+	setTheme: (_name: ThemeName) => undefined,
+});
+
+const useThemeStore = () => {
 	const mode = localStorage.getItem(THEME_STORAGE_KEY);
 	let themeMode;
 	if (mode) {
@@ -19,20 +24,22 @@ const useThemeMode = () => {
 	return themeMode;
 };
 
-export const setThemeMode = (themeName: ThemeName) =>
-	localStorage.setItem(THEME_STORAGE_KEY, themeName);
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-	const themeNameSelected = useThemeMode();
+	const themeNameSelected = useThemeStore();
 
-	const [themeName, setThemeName] = useState(styledTheme(themeNameSelected === ThemeName.dark));
+	const [themeName, setThemeName] = useState(themeNameSelected);
 
-	useEffect(() => {
-		setThemeName(styledTheme(themeNameSelected === ThemeName.dark));
-	}, [themeNameSelected]);
+	const setThemeMode = (name: ThemeName) => {
+		localStorage.setItem(THEME_STORAGE_KEY, name);
+		setThemeName(name);
+	};
 
 	return (
-		<StyledComponentsThemeProvider theme={themeName}>{children}</StyledComponentsThemeProvider>
+		<ThemeContext.Provider value={{ theme: themeName, setTheme: (name) => setThemeMode(name) }}>
+			<StyledComponentsThemeProvider theme={styledTheme(themeNameSelected === ThemeName.dark)}>
+				{children}
+			</StyledComponentsThemeProvider>
+		</ThemeContext.Provider>
 	);
 }
 

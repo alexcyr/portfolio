@@ -44,6 +44,8 @@ export const interiorDesign: Project = {
 					alt: "interior room capture banner",
 					autoplay: true,
 					posterSrc: VidPoster,
+					preload: true,
+					disable: true,
 				},
 			],
 		},
@@ -120,18 +122,6 @@ export const interiorDesign: Project = {
 					type: MediaType.image,
 					src: Content5,
 					alt: "interior room blog page",
-				},
-			],
-		},
-		{
-			type: ContentType.multimedia,
-			size: Size.lg,
-			media: [
-				{
-					type: MediaType.video,
-					src: "/video.mp4",
-					alt: "video description",
-					caption: "optional caption",
 				},
 			],
 		},

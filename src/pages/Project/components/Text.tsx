@@ -22,9 +22,7 @@ const StyledText = styled(Markdown)<{ size: Size }>`
         font-size: ${theme.text.size.s21};
 		line-height: 32px;
 		letter-spacing: 0.5px;
-
 		margin: ${theme.space.s20} auto ${theme.space.s20} auto;
-
       `;
 		} else {
 			return `
@@ -49,6 +47,17 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 
 	li {
 		margin: ${({ theme }) => `${theme.space.s16} 0`};
+	}
+
+	a {
+		font-weight: ${({ theme }) => theme.text.weight.semi_bold};
+		color: ${({ theme }) => theme.color.primary1};
+		text-decoration: none;
+		text-decoration-thickness: 2px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 `;
 
