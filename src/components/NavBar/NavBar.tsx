@@ -21,6 +21,7 @@ const NavBarWrapper = styled.div`
 
 const StyleLink = styled(Link)`
 	text-decoration: none;
+	flex-shrink: 0;
 
 	&:hover {
 		text-decoration: underline;
