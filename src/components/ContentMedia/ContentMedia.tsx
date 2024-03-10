@@ -18,44 +18,15 @@ const ContentMediaWrapper = styled.div`
 	flex: 1; */
 `;
 
-const FullscreenWrapper = styled.div<{ $fullscreen: boolean; disable: boolean }>`
-	${({ theme }) => theme.flexCenter};
+const ContentWrapper = styled.div<{ disable: boolean }>`
+	width: 100%;
 	flex-direction: column;
 	flex: 1;
 	width: 100%;
 
 	${({ theme }) => theme.flexCenter};
-	flex-direction: column;
 
 	gap: ${({ theme }) => theme.space.s16};
-
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		margin: 16px auto;
-	`}
-
-	${({ $fullscreen }) =>
-		$fullscreen
-			? `
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		left: 0;
-		top: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: ${({ theme }) => theme.color.surface1};
-
-
-		${Image} {
-			cursor: zoom-out;
-			width:100%;
-			height:100%;
-			object-fit: contain;
-			
-		}
-	`
-			: ""};
 
 	${({ disable }) =>
 		disable
@@ -65,7 +36,37 @@ const FullscreenWrapper = styled.div<{ $fullscreen: boolean; disable: boolean }>
 			pointer-events: none;	
 		}
 	`
-			: ""};
+			: ""}
+`;
+
+const FullscreenWrapper = styled.div`
+	${({ theme }) => theme.flexCenter};
+	z-index: 10;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		margin: 16px auto;
+	`}
+
+	flex-direction: column;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: ${({ theme }) => theme.color.surface1};
+	gap: 8px;
+
+	img,
+	div,
+	video {
+		cursor: zoom-out;
+		object-fit: contain;
+		max-width: 90vw;
+		max-height: 90vh;
+	}
 `;
 
 const Caption = styled.span`
@@ -101,10 +102,17 @@ export const ContentMedia = (media: Media) => {
 		<ContentMediaWrapper
 			onClick={() => type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)}
 		>
-			<FullscreenWrapper $fullscreen={fullscreen} disable={disable}>
+			<ContentWrapper disable={disable}>
 				{content}
 				{caption && <Caption>{caption}</Caption>}
-			</FullscreenWrapper>
+			</ContentWrapper>
+
+			{!disable && fullscreen && (
+				<FullscreenWrapper>
+					{content}
+					{caption && <Caption>{caption}</Caption>}
+				</FullscreenWrapper>
+			)}
 		</ContentMediaWrapper>
 	);
 };

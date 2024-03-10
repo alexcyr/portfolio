@@ -1,10 +1,11 @@
 // import Logo from "components/Logo/Logo";
 import { ThemeToggle } from "components/ThemeToggle/ThemeToggle";
 import { Link } from "react-router-dom";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import { LinkedInIcon } from "components/Icons/LinkedIn";
 import { GithubIcon } from "components/Icons/Github";
 import { HoverMenu } from "components/HoverMenu/HoverMenu";
+import useScrollToAnchor from "hooks/ScrollToAnchor";
 
 const STRINGS = {
 	siteName: "alex cyr",
@@ -21,6 +22,7 @@ const NavBarWrapper = styled.div`
 
 const StyleLink = styled(Link)`
 	text-decoration: none;
+	flex-shrink: 0;
 
 	&:hover {
 		text-decoration: underline;
@@ -58,8 +60,8 @@ const IconLink = styled(Link)`
 `;
 
 export const NavBar = () => {
-	const { theme } = useTheme();
-	console.log(theme);
+	useScrollToAnchor();
+
 	return (
 		<NavBarWrapper>
 			<StyleLink to="/">

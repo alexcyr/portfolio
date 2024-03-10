@@ -3,13 +3,13 @@ import { Project } from "types/project";
 import ProjectRow from "./ProjectRow";
 
 const SectionWrapper = styled.section`
-	margin: ${({ theme }) => `${theme.space.s48} 0 ${theme.space.s72} 0`};
+	padding: ${({ theme }) => `${theme.space.s36} 0 ${theme.space.s72} 0`};
 `;
 
 const SectionLabel = styled.h2`
 	font-size: ${({ theme }) => theme.text.size.s24};
 	font-weight: ${({ theme }) => theme.text.weight.light};
-	margin: ${({ theme }) => `${theme.space.s36} 0 0 0`};
+	margin: 0;
 	color: ${({ theme }) => theme.color.primary2};
 `;
 
