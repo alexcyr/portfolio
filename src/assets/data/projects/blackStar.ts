@@ -67,7 +67,7 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.multimedia,
-			size: Size.md,
+			size: Size.sm,
 			media: [
 				{
 					type: MediaType.video,

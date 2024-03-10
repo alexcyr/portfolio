@@ -7,4 +7,5 @@ export interface Media {
 	caption?: string;
 	preload?: boolean;
 	disable?: boolean;
+	fullscreenSrc?: string;
 }
