@@ -15,6 +15,7 @@ const IframeWindow = styled.iframe`
 	position: absolute;
 	inset: 0;
 	width: 100%;
+	max-height: 100%;
 	aspect-ratio: 1/1;
 `;
 
@@ -54,7 +55,7 @@ const LoadIframeButton = styled.button`
 	}
 `;
 
-export const Iframe = ({ src, alt }: IframeProps) => {
+export const Iframe = ({ src, alt, preload }: IframeProps) => {
 	const { iframeId, setIframeId } = useContext(IframeContext);
 	const [loaded, setLoaded] = useState(false);
 
@@ -69,9 +70,9 @@ export const Iframe = ({ src, alt }: IframeProps) => {
 
 	return (
 		<IframeWrapper ref={ref}>
-			{!loaded && iframeId === alt && <LoadingWrapper>Loading</LoadingWrapper>}
+			{!preload && !loaded && iframeId === alt && <LoadingWrapper>Loading</LoadingWrapper>}
 			{inView ? (
-				iframeId === alt ? (
+				iframeId === alt || preload ? (
 					<IframeWindow
 						loading="lazy"
 						src={src}

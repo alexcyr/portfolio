@@ -24,6 +24,10 @@ const ContentWrapper = styled.div<{ disable: boolean }>`
 	flex: 1;
 	width: 100%;
 
+	video {
+		cursor: zoom-in;
+	}
+
 	${({ theme }) => theme.flexCenter};
 
 	gap: ${({ theme }) => theme.space.s16};
@@ -31,7 +35,7 @@ const ContentWrapper = styled.div<{ disable: boolean }>`
 	${({ disable }) =>
 		disable
 			? `
-		${Image} {
+		${Image}, video {
 			cursor: default;
 			pointer-events: none;	
 		}
@@ -79,7 +83,7 @@ const Caption = styled.span`
 
 export const ContentMedia = (media: Media) => {
 	const [fullscreen, setFullscreen] = useState(false);
-	const { type, src, alt, caption, preload, disable } = media;
+	const { type, src, alt, caption, preload, disable, fullscreenSrc } = media;
 	let content;
 
 	useEffect(() => {
@@ -99,18 +103,30 @@ export const ContentMedia = (media: Media) => {
 	}
 
 	return (
-		<ContentMediaWrapper
-			onClick={() => type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)}
-		>
-			<ContentWrapper disable={disable}>
+		<ContentMediaWrapper>
+			<ContentWrapper
+				disable={disable}
+				onClick={() => type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)}
+			>
 				{content}
 				{caption && <Caption>{caption}</Caption>}
 			</ContentWrapper>
 
 			{!disable && fullscreen && (
 				<FullscreenWrapper>
-					{content}
-					{caption && <Caption>{caption}</Caption>}
+					{fullscreenSrc ? (
+						<Iframe src={fullscreenSrc} alt={alt} type={MediaType.iframe} preload={preload} />
+					) : (
+						<ContentWrapper
+							disable={disable}
+							onClick={() =>
+								type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)
+							}
+						>
+							{content}
+							{caption && <Caption>{caption}</Caption>}
+						</ContentWrapper>
+					)}
 				</FullscreenWrapper>
 			)}
 		</ContentMediaWrapper>

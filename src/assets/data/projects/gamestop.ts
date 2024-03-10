@@ -89,7 +89,9 @@ export const gamestop: Project = {
 							alt: "bannanya runner game",
 							caption: "Bannanya Runner game easter-egg",
 							autoplay: true,
+							preload: true,
 							posterSrc: NFTRunerPoster,
+							fullscreenSrc: "./runner.html",
 						},
 					],
 				},
@@ -107,7 +109,7 @@ export const gamestop: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
+					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper and more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
 					size: Size.md,
 				},
 			],
