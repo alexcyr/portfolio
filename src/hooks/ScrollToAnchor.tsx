@@ -6,6 +6,19 @@ function useScrollToAnchor() {
 	const lastHash = useRef("");
 
 	useEffect(() => {
+		const handlePopState = (event) => {
+			if (event.currentTarget.location.hash.includes("#")) {
+				lastHash.current = "";
+				window.location.hash = "";
+			}
+		};
+		window.addEventListener("popstate", handlePopState);
+
+		return () => window.removeEventListener("popstate", handlePopState);
+		// window.location.hash = ""
+	}, []);
+
+	useEffect(() => {
 		if (location.hash) {
 			lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
 		}

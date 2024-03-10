@@ -57,14 +57,16 @@ const FullscreenWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	background: ${({ theme }) => theme.color.surface1};
+	gap: 8px;
 
-	img, div, video {
+	img,
+	div,
+	video {
 		cursor: zoom-out;
-		object-fit: contain;	
+		object-fit: contain;
 		max-width: 90vw;
 		max-height: 90vh;
 	}
-
 `;
 
 const Caption = styled.span`
