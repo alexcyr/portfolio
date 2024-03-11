@@ -43,6 +43,10 @@ const MenuWrapper = styled.div`
 			display: block;
 		}
 	}
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		display: block;
+	`}
 `;
 
 interface HoverMenuProps {
