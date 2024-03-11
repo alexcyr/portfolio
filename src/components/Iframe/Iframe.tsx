@@ -65,7 +65,6 @@ const LoadIframeButton = styled.button`
 			letter-spacing: 2px;
 		}
 	}
-	
 
 	&::after {
 		content: "";
@@ -99,10 +98,10 @@ const LoadIframeButton = styled.button`
 `;
 
 const TextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
-  gap: ${({ theme }) => theme.space.s4};
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	gap: ${({ theme }) => theme.space.s4};
 `;
 
 export const Iframe = ({ src, alt, preload }: IframeProps) => {
@@ -136,10 +135,10 @@ export const Iframe = ({ src, alt, preload }: IframeProps) => {
 					<LoadIframeButton onClick={() => setIframeId(alt)} title={`load ${alt}`}>
 						<PlayIcon />
 						<TextWrapper>
-						<span>
-							<strong>Play Web App</strong>
-						</span>
-						<span>Attn: Can be computer intensive</span>
+							<span>
+								<strong>Play Web App</strong>
+							</span>
+							<span>Attn: Can be computer intensive</span>
 						</TextWrapper>
 					</LoadIframeButton>
 				)

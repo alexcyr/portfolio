@@ -1,7 +1,7 @@
 import { useTheme } from "styled-components";
 
 export const LinkedInIcon = () => {
-    const theme = useTheme();
+	const theme = useTheme();
 	return (
 		<svg
 			version="1.1"

@@ -13,9 +13,7 @@ function useScrollToAnchor() {
 			}
 		};
 		window.addEventListener("popstate", handlePopState);
-
 		return () => window.removeEventListener("popstate", handlePopState);
-		// window.location.hash = ""
 	}, []);
 
 	useEffect(() => {

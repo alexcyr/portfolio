@@ -1,7 +1,7 @@
 import { useTheme } from "styled-components";
 
 export const PlayIcon = () => {
-	const theme  = useTheme();
+	const theme = useTheme();
 	return (
 		<svg
 			width="153"

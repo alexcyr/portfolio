@@ -6,6 +6,8 @@ import { LinkedInIcon } from "components/Icons/LinkedIn";
 import { GithubIcon } from "components/Icons/Github";
 import { HoverMenu } from "components/HoverMenu/HoverMenu";
 import useScrollToAnchor from "hooks/ScrollToAnchor";
+import { useState } from "react";
+import { HamburgerToggleIcon } from "components/HamburgerToggleIcon/HamburgerToggleIcon";
 
 const STRINGS = {
 	siteName: "alex cyr",
@@ -36,11 +38,26 @@ const SiteName = styled.h1`
 	font-size: ${({ theme }) => theme.text.size.s42};
 `;
 
-const LinksWrapper = styled.div`
+const LinksWrapper = styled.div<{ isChecked: boolean }>`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 18px;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		display: none;
+		position: fixed;
+		inset: 0;
+		height: 100vh;
+		width: 100vw;
+		align-items: unset;
+		justify-content: unset;
+		background: ${theme.color.surface2};
+		padding: ${theme.space.s32};
+		flex-direction: column;
+	`}
+
+	${({ isChecked }) => (isChecked ? "display: flex !important;" : "")}
 `;
 
 const PageLink = styled(StyleLink)`
@@ -59,7 +76,29 @@ const IconLink = styled(Link)`
 	padding: 4px;
 `;
 
+const Checkbox = styled.input`
+	position: absolute;
+	inset: 0;
+	padding: ${({ theme }) => theme.space.s4};
+	visibility: 0;
+	opacity: 0;
+	cursor: pointer;
+`;
+
+const MenuToggleLabel = styled.label`
+	width: 32px;
+	height: 32px;
+	position: relative;
+	z-index: 1;
+	display: none;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		display: block;
+	`}
+`;
+
 export const NavBar = () => {
+	const [isChecked, setIsChecked] = useState(false);
 	useScrollToAnchor();
 
 	return (
@@ -68,7 +107,18 @@ export const NavBar = () => {
 				<SiteName>{STRINGS.siteName}</SiteName>
 			</StyleLink>
 
-			<LinksWrapper>
+			<MenuToggleLabel htmlFor="menu-toggle">
+				<Checkbox
+					name="menu-toggle"
+					id="menu-toggle"
+					type="checkbox"
+					onClick={() => setIsChecked((previous) => !previous)}
+				/>
+
+				<HamburgerToggleIcon isChecked={isChecked} />
+			</MenuToggleLabel>
+
+			<LinksWrapper isChecked={isChecked}>
 				<HoverMenu>
 					<PageLink to="/">{STRINGS.work}</PageLink>
 				</HoverMenu>

@@ -70,6 +70,7 @@ const FullscreenWrapper = styled.div`
 		object-fit: contain;
 		max-width: 90vw;
 		max-height: 90vh;
+		width: auto;
 	}
 `;
 
