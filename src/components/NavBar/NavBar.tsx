@@ -82,7 +82,6 @@ const Checkbox = styled.input`
 	padding: ${({ theme }) => theme.space.s4};
 	visibility: 0;
 	opacity: 0;
-	cursor: pointer;
 `;
 
 const MenuToggleLabel = styled.label`
@@ -91,6 +90,7 @@ const MenuToggleLabel = styled.label`
 	position: relative;
 	z-index: 1;
 	display: none;
+	cursor: pointer;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		display: block;
@@ -100,6 +100,20 @@ const MenuToggleLabel = styled.label`
 export const NavBar = () => {
 	const [isChecked, setIsChecked] = useState(false);
 	useScrollToAnchor();
+
+	const handleClick = () => {
+		if (isChecked) {
+			document.body.style.overflow = "unset";
+		} else {
+			document.body.style.overflow = "hidden";
+			document.documentElement.scrollTo({
+				top: 0,
+				left: 0,
+			});
+		}
+
+		setIsChecked((previous) => !previous);
+	};
 
 	return (
 		<NavBarWrapper>
@@ -112,7 +126,8 @@ export const NavBar = () => {
 					name="menu-toggle"
 					id="menu-toggle"
 					type="checkbox"
-					onClick={() => setIsChecked((previous) => !previous)}
+					checked={isChecked}
+					onClick={() => handleClick()}
 				/>
 
 				<HamburgerToggleIcon isChecked={isChecked} />

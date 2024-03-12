@@ -7,99 +7,100 @@ interface ToggleProps {
 
 const topRow = keyframes`   
   0% {
-    y: 0;
   }
   50% {
-    y: 8;
-    transform: rotate(0);
+    transform: translateY(200%);
 
   }
   100% {
-    y: 8;
-    transform: rotate(45deg);
+    transform: translateY(200%) rotate(45deg);
+
+    /* transform: rotate(45deg); */
   }
 `;
 
 const topRowOut = keyframes`   
       0% {
-        y: 8;
-        transform: rotate(45deg);
+        transform: translateY(200%) rotate(45deg);
       }
       50% {
-          y: 8;
-          transform: rotate(0);
+          transform: translateY(200%) ;
           
         }
         100% {
-          y: 0;
+       
         }
 `;
 
 const middleRow = keyframes`   
   0% {
-    display: block;
+    visibility: visible;
 
   }
   50% {
-    display:none;
+    visibility: hidden;
   }
   100% {
-    display:none;
+    visibility: hidden;
 
   }
 `;
 
 const middleRowOut = keyframes`   
       0% {
-        display:none;
+        visibility: hidden;
     
       }
       50% {
-          display:none;
+          visibility: hidden;
         }
         100% {
-          display: block;
+          visibility: visible;
       
         }
         `;
 
 const bottomRow = keyframes`   
   0% {
-    y: 16;
   }
   50% {
-    y: 8;
-    transform: rotate(0);
+    transform: translateY(-200%);
 
   }
   100% {
-    y: 8;
-    transform: rotate(-45deg);
+    transform: translateY(-200%) rotate(-45deg) ;
   }
 `;
 
 const bottomRowOut = keyframes`   
       0% {
-        y: 8;
-        transform: rotate(-45deg);
+        transform: translateY(-200%) rotate(-45deg) ;
       }
       50% {
-          y: 8;
-          transform: rotate(0);
+          transform: translateY(-200%);
           
         }
         100% {
-          y: 16;
-        }
+          transform: translateY(0);
+          }
+`;
+
+const placeholder = keyframes`   
+      0% {
+        rect: {animation: unset;}
+      }
+      100% {
+        rect: {animation: unset;}
+      }
 `;
 
 const StyledSvg = styled.svg<{ isChecked: boolean }>`
 	display: block;
 	width: 100%;
 	height: 100%;
+	animation: ${placeholder} 0.25s linear forwards;
 
 	& rect {
-		transition: all 3s ease-in-out;
 		transform-box: fill-box;
 		transform-origin: center;
 		fill: ${({ theme }) => theme.color.primary1};
@@ -126,7 +127,6 @@ const StyledSvg = styled.svg<{ isChecked: boolean }>`
 	}
 
 	& rect:last-child {
-		transform: all 0.25s ease-in-out;
 		${({ isChecked }) =>
 			isChecked
 				? css`
