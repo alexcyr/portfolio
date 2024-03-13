@@ -1,9 +1,7 @@
 import ContentMedia from "components/ContentMedia/ContentMedia";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Project } from "types/project";
-
-// const colors = ["#a4c441", "#f7931e", "#5ac1e5"];
 
 const PREVIEW_WIDTH = "150px";
 
@@ -53,8 +51,15 @@ const Description = styled.p`
 	text-overflow: ellipsis;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
-			font-size: ${theme.text.size.s18};
-			line-height: 24px;
+		font-size: ${theme.text.size.s16};
+		line-height: 24px;
+		max-width: 600px;
+	`}
+
+	${({ theme }) => theme.mediaWidth.upToExtraSmall`
+		font-size: ${theme.text.size.s12};
+		line-height: 18px;
+		max-width: 500px;
 	`}
 `;
 
@@ -65,8 +70,20 @@ const ProjectRowWrapper = styled.div`
 	padding: ${({ theme }) => `${theme.space.s16} 0`};
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
-		padding: ${theme.space.s8} 0;
+		padding: ${theme.space.s8} 0 ${theme.space.s16};
 	`}
+`;
+
+const descriptionHoverStyle = css`
+	${PreviewWrapper} {
+		max-width: ${PREVIEW_WIDTH};
+		grid-template-rows: 1fr;
+	}
+
+	${DescriptionWrapper} {
+		grid-template-rows: 1fr;
+		transition-delay: 0.33s;
+	}
 `;
 
 const StyleLink = styled(Link)`
@@ -75,21 +92,17 @@ const StyleLink = styled(Link)`
 
 	&:hover,
 	&:focus {
+		${descriptionHoverStyle}
+
 		${Title} {
 			text-decoration: underline;
 			text-decoration-thickness: 4px;
 		}
-
-		${PreviewWrapper} {
-			max-width: ${PREVIEW_WIDTH};
-			grid-template-rows: 1fr;
-		}
-
-		${DescriptionWrapper} {
-			grid-template-rows: 1fr;
-			transition-delay: 0.33s;
-		}
 	}
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		${descriptionHoverStyle}
+	`}
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
