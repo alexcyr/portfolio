@@ -4,6 +4,10 @@ import ProjectRow from "./ProjectRow";
 
 const SectionWrapper = styled.section`
 	padding: ${({ theme }) => `${theme.space.s36} 0 ${theme.space.s72} 0`};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		padding: ${theme.space.s36} 0 ${theme.space.s36} 0;
+	`}
 `;
 
 const SectionLabel = styled.h2`

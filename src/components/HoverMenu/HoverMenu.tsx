@@ -9,6 +9,14 @@ const LinksOuterWrapper = styled.div`
 	top: ${({ theme }) => theme.space.s32};
 	padding-top: ${({ theme }) => theme.space.s16};
 	right: 0;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		display: block;
+        right: unset;
+        position: relative;
+        top: unset;
+        padding: ${theme.space.s8};
+	`}
 `;
 
 const LinksInnerWrapper = styled.div`
@@ -16,7 +24,7 @@ const LinksInnerWrapper = styled.div`
 	top: ${({ theme }) => theme.space.s32};
 	flex-direction: column;
 	background: ${({ theme }) => theme.color.surface2};
-	padding: ${({ theme }) => `${theme.space.s12} 0 ${theme.space.s16}`};
+	padding: ${({ theme }) => `${theme.space.s4} 0 ${theme.space.s16}`};
 	border-radius: 16px;
 `;
 
@@ -33,6 +41,12 @@ const StyledLink = styled(Link)`
 	&:hover {
 		text-decoration: underline;
 	}
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		text-align: left;
+        font-size: ${theme.space.s20};
+        padding: ${theme.space.s8} ${theme.space.s4};
+	`}
 `;
 
 const MenuWrapper = styled.div`
@@ -43,10 +57,6 @@ const MenuWrapper = styled.div`
 			display: block;
 		}
 	}
-
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		display: block;
-	`}
 `;
 
 interface HoverMenuProps {
