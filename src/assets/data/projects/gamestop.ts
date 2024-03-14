@@ -21,12 +21,22 @@ import GSHeaderPoster from "assets/images/gamestop/gs-header-poster.jpg";
 import GSShopMyStore from "assets/images/gamestop/gs-shop-my-store.jpg";
 import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
 
+import GSThumb from "assets/video/gamestop/gs-thumb.mp4";
+import GSThumbPoster from "assets/images/gamestop/gs-thumb-poster.jpg";
+
 export const gamestop: Project = {
 	id: "gamestop",
 	title: "GameStop - Web3 and Ecommerce",
 	description:
 		"Frontend developer focused on delivering new features for gamestop.com and GameStop mobile app, as well as bootstrapping the GameStop NFT marketplace. Tech stack includes Salesforce Commerce Cloud on the web, react-native for mobile, and react for the nft marketplace.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: GSThumb,
+		alt: "gs preview",
+		posterSrc: GSThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		date: "May 2021 - Present",
 		website: "https://nft.gamestop.com",

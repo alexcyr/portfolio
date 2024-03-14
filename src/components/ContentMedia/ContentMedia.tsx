@@ -4,6 +4,7 @@ import { MediaType } from "types/mediaType";
 import { useState, useEffect } from "react";
 import { Video } from "components/Video/Video";
 import { Iframe } from "components/Iframe/Iframe";
+import { Video as VideoType } from "types/video";
 
 const Image = styled.img`
 	width: 100%;
@@ -82,16 +83,18 @@ const Caption = styled.span`
 	margin: ${({ theme }) => `${theme.space.s4} 0`};
 `;
 
-export const ContentMedia = (media: Media) => {
+export const ContentMedia = (media: Media | VideoType) => {
 	const [fullscreen, setFullscreen] = useState(false);
 	const { type, src, alt, caption, preload, disable, fullscreenSrc } = media;
 	let content;
 
 	useEffect(() => {
-		const minimize = () => setFullscreen(false);
-		window.addEventListener("scroll", minimize);
-		return () => window.removeEventListener("scroll", minimize);
-	}, []);
+		if (!disable) {
+			const minimize = () => setFullscreen(false);
+			window.addEventListener("scroll", minimize);
+			return () => window.removeEventListener("scroll", minimize);
+		}
+	}, [disable]);
 
 	if (type === MediaType.image) {
 		content = <Image loading={preload ? "eager" : "lazy"} src={src} alt={alt} />;

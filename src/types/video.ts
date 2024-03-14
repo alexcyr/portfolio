@@ -1,6 +1,7 @@
+import { Media } from "./media";
 import { MediaType } from "./mediaType";
 
-export interface Video {
+export interface Video extends Media {
 	type: MediaType;
 	src: string;
 	alt: string;

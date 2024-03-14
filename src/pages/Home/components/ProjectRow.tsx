@@ -1,4 +1,6 @@
 import ContentMedia from "components/ContentMedia/ContentMedia";
+import { IframeContext } from "pages/Project/Project";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { Project } from "types/project";
@@ -6,19 +8,30 @@ import { Project } from "types/project";
 const PREVIEW_WIDTH = "150px";
 
 const PreviewWrapper = styled.div`
-	max-width: 0;
-	width: 100%;
-	transition: max-width 0.25s ease-in-out, grid-template-rows 0.25s ease-in-out;
-	transition-delay: 0.25s;
-	display: grid;
-	grid-template-rows: 0fr;
-	display: none;
+	/* width: 300px; */
+	max-width: 300px;
+	transition: max-height 0.25s ease-in-out;
+	max-height: 0;
+	flex: 1;
+	overflow: hidden;
+	position: relative;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		max-width: 150px;
+		width: unset;
+	`}
 `;
 
 const DescriptionWrapper = styled.div`
 	transition: grid-template-rows 0.25s ease-in-out;
+	flex: 4;
 	display: grid;
 	grid-template-rows: 0fr;
+	overflow: hidden;
+
+	${({ theme }) => theme.mediaWidth.upToMedium`
+		flex: 2;
+	`}
 `;
 
 const Title = styled.h3`
@@ -34,15 +47,25 @@ const Title = styled.h3`
 	`}
 `;
 
+const RowWrapper = styled.div`
+	display: flex;
+	gap: ${({ theme }) => theme.space.s32};
+	margin-top: ${({ theme }) => theme.space.s16};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		gap: ${theme.space.s16};
+	`}
+`;
+
 const Description = styled.p`
 	/* max-width: calc(100% - ${PREVIEW_WIDTH}); */
-	margin: 0;
+	flex: 2;
 	overflow: hidden;
 	font-size: ${({ theme }) => theme.text.size.s24};
-	max-width: 860px;
+	max-width: 800px;
 	color: ${({ theme }) => theme.color.primary2};
 	line-height: 36px;
-	margin-top: ${({ theme }) => theme.space.s8};
+	margin: -4px 0 auto;
 
 	// Truncate text
 	display: -webkit-box;
@@ -67,7 +90,7 @@ const TextWrapper = styled.div``;
 
 const ProjectRowWrapper = styled.div`
 	${({ theme }) => theme.flexRowNoWrap};
-	padding: ${({ theme }) => `${theme.space.s16} 0`};
+	padding: ${({ theme }) => `${theme.space.s16} 0 0`};
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		padding: ${theme.space.s8} 0 ${theme.space.s16};
@@ -76,8 +99,9 @@ const ProjectRowWrapper = styled.div`
 
 const descriptionHoverStyle = css`
 	${PreviewWrapper} {
-		max-width: ${PREVIEW_WIDTH};
-		grid-template-rows: 1fr;
+		max-height: 200px;
+		aspect-ratio: 3 / 2;
+		transition-delay: 0.33s;
 	}
 
 	${DescriptionWrapper} {
@@ -105,18 +129,65 @@ const StyleLink = styled(Link)`
 	`}
 `;
 
+const ImagePoster = styled.img`
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+`;
+
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
+	const ref = useRef<HTMLDivElement>(null);
+	const [hovered, setHovered] = useState(false);
+	const { iframeId, setIframeId } = useContext(IframeContext);
+
+	useEffect(() => {
+		if (iframeId !== id) {
+			setHovered(false);
+		}
+	}, [iframeId, id]);
+
+	useEffect(() => {
+		const current = ref.current;
+		if (current) {
+			const onMouseEnter = () => setHovered(true);
+			const onMouseLeave = () => setHovered(false);
+
+			const onTouchEnter = () => {
+				setIframeId(id);
+				setHovered(true);
+			};
+
+			current.addEventListener("mouseenter", onMouseEnter);
+			current.addEventListener("mouseleave", onMouseLeave);
+			current.addEventListener("touchstart", onTouchEnter);
+
+			return () => {
+				current.removeEventListener("mouseenter", onMouseEnter);
+				current.removeEventListener("mouseleave", onMouseLeave);
+				current.removeEventListener("touchstart", onTouchEnter);
+			};
+		}
+	}, [id, setIframeId]);
+
 	return (
-		<ProjectRowWrapper>
+		<ProjectRowWrapper ref={ref}>
 			<StyleLink to={`project/${id}`}>
-				<PreviewWrapper>
-					<ContentMedia {...previewMedia} />
-				</PreviewWrapper>
 				<TextWrapper>
 					<Title>{title}</Title>
-					<DescriptionWrapper>
-						<Description>{description}</Description>
-					</DescriptionWrapper>
+					<RowWrapper>
+						{previewMedia && (
+							<PreviewWrapper>
+								{!hovered ? (
+									<ImagePoster src={previewMedia.posterSrc} />
+								) : (
+									<ContentMedia {...previewMedia} />
+								)}
+							</PreviewWrapper>
+						)}
+						<DescriptionWrapper>
+							<Description>{description}</Description>
+						</DescriptionWrapper>
+					</RowWrapper>
 				</TextWrapper>
 			</StyleLink>
 		</ProjectRowWrapper>

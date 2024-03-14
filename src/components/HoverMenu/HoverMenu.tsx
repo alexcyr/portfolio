@@ -24,7 +24,7 @@ const LinksInnerWrapper = styled.div`
 	top: ${({ theme }) => theme.space.s32};
 	flex-direction: column;
 	background: ${({ theme }) => theme.color.surface2};
-	padding: ${({ theme }) => `${theme.space.s4} 0 ${theme.space.s16}`};
+	padding: ${({ theme }) => `${theme.space.s8} 0 ${theme.space.s16}`};
 	border-radius: 16px;
 `;
 
