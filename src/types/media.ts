@@ -8,4 +8,5 @@ export interface Media {
 	preload?: boolean;
 	disable?: boolean;
 	fullscreenSrc?: string;
+	posterSrc?: string;
 }

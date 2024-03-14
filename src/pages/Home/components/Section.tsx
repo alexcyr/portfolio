@@ -4,13 +4,21 @@ import ProjectRow from "./ProjectRow";
 
 const SectionWrapper = styled.section`
 	padding: ${({ theme }) => `${theme.space.s36} 0 ${theme.space.s72} 0`};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		padding: ${theme.space.s16} 0 ${theme.space.s36} 0;
+	`}
 `;
 
 const SectionLabel = styled.h2`
 	font-size: ${({ theme }) => theme.text.size.s24};
 	font-weight: ${({ theme }) => theme.text.weight.light};
-	margin: 0;
 	color: ${({ theme }) => theme.color.primary2};
+	margin: 0;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		margin: 0 0 ${theme.space.s4};
+	`}
 `;
 
 interface SectionProps {
