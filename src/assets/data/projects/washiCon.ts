@@ -11,12 +11,22 @@ import Shirt2 from "assets/images/washi/shirt-2.jpg";
 import Shirt3 from "assets/images/washi/shirt-3.jpeg";
 import Shirt4 from "assets/images/washi/shirt-4.jpeg";
 
+import WashiThumbPoster from "assets/images/washi/washi-thumb-poster.jpg";
+import WashiThumb from "assets/images/washi/washi-thumb.gif";
+
 export const washiCon: Project = {
 	id: "washi-con",
 	title: "Washi Con",
 	description:
 		"For four consecutive years (2016-2019), I had the honor of contributing unique illustrations for Washi Con, an anime convention hosted at Eastern Michigan University. Each illustration was crafted for the official event T-shirt, revolving around the convention's mascots: Washi (eagle in Japanese), Mountain, and Eggplant.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: WashiThumb,
+		alt: "washi preview",
+		posterSrc: WashiThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

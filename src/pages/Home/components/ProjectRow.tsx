@@ -14,7 +14,6 @@ const PreviewWrapper = styled.div`
 	max-height: 0;
 	flex: 1;
 	overflow: hidden;
-	position: relative;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		max-width: 150px;
@@ -100,6 +99,7 @@ const ProjectRowWrapper = styled.div`
 const descriptionHoverStyle = css`
 	${PreviewWrapper} {
 		max-height: 200px;
+		aspect-ratio: 3 / 2;
 		transition-delay: 0.33s;
 	}
 
@@ -131,10 +131,7 @@ const StyleLink = styled(Link)`
 const ImagePoster = styled.img`
 	width: 100%;
 	height: 100%;
-	aspect-ratio: 3 / 2;
-
-	position: absolute;
-	display: block;
+	object-fit: cover;
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
@@ -179,9 +176,11 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 					<RowWrapper>
 						{previewMedia && (
 							<PreviewWrapper>
-								<ImagePoster src={previewMedia.posterSrc} />
-
-								{hovered && <ContentMedia {...previewMedia} />}
+								{!hovered ? (
+									<ImagePoster src={previewMedia.posterSrc} />
+								) : (
+									<ContentMedia {...previewMedia} />
+								)}
 							</PreviewWrapper>
 						)}
 						<DescriptionWrapper>
