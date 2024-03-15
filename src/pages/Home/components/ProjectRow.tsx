@@ -100,7 +100,6 @@ const ProjectRowWrapper = styled.div`
 const descriptionHoverStyle = css`
 	${PreviewWrapper} {
 		max-height: 200px;
-		aspect-ratio: 3 / 2;
 		transition-delay: 0.33s;
 	}
 
@@ -132,7 +131,10 @@ const StyleLink = styled(Link)`
 const ImagePoster = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	aspect-ratio: 3 / 2;
+
+	position: absolute;
+	display: block;
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
@@ -177,11 +179,9 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 					<RowWrapper>
 						{previewMedia && (
 							<PreviewWrapper>
-								{!hovered ? (
-									<ImagePoster src={previewMedia.posterSrc} />
-								) : (
-									<ContentMedia {...previewMedia} />
-								)}
+								<ImagePoster src={previewMedia.posterSrc} />
+
+								{hovered && <ContentMedia {...previewMedia} />}
 							</PreviewWrapper>
 						)}
 						<DescriptionWrapper>

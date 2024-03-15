@@ -10,12 +10,22 @@ import FordSpaceBookingImg from "assets/images/ford/ford-space-booking.jpg";
 import FordCovidChartImg from "assets/images/ford/ford-covid-chart.jpg";
 import FordCovidSurveyImg from "assets/images/ford/ford-covid-survey.jpg";
 
+import FordThumbPoster from "assets/images/ford/ford-thumb-poster.jpg";
+import FordThumb from "assets/images/ford/ford-thumb.gif";
+
 export const ford: Project = {
 	id: "ford",
 	title: "Ford Motor Company - Workplace Solutions",
 	description:
 		"Fullstack developer working on internal web applications to help employees throughout their day at work such as building navigation, room booking, and during quarantine built a COVID-19 screening survey with regional localization that supported 83k daily users as they returned to work. All of our apps were made with AngularJS frontends and Java Spring Boot backends.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: FordThumb,
+		alt: "ford preview",
+		posterSrc: FordThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		date: "April 2019 - April 2021",
 	},

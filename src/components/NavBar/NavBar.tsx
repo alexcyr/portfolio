@@ -57,6 +57,7 @@ const MenuWrapper = styled.div<{ isChecked: boolean }>`
 		justify-content: space-between;
 		box-sizing: border-box;
 		padding-top: 36px;
+		z-index: 1;
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -96,7 +97,7 @@ const MenuToggleLabel = styled.label`
 	width: 32px;
 	height: 32px;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	display: none;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`

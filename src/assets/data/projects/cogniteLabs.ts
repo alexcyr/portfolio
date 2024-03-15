@@ -20,12 +20,22 @@ import Preuss from "assets/images/cognite/preuss-home.jpg";
 import EAM from "assets/images/cognite/eam.jpg";
 import CommonWealth from "assets/images/cognite/commonwealth.jpg";
 
+import CogniteThumbPoster from "assets/images/cognite/cognite-thumb-poster.jpg";
+import CogniteThumb from "assets/images/cognite/cognite-thumb.gif";
+
 export const cogniteLabs: Project = {
 	id: "cognite-labs",
 	title: "Cognite Labs - Web Development & Design",
 	description:
 		"As a frontend developer and designer at Cognite Labs, I specialized in crafting web apps and static pages for businesses spanning local and diverse markets. I played a pivotal role in implementing marketing sales funnels, elevating online presence, and enhancing lead generation. My work highlighted the seamless integration of design and development, delivering impactful digital solutions.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: CogniteThumb,
+		alt: "cognite labs preview",
+		posterSrc: CogniteThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		date: "Mar 2018 - March 2019",
 	},
