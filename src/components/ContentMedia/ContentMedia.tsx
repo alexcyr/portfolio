@@ -23,7 +23,6 @@ const ContentWrapper = styled.div<{ disable: boolean }>`
 	width: 100%;
 	flex-direction: column;
 	flex: 1;
-	width: 100%;
 
 	video {
 		cursor: zoom-in;

@@ -41,12 +41,22 @@ import ARDiceVid from "assets/video/shrine/ar-dice.mp4";
 import ARPokeVid from "assets/video/shrine/ar-poke.mp4";
 import ARRulerVid from "assets/video/shrine/ar-ruler.mp4";
 
+import ShrineThumbPoster from "assets/images/shrine/shrine-thumb-poster.jpg";
+import ShrineThumb from "assets/images/shrine/shrine-thumb.gif";
+
 export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
 	description:
 		"Frontend and mobile app developer/designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: ShrineThumb,
+		alt: "shrine preview",
+		posterSrc: ShrineThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		date: "Mar 2018 - March 2019",
 	},
