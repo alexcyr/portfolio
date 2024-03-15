@@ -10,12 +10,22 @@ import Block1 from "assets/images/gen-art/block1.webp";
 import Block2 from "assets/images/gen-art/block2.webp";
 import Block3 from "assets/images/gen-art/block3.webp";
 
+import GenThumbPoster from "assets/images/gen-art/gen-thumb-poster.jpg";
+import GenThumb from "assets/video/gen-art/gen-thumb.mp4";
+
 export const generativeArt: Project = {
 	id: "generative-art",
 	title: "Generative Art",
 	description:
 		"Experiments in creating generative art powered by p5.js, where algorithms feel alive as unique visual experiences, blending code and creativity. Explore procedurally generated pieces, dynamic flow fields, and interactive artworks. Each creation is minted as an NFT on the Tezos blockchain.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: GenThumb,
+		alt: "gen art preview",
+		posterSrc: GenThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		website: "https://objkt.com/profile/bigcatnft",
 	},

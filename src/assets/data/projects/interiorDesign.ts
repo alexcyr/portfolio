@@ -13,12 +13,22 @@ import Content3 from "assets/images/interior/interior-design-3.jpg";
 import Content4 from "assets/images/interior/interior-design-4.jpg";
 import Content5 from "assets/images/interior/interior-design-5.jpg";
 
+import InteriorThumbPoster from "assets/images/interior/interior-thumb-poster.jpg";
+import InteriorThumb from "assets/video/interior/interior-thumb.mp4";
+
 export const interiorDesign: Project = {
 	id: "interior-design",
 	title: "interiordesignideasforho.me",
 	description:
 		"Embarking on the mission to turn an idea into a passive income stream through affiliate marketing led to the creation of interiordesignideasforho.me. This unique website offers an immersive exploration of interior design styles, seamlessly connecting users with carefully selected products from Wayfair through affiliate links.",
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: InteriorThumb,
+		alt: "interior preview",
+		posterSrc: InteriorThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {
 		date: "May 2021",
 		website: "interiordesignideasforho.me",
