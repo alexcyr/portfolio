@@ -10,11 +10,21 @@ import GalCiv3 from "assets/images/gal-civ/galciv_5.jpg";
 
 import Ipad from "assets/images/gal-civ/galciv_22.jpg";
 
+import ThumbPoster from "assets/images/gal-civ/galciv-thumb-poster.jpg";
+import Thumb from "assets/images/gal-civ/galciv-thumb.gif";
+
 export const galCiv: Project = {
 	id: "gal-civ",
 	title: "Galactic Civilizations III: Ship Builder",
 	description: `In collaboration with Stardock game studios, my team and I had the privilege of adapting the ship editor from Galactic Civilizations III for a mobile iPad application as part of our college capstone course. Over a three-month span, my role as a UI designer was centered on refining the shipbuilding process. Key enhancements include highlighting essential elements, clear indicators for attaching parts, and an intuitive touch-based rotate UI, ensuring an optimal and immersive editing experience on the iPad.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: Thumb,
+		alt: "gal civ preview",
+		posterSrc: ThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

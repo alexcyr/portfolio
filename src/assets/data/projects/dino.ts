@@ -9,11 +9,21 @@ import Dino1 from "assets/images/dino/dino_1.png";
 import Dino2 from "assets/images/dino/dino_2.png";
 import Dino3 from "assets/images/dino/dino_4.png";
 
+import DinoThumbPoster from "assets/images/dino/dino-thumb-poster.jpg";
+import DinoThumb from "assets/video/dino/dino-thumb.mp4";
+
 export const dino: Project = {
 	id: "dino",
 	title: "DinoFightinSaurs",
 	description: `"DinoFightinSaurs" is a collaborative project developed within the MSU Game Design Specialization, drawing inspiration from the likes of Super Smash Bros.. The game provides a quick-paced and addictively engaging combat experience, amped up by numerous explosive weapons and platform building.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: DinoThumb,
+		alt: "dino preview",
+		posterSrc: DinoThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

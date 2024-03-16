@@ -13,11 +13,21 @@ import FlythroughPoster from "assets/images/cyber/flythrough-poster.jpg";
 import Cyber2 from "assets/images/cyber/cyber_2.png";
 import Cyber4 from "assets/images/cyber/cyber_4.png";
 
+import ThumbPoster from "assets/images/cyber/cyber-thumb-poster.jpg";
+import Thumb from "assets/video/cyber/cyber-thumb.mp4";
+
 export const cyberSlice: Project = {
 	id: "cyber-slice",
 	title: "Cyber Slice",
 	description: `Whether playing solo or with friends, players tackle 18 holes filled with traps, jumps, teleporters, and diverse obstacles, demanding precision and strategic finesse. In a mere 5 weeks, Cyber Slice took shape as a contemporary miniature golf adventure. In my role as artist and designer, I crafted 3D assets and meticulously determined the flow of each hole and level.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: Thumb,
+		alt: "cyber slice preview",
+		posterSrc: ThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

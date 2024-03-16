@@ -12,11 +12,21 @@ import Morph1 from "assets/images/morph/morph_2.png";
 import Morph2 from "assets/images/morph/morph_4.png";
 import Morph3 from "assets/images/morph/morph_5.png";
 
+import MorphThumbPoster from "assets/images/morph/morph-thumb-poster.jpg";
+import MorphThumb from "assets/video/morph/morph-thumb.mp4";
+
 export const morph: Project = {
 	id: "morph",
 	title: "Morph",
 	description: `Experience the thrill of Morph, a game where quick thinking and reflexes are paramount. In this 5-week project, race down challenging slopes, collecting coins and morphing between shapes—a ball for rolling, a cone for jumping, a cube for breaking obstacles, and a star for gliding through the air. Dash through hoops and loops, aiming for the fastest time while collecting coins for the highest score.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: MorphThumb,
+		alt: "morph preview",
+		posterSrc: MorphThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

@@ -18,11 +18,21 @@ import FailPoster from "assets/images/slider-diner/fail-poster.jpg";
 import World from "assets/video/slider-diner/world-load.mp4";
 import WorldPoster from "assets/images/slider-diner/world-poster.jpg";
 
+import SliderThumbPoster from "assets/images/slider-diner/slider-thumb-poster.jpg";
+import SliderThumb from "assets/video/slider-diner/slider-thumb.mp4";
+
 export const sliderDiner: Project = {
 	id: "slider-diner",
 	title: "Slider Diner",
 	description: `"Slider Diner" is a Unity-built mobile game that merges the swiping intensity of Fruit Ninja with the culinary chaos of Diner Dash. Swiftly combine ingredients to construct recipes, aiming for a 1-3 star rating. Progress through themed worlds, unlocking new challenges by earning stars. Creating 'Slider Diner' was an enjoyable journey in combining swiping mechanics with culinary challenges. Prototyping this concept was a rewarding and fun experience.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: SliderThumb,
+		alt: "slider diner preview",
+		posterSrc: SliderThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{
