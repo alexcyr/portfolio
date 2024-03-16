@@ -13,12 +13,22 @@ import BuckCoinPoster from "assets/images/buck/buck-coin-wall-poster.jpeg";
 import BuckFlip from "assets/video/buck/buck-flip.mp4";
 import BuckFlipPoster from "assets/images/buck/flip-poster.jpg";
 
+import BuckThumbPoster from "assets/images/buck/buck-thumb-poster.jpg";
+import BuckThumb from "assets/video/buck/buck-thumb.mp4";
+
 export const buckledIn: Project = {
 	id: "buckled-in",
 	title: "Buckled In: A Bunny in Space",
 	description:
 		'In "Buckled In: A Bunny in Space," I was one of three team members working on a unique project highlighting the potential of digital ownership in gaming. My multifaceted role included creating collectible power-ups, implementing special effects particles, designing sound systems, crafting UI menus, and developing a system for selecting and swapping sprites. These sprites, representing purchasable NFT character outfits, were available on our dedicated marketplace.',
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: BuckThumb,
+		alt: "buckled in preview",
+		posterSrc: BuckThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

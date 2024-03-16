@@ -14,11 +14,21 @@ import RemovePoster from "assets/images/black-star/remove-poster.jpg";
 import VictoryVid from "assets/video/black-star/blackstar-victory.mp4";
 import VictoryPoster from "assets/images/black-star/victory-poster.jpg";
 
+import BlackstarThumbPoster from "assets/images/black-star/blackstar-thumb-poster.jpg";
+import BlackstarThumb from "assets/video/black-star/blackstar-thumb.mp4";
+
 export const blackStar: Project = {
 	id: "black-star",
 	title: "Black Star",
 	description: `"Black Star" is a prototype for a mobile game built with Unity where players draw cards featuring colored shapes. The objective is to strategically place cards on a grid, creating three-in-a-row sequences of matching colors and shapes, similar to tic-tac-toe. With strategic removal cards and wildcard black stars, the game combines skill and surprise for a dynamic and challenging experience. `,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.video,
+		src: BlackstarThumb,
+		alt: "black star preview",
+		posterSrc: BlackstarThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{

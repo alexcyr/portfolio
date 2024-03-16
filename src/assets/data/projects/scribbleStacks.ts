@@ -11,11 +11,21 @@ import Scribble4 from "assets/images/scribble/scribble4.jpg";
 import Scribble5 from "assets/images/scribble/scribble5.jpg";
 import Scribble6 from "assets/images/scribble/scribble6.jpg";
 
+import ScribbleThumbPoster from "assets/images/scribble/scribble-thumb-poster.jpg";
+import ScribbleThumb from "assets/images/scribble/scribble-thumb.gif";
+
 export const scribbleStacks: Project = {
 	id: "scribble-stacks",
 	title: "Scribble Stacks",
 	description: `Built with Swift for iOS and powered by the Firebase API, Scribble Stacks is a collaborative multiplayer drawing game, blending Pictionary and Telephone . Players take turns drawing or phrasing, passing their creations in a cycle, causing the drawing outcome to naturally evolve each round.`,
-	previewMedia: { type: MediaType.video, src: "", alt: "" },
+	previewMedia: {
+		type: MediaType.image,
+		src: ScribbleThumb,
+		alt: "scribble stacks preview",
+		posterSrc: ScribbleThumbPoster,
+		autoplay: true,
+		disable: true,
+	},
 	info: {},
 	pageContent: [
 		{
