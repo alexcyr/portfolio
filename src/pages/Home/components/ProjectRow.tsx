@@ -35,6 +35,7 @@ const DescriptionWrapper = styled.div`
 
 const Title = styled.h3`
 	font-size: ${({ theme }) => theme.text.size.s48};
+	word-break: break-word;
 	margin: 0;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
@@ -99,7 +100,7 @@ const ProjectRowWrapper = styled.div`
 const descriptionHoverStyle = css`
 	${PreviewWrapper} {
 		max-height: 200px;
-		aspect-ratio: 3 / 2;
+		/* aspect-ratio: 3 / 2; */
 		transition-delay: 0.33s;
 	}
 
@@ -135,7 +136,7 @@ const ImagePoster = styled.img`
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
-	const ref = useRef<HTMLDivElement>(null);
+	const ref = useRef<HTMLAnchorElement>(null);
 	const [hovered, setHovered] = useState(false);
 	const { iframeId, setIframeId } = useContext(IframeContext);
 
@@ -169,8 +170,8 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 	}, [id, setIframeId]);
 
 	return (
-		<ProjectRowWrapper ref={ref}>
-			<StyleLink to={`project/${id}`}>
+		<ProjectRowWrapper>
+			<StyleLink to={`project/${id}`} ref={ref}>
 				<TextWrapper>
 					<Title>{title}</Title>
 					<RowWrapper>
