@@ -48,7 +48,7 @@ const MenuWrapper = styled.div<{ isChecked: boolean }>`
 		display: none;
 		position: fixed;
 		inset: 0;
-		height: 100vh;
+		height: 100dvh;
 		width: 100vw;
 		align-items: unset;
 		background: ${theme.color.surface2};

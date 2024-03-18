@@ -24,6 +24,8 @@ import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
 import GSThumb from "assets/video/gamestop/gs-thumb.mp4";
 import GSThumbPoster from "assets/images/gamestop/gs-thumb-poster.jpg";
 
+import AlbumPoster from "assets/images/gamestop/album-poster.jpg";
+
 export const gamestop: Project = {
 	id: "gamestop",
 	title: "GameStop - Web3 and Ecommerce",
@@ -210,6 +212,7 @@ export const gamestop: Project = {
 					src: "https://www.gstop-content.com/ipfs/QmSzmoQCZbQZXdEH5EKnj9MZrT2sCiauVVXLH5ULt4HkYr",
 					alt: "Buck: The Album",
 					caption: "Buck: The Album",
+					posterSrc: AlbumPoster,
 				},
 			],
 		},

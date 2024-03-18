@@ -52,6 +52,10 @@ const LoadIframeButton = styled.button`
 	color: ${({ theme }) => theme.color.primary1};
 	gap: ${({ theme }) => theme.space.s32};
 
+	svg {
+		z-index: 1;
+	}
+
 	span {
 		font-family: ${({ theme }) => theme.text.family.body};
 		font-size: ${({ theme }) => theme.text.size.s16};
@@ -70,14 +74,13 @@ const LoadIframeButton = styled.button`
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: ${({ theme }) => theme.color.primary1};
-		opacity: 0.1;
+		background: ${({ theme }) => theme.color.surface2};
+		opacity: 0.7;
 	}
 
 	&:hover {
 		transition: all 0.25s ease-in-out;
 		&::after {
-			background: ${({ theme }) => theme.color.primary2};
 			transition: all 0.25s ease-in-out;
 		}
 		svg {
@@ -86,11 +89,11 @@ const LoadIframeButton = styled.button`
 		}
 
 		span {
-			transition: all 3s ease-in-out;
+			transition: all 2s ease-in-out;
 			font-size: ${({ theme }) => theme.text.size.s18};
 
 			strong {
-				transition: all 3s ease-in-out;
+				transition: all 2s ease-in-out;
 				font-size: ${({ theme }) => theme.text.size.s32};
 			}
 		}
@@ -102,9 +105,16 @@ const TextWrapper = styled.div`
 	flex-direction: column;
 	text-transform: uppercase;
 	gap: ${({ theme }) => theme.space.s4};
+	z-index: 1;
 `;
 
-export const Iframe = ({ src, alt, preload }: IframeProps) => {
+const IframePoster = styled.img`
+	position: absolute;
+	inset: 0;
+	width: 100%;
+`;
+
+export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
 	const { iframeId, setIframeId } = useContext(IframeContext);
 	const [loaded, setLoaded] = useState(false);
 
@@ -140,6 +150,7 @@ export const Iframe = ({ src, alt, preload }: IframeProps) => {
 							</span>
 							<span>Attn: Can be computer intensive</span>
 						</TextWrapper>
+						{posterSrc && <IframePoster src={posterSrc} />}
 					</LoadIframeButton>
 				)
 			) : null}
