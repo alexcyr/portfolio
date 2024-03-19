@@ -37,6 +37,13 @@ const LoadingWrapper = styled.div`
 	}
 `;
 
+const BackdropBlur = styled.div`
+	position: absolute;
+	inset: 0;
+	backdrop-filter: blur(2px);
+	z-index: 1;
+`;
+
 const LoadIframeButton = styled.button`
 	cursor: pointer;
 	background: transparent;
@@ -53,7 +60,7 @@ const LoadIframeButton = styled.button`
 	gap: ${({ theme }) => theme.space.s32};
 
 	svg {
-		z-index: 1;
+		z-index: 2;
 	}
 
 	span {
@@ -74,7 +81,7 @@ const LoadIframeButton = styled.button`
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: ${({ theme }) => theme.color.surface2};
+		background: #000;
 		opacity: 0.7;
 	}
 
@@ -90,11 +97,11 @@ const LoadIframeButton = styled.button`
 
 		span {
 			transition: all 2s ease-in-out;
-			font-size: ${({ theme }) => theme.text.size.s18};
+			transform: scale(1.05);
 
 			strong {
 				transition: all 2s ease-in-out;
-				font-size: ${({ theme }) => theme.text.size.s32};
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -105,7 +112,7 @@ const TextWrapper = styled.div`
 	flex-direction: column;
 	text-transform: uppercase;
 	gap: ${({ theme }) => theme.space.s4};
-	z-index: 1;
+	z-index: 2;
 `;
 
 const IframePoster = styled.img`
@@ -150,6 +157,7 @@ export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
 							</span>
 							<span>Attn: Can be computer intensive</span>
 						</TextWrapper>
+						<BackdropBlur />
 						{posterSrc && <IframePoster src={posterSrc} />}
 					</LoadIframeButton>
 				)
