@@ -9,14 +9,14 @@ const AboutWrapper = styled.div`
 	align-items: center;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
-        gap: ${({ theme }) => theme.space.s48};
+        gap: ${theme.space.s48};
 
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		flex-direction: column;
-        gap: ${({ theme }) => theme.space.s16};
-        margin-top: ${({ theme }) => theme.space.s16};
+        gap: ${theme.space.s16};
+        margin-top: ${theme.space.s16};
 	`}
 `;
 
@@ -74,7 +74,7 @@ export function About() {
 				<h1>about</h1>
 				<Bio>
 					Welcome to my portfolio site. I graduated from Michigan State with a degree in graphic
-					design. Since then I've worked hard to become a full-stack and video game developer,
+					design. Since then I&apos;ve worked hard to become a full-stack and video game developer,
 					working professionally and on personal projects. Currently based in the Detroit area
 					working remotely for Gamestop on a blockchain project.
 				</Bio>
