@@ -10,6 +10,11 @@ import Block1 from "assets/images/gen-art/block1.webp";
 import Block2 from "assets/images/gen-art/block2.webp";
 import Block3 from "assets/images/gen-art/block3.webp";
 
+import Ebb from "assets/images/gen-art/ebb.jpg";
+import Connections from "assets/images/gen-art/connections.jpg";
+import Shadow from "assets/images/gen-art/shadow.jpg";
+import Blob from "assets/images/gen-art/blob.jpg";
+
 import GenThumbPoster from "assets/images/gen-art/gen-thumb-poster.jpg";
 import GenThumb from "assets/video/gen-art/gen-thumb.mp4";
 
@@ -101,11 +106,13 @@ export const generativeArt: Project = {
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmY9mmMYKrubP2cG6ySXZFpeZbAifNdzdPHTRjEP2spD9s/artifact/index.html?objkt=295121&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "ebb n flow",
+					posterSrc: Ebb,
 				},
 				{
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmXaBZhViDRNCt82ErFv67GoRqSvRdV4TeMzGT6qtaU1cE/artifact/index.html?objkt=354199&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "connections",
+					posterSrc: Connections,
 				},
 			],
 		},
@@ -117,11 +124,13 @@ export const generativeArt: Project = {
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmYZU8tnD9PpQo2PsmLpX69vkquLsB3hW8GeEAZ3DaDhPA/artifact/index.html?objkt=389808&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "shadowmaker",
+					posterSrc: Shadow,
 				},
 				{
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "roy g blob",
+					posterSrc: Blob,
 				},
 			],
 		},
