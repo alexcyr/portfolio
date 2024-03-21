@@ -102,6 +102,10 @@ const descriptionHoverStyle = css`
 		max-height: 200px;
 		/* aspect-ratio: 3 / 2; */
 		transition-delay: 0.33s;
+
+		${({ theme }) => theme.mediaWidth.upToSmall`
+				max-height: 100px;
+		`}	
 	}
 
 	${DescriptionWrapper} {
@@ -130,9 +134,14 @@ const StyleLink = styled(Link)`
 `;
 
 const ImagePoster = styled.img`
-	width: 100%;
-	height: 100%;
+	width: 300px;
+	height: 200px;
 	object-fit: cover;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		max-width: 150px;
+		max-height: 100px;
+	`}
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
