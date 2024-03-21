@@ -17,6 +17,7 @@ const PreviewWrapper = styled.div`
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		max-width: 150px;
+		aspect-ratio: 3 / 2;
 		width: unset;
 	`}
 `;
@@ -100,7 +101,6 @@ const ProjectRowWrapper = styled.div`
 const descriptionHoverStyle = css`
 	${PreviewWrapper} {
 		max-height: 200px;
-		/* aspect-ratio: 3 / 2; */
 		transition-delay: 0.33s;
 
 		${({ theme }) => theme.mediaWidth.upToSmall`
@@ -134,13 +134,19 @@ const StyleLink = styled(Link)`
 `;
 
 const ImagePoster = styled.img`
-	width: 300px;
-	height: 200px;
-	object-fit: cover;
+	/* width: 300px;
+	height: 200px; */
+	/* object-fit: cover; */
+	width: 100%;
+	position: relative;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
+		width: 100%;
 		max-width: 150px;
-		max-height: 100px;
+
+		height: auto;
+		aspect-ratio: 3 / 2;
+		object-fit: contain;
 	`}
 `;
 
