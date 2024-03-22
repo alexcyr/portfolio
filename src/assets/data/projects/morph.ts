@@ -53,6 +53,11 @@ export const morph: Project = {
 			],
 		},
 		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
+		},
+		{
 			type: ContentType.multimedia,
 			size: Size.xs,
 			media: [
@@ -66,9 +71,19 @@ export const morph: Project = {
 			],
 		},
 		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
+		},
+		{
 			type: ContentType.text,
 			text: `Morph demands quick reactions and decision-making, providing a challenging and rapidly replayable adventure. My role in the project involved learning Maya to construct dynamic levels and design vibrant bonus skins for the in-game shop. Crafting user experiences through meticulous testing ensures that Morph, despite its concise development period, delivers an engaging and enjoyable gameplay experience.`,
 			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
 		},
 		{
 			type: ContentType.multimedia,

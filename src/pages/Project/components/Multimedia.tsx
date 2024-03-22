@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Size } from "types/size";
 
-const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: boolean }>`
+const MultimediaWrapper = styled.div<{
+	size: Size;
+	isGrid: boolean;
+	flipGrid: boolean;
+	column: boolean;
+}>`
 	display: flex;
 	align-items: center;
 	gap: ${({ theme }) => theme.space.s16};
@@ -66,6 +71,7 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: bo
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		margin: 16px auto;
 
+		flex-direction: ${({ column }) => (column ? "column" : "row")};
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToMedium`
@@ -73,9 +79,9 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: bo
       `}
 `;
 
-export const Multimedia = ({ media, size, isGrid, flipGrid }: MultiMediaProps) => {
+export const Multimedia = ({ media, size, isGrid, flipGrid, column }: MultiMediaProps) => {
 	return (
-		<MultimediaWrapper size={size} isGrid={isGrid} flipGrid={flipGrid}>
+		<MultimediaWrapper size={size} isGrid={isGrid} flipGrid={flipGrid} column={column}>
 			{media.map((item) => (
 				<ContentMedia key={item.alt} {...item} />
 			))}
