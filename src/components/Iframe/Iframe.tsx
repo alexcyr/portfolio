@@ -19,16 +19,15 @@ const spin = keyframes`
 `;
 
 const LoaderAnim = styled.div`
-  position: absolute;
-  z-index: 1;
-  width: 35%;
-  height: 35%;
-  border: 8px solid ${({ theme }) => theme.color.surface2};
-  border-radius: 50%;
-  border-top: 8px solid ${({ theme }) => theme.color.primary1};
-  animation: ${spin} 2s linear infinite;
-
-`
+	position: absolute;
+	z-index: 1;
+	width: 35%;
+	height: 35%;
+	border: 8px solid ${({ theme }) => theme.color.surface2};
+	border-radius: 50%;
+	border-top: 8px solid ${({ theme }) => theme.color.primary1};
+	animation: ${spin} 2s linear infinite;
+`;
 
 const IframeWindow = styled.iframe`
 	position: absolute;
@@ -49,7 +48,6 @@ const LoadingWrapper = styled.div`
 	justify-content: center;
 	color: ${({ theme }) => theme.color.primary1};
 	font-family: ${({ theme }) => theme.text.family.title};
-
 
 	&::after {
 		content: "";
@@ -112,7 +110,6 @@ const LoadIframeButton = styled.button`
 		background: #000;
 		opacity: 0.7;
 		transition: all 0.25s ease-in-out;
-
 	}
 
 	&:hover {
@@ -166,7 +163,12 @@ export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
 
 	return (
 		<IframeWrapper ref={ref}>
-			{!preload && !loaded && iframeId === alt && <LoadingWrapper><LoaderAnim />Loading</LoadingWrapper>}
+			{!preload && !loaded && iframeId === alt && (
+				<LoadingWrapper>
+					<LoaderAnim />
+					Loading
+				</LoadingWrapper>
+			)}
 			{inView ? (
 				iframeId === alt || preload ? (
 					<IframeWindow

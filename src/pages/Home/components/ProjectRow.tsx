@@ -105,7 +105,7 @@ const descriptionHoverStyle = css`
 
 		${({ theme }) => theme.mediaWidth.upToSmall`
 				max-height: 100px;
-		`}	
+		`}
 	}
 
 	${DescriptionWrapper} {

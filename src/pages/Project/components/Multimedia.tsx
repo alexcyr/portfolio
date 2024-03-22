@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Size } from "types/size";
 
-const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: boolean, column: boolean }>`
+const MultimediaWrapper = styled.div<{
+	size: Size;
+	isGrid: boolean;
+	flipGrid: boolean;
+	column: boolean;
+}>`
 	display: flex;
 	align-items: center;
 	gap: ${({ theme }) => theme.space.s16};
@@ -32,7 +37,6 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: bo
 		}
 	}}
 	margin: 16px auto 48px auto;
-
 
 	${({ isGrid, flipGrid }) =>
 		isGrid
@@ -67,7 +71,7 @@ const MultimediaWrapper = styled.div<{ size: Size; isGrid: boolean; flipGrid: bo
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		margin: 16px auto;
 
-		flex-direction: ${({ column }) => column ? 'column' : 'row'};
+		flex-direction: ${({ column }) => (column ? "column" : "row")};
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToMedium`
