@@ -101,6 +101,7 @@ export const generativeArt: Project = {
 		{
 			type: ContentType.multimedia,
 			size: Size.md,
+			column: true,
 			media: [
 				{
 					type: MediaType.iframe,
@@ -119,6 +120,7 @@ export const generativeArt: Project = {
 		{
 			type: ContentType.multimedia,
 			size: Size.md,
+			column: true,
 			media: [
 				{
 					type: MediaType.iframe,

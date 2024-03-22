@@ -2,7 +2,7 @@ import { PlayIcon } from "components/Icons/Play";
 import { IframeContext } from "pages/Project/Project";
 import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Media as IframeProps } from "types/media";
 
 const IframeWrapper = styled.div`
@@ -10,7 +10,25 @@ const IframeWrapper = styled.div`
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	position: relative;
+	margin: ${({ theme }) => theme.space.s16};
 `;
+
+const spin = keyframes`   
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+const LoaderAnim = styled.div`
+  position: absolute;
+  z-index: 1;
+  width: 35%;
+  height: 35%;
+  border: 8px solid ${({ theme }) => theme.color.surface2};
+  border-radius: 50%;
+  border-top: 8px solid ${({ theme }) => theme.color.primary1};
+  animation: ${spin} 2s linear infinite;
+
+`
 
 const IframeWindow = styled.iframe`
 	position: absolute;
@@ -22,18 +40,23 @@ const IframeWindow = styled.iframe`
 `;
 
 const LoadingWrapper = styled.div`
-	position: absolute;
+	position: relative;
+	width: 100%;
+	height: 100%;
 	inset: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: ${({ theme }) => theme.color.primary1};
+	font-family: ${({ theme }) => theme.text.family.title};
+
 
 	&::after {
 		content: "";
 		position: absolute;
 		inset: 0;
-		background: ${({ theme }) => theme.color.primary1};
-		opacity: 0.1;
+		background: #000;
+		opacity: 0.7;
 	}
 `;
 
@@ -42,6 +65,11 @@ const BackdropBlur = styled.div`
 	inset: 0;
 	backdrop-filter: blur(2px);
 	z-index: 1;
+	transition: all 0.25s ease-in-out;
+
+	&:hover {
+		backdrop-filter: blur(3px);
+	}
 `;
 
 const LoadIframeButton = styled.button`
@@ -83,12 +111,14 @@ const LoadIframeButton = styled.button`
 		inset: 0;
 		background: #000;
 		opacity: 0.7;
+		transition: all 0.25s ease-in-out;
+
 	}
 
 	&:hover {
 		transition: all 0.25s ease-in-out;
 		&::after {
-			transition: all 0.25s ease-in-out;
+			opacity: 0.75;
 		}
 		svg {
 			transition: all 0.15s ease-in-out;
@@ -136,7 +166,7 @@ export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
 
 	return (
 		<IframeWrapper ref={ref}>
-			{!preload && !loaded && iframeId === alt && <LoadingWrapper>Loading</LoadingWrapper>}
+			{!preload && !loaded && iframeId === alt && <LoadingWrapper><LoaderAnim />Loading</LoadingWrapper>}
 			{inView ? (
 				iframeId === alt || preload ? (
 					<IframeWindow

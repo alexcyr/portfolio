@@ -8,5 +8,6 @@ export interface MultiMedia {
 	size: Size;
 	isGrid?: boolean;
 	flipGrid?: boolean;
+	column?: boolean;
 	media: (Media | Video)[];
 }

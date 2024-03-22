@@ -6,12 +6,20 @@ import { Size } from "types/size";
 const TitleLarge = styled.h1`
 	font-size: ${({ theme }) => theme.text.size.s56};
 	word-break: break-word;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		font-size: ${theme.text.size.s36};
+	`}
 `;
 
 const TitleMedium = styled.h2`
 	font-size: ${({ theme }) => theme.text.size.s32};
 	margin-top: ${({ theme }) => theme.space.s72};
 	word-break: break-word;
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		font-size: ${theme.text.size.s24};
+	`}
 `;
 
 const TitleSmall = styled.h3`
