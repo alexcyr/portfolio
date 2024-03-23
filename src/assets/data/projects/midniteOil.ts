@@ -40,7 +40,7 @@ export const midniteOil: Project = {
 	id: "midnite-oil",
 	title: "Midnite Oil Creative - Brand & Print Design",
 	description:
-		"Graphic designer working on delivering impactful marketing and branding assets for high profile clients such as the Detroit Tigers and Dave & Busters, as well as regional/local eateries like Andiamo, Bagger Daves, and Roak Brewing.",
+		"**Graphic designer** working to deliver impactful **marketing** and **branding assets** for high profile clients such as the **Detroit Tigers** and **Dave & Busters**, as well as regional/local eateries like **Andiamo**, **Bagger Daves**, and **Roak Brewing**.",
 	previewMedia: {
 		type: MediaType.image,
 		src: MidniteThumb,
@@ -60,7 +60,7 @@ export const midniteOil: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Graphic designer working on delivering impactful marketing and branding assets for high profile clients such as the Detroit Tigers and Dave & Busters, as well as regional/local eateries like Andiamo, Bagger Daves, and Roak Brewing.",
+			text: "**Graphic designer** working to deliver impactful **marketing** and **branding assets** for high profile clients such as the **Detroit Tigers** and **Dave & Busters**, as well as regional/local eateries like **Andiamo**, **Bagger Daves**, and **Roak Brewing**.",
 			size: Size.lg,
 		},
 		{

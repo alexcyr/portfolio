@@ -27,7 +27,7 @@ export const cogniteLabs: Project = {
 	id: "cognite-labs",
 	title: "Cognite Labs - Web Development & Design",
 	description:
-		"As a frontend developer and designer at Cognite Labs, I specialized in crafting web apps and static pages for businesses spanning local and diverse markets. I played a pivotal role in implementing marketing sales funnels, elevating online presence, and enhancing lead generation. My work highlighted the seamless integration of design and development, delivering impactful digital solutions.",
+		"As a **frontend developer** and **designer** at Cognite Labs, I specialized in crafting **web apps** and **static landing pages** for businesses spanning local and diverse markets. I played a pivotal role in implementing **marketing sales funnels**, elevating **online presence**, and enhancing **lead generation**.",
 	previewMedia: {
 		type: MediaType.image,
 		src: CogniteThumb,
@@ -47,7 +47,7 @@ export const cogniteLabs: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "As a frontend developer and designer at Cognite Labs, I specialized in crafting web apps and static pages for businesses spanning local and diverse markets. I played a pivotal role in implementing marketing sales funnels, elevating online presence, and enhancing lead generation. My work highlighted the seamless integration of design and development, delivering impactful digital solutions.",
+			text: "As a **frontend developer** and **designer** at Cognite Labs, I specialized in crafting **web apps** and **static landing pages** for businesses spanning local and diverse markets. I played a pivotal role in implementing **marketing sales funnels**, elevating **online presence**, and enhancing **lead generation**.",
 			size: Size.lg,
 		},
 		{
@@ -74,6 +74,11 @@ export const cogniteLabs: Project = {
 			size: Size.md,
 		},
 		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
+		},
+		{
 			type: ContentType.multimedia,
 			size: Size.md,
 			media: [
@@ -91,8 +96,13 @@ export const cogniteLabs: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "The design direction of the dashboard needed to reflect and support the goal of creating healthy habits. The main aspects of the dashboard are the daily diary and gratitude journal, a recipes page to find and share healthy meal ideas, and a resources tab to make it easy to find all necessary information regarding their clean eating journey. Built with Ruby",
+			text: "The design direction of the dashboard needed to reflect and support the goal of creating healthy habits. The main aspects of the dashboard are the daily diary and gratitude journal, a recipes page to find and share healthy meal ideas, and a resources tab to make it easy to find all necessary information regarding their clean eating journey.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.sm,
+			content: [],
 		},
 
 		{

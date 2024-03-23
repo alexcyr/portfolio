@@ -17,7 +17,7 @@ export const ford: Project = {
 	id: "ford",
 	title: "Ford Motor Company - Workplace Solutions",
 	description:
-		"Fullstack developer working on internal web applications to help employees throughout their day at work such as building navigation, room booking, and during quarantine built a COVID-19 screening survey with regional localization that supported 83k daily users as they returned to work. All of our apps were made with AngularJS frontends and Java Spring Boot backends.",
+		"**Fullstack developer** building internal web applications with **Angular JS** and **Java Spring Boot** to help employees throughout their day at work such as **building navigation**, **room booking**, and during quarantine built a **COVID-19 screening survey** with regional localization that supported 83k daily users as they returned to work.",
 	previewMedia: {
 		type: MediaType.image,
 		src: FordThumb,
@@ -37,7 +37,7 @@ export const ford: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Fullstack developer working on internal web applications to help employees throughout their day at work such as building navigation, room booking, and during quarantine built a COVID-19 screening survey with regional localization that supported 83k daily users as they returned to work. All of our apps were made with AngularJS frontends and Java Spring Boot backends.",
+			text: "**Fullstack developer** building internal web applications with **Angular JS** and **Java Spring Boot** to help employees throughout their day at work such as **building navigation**, **room booking**, and during quarantine built a **COVID-19 screening survey** with regional localization that supported 83k daily users as they returned to work.",
 			size: Size.lg,
 		},
 		{
@@ -64,7 +64,7 @@ export const ford: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "We built an interactive mapping solution using svg maintenance floorplans as a base, powered by LeafletJs. To make a richer experience, I parsed the svgs, extracting rooms and mapping to known entities, to paint interactive layers on top of the base floorplans. Employees can search for conference rooms or other key landmarks. We piloted this as a large touchscreen in the lobby of our building, and also available to access on the web and on the go.",
+					text: "To help employees navigate unfamiliar buildings, we built an interactive mapping solution powered by LeafletJs, using svg maintenance floorplans as a base. To make for a richer user experience, I built a tool to parse the floorplan svgs, extracting rooms and mapping them to known entities, which would then be used to paint interactive layers on top of the base floorplans. Employees can search for conference rooms or other key landmarks. We piloted this as a large touchscreen in the lobby of our building, and also made it available to access on the web for on the go.",
 					size: Size.md,
 				},
 			],
@@ -93,7 +93,7 @@ export const ford: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "The existing method for booking rooms consisted of checking if rooms were available one by one, so we wanted ease friction by letting employees choose from a list of available rooms. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was no where near scalable for all the building in Ford. Later we added integration with Office 365 so that requests for room availability happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
+					text: "The existing method for booking rooms required employees to use their email client to manually check room availability one room at a time, so we wanted ease friction by letting employees choose from a list of available rooms. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was nowhere near scalable for all the buildings in Ford. Later we added integration with Office 365 so that room availability requests happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
 					size: Size.md,
 				},
 			],
@@ -118,7 +118,7 @@ export const ford: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "While the rest of Ford was shut down at the very beginning of quarantine, our team worked hard to build an attestation survey within two weeks, to help monitor and control the spread of COVID-19 as employees returned back to work. As time went on the survey evolved to support a unique survey for each geographic region, as well as multiple languages within each region with full admin customization and changelog auditing. Our survey serviced 83k users daily and helped to avoid large outbreaks and full shutdowns.",
+			text: "While most of Ford was shutdown at the very beginning of quarantine, our team worked hard to build an attestation survey within two weeks to help monitor and control the spread of COVID-19 as employees returned back to work. Safety and security was the main priority and foundation of the app, which also meant we needed to safely handle the encryption and storage of employee HIPPA info. As time went on the survey evolved to support a unique survey for each geographic region, as well as multiple languages within each region with full admin customization and changelog auditing. Our survey serviced 83k users daily and helped to mitigate outbreaks and avoid full shutdowns.",
 			size: Size.md,
 		},
 		{

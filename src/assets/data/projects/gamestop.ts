@@ -30,7 +30,7 @@ export const gamestop: Project = {
 	id: "gamestop",
 	title: "GameStop - Web3 and Ecommerce",
 	description:
-		"Frontend developer focused on delivering new features for gamestop.com and GameStop mobile app, as well as bootstrapping the GameStop NFT marketplace. Tech stack includes Salesforce Commerce Cloud on the web, react-native for mobile, and react for the nft marketplace.",
+		"**Frontend developer** focused on delivering new features for **gamestop.com** and **GameStop mobile app**, as well as bootstrapping the **GameStop NFT marketplace**. Tech stack includes **Salesforce Commerce Cloud** on the web, **React Native** for mobile, and **React** for the nft marketplace.",
 	previewMedia: {
 		type: MediaType.video,
 		src: GSThumb,
@@ -51,7 +51,7 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Frontend developer focused on delivering new features for gamestop.com and GameStop mobile app, as well as bootstrapping the GameStop NFT marketplace. Tech stack includes Salesforce Commerce Cloud on the web, react-native for mobile, and react for the nft marketplace.",
+			text: "**Frontend developer** focused on delivering new features for **gamestop.com** and **GameStop mobile app**, as well as bootstrapping the **GameStop NFT marketplace**. Tech stack includes **Salesforce Commerce Cloud** on the web, **React Native** for mobile, and **React** for the nft marketplace.",
 			size: Size.lg,
 		},
 		{
@@ -76,7 +76,7 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "As the first frontend hire for the blockchain team, I was involved with development from the beginning, and was tasked with building the teaser site to announce our upcoming NFT marketplace. The main feature of the site is a scrolling animation (akin to Apple landing pages) showcasing a game cartridge and a handheld game system, designed by Syed Ibrahim. I also added a 'dead pixel' easter egg linking to a re-skinned version of the dino runner game, with art I made inspired by a GameStop exclusive Bananya cat plush pillow.",
+			text: "As the initial frontend hire for the blockchain team, I was involved with development from the beginning, and was first tasked with building the teaser site to announce our upcoming NFT marketplace. The main feature of the site is a scrolling animation (akin to Apple landing pages) showcasing a game cartridge and a handheld game system, designed by [Syed Ibrahim](https://www.linkedin.com/in/sy%CE%BEd-ibrahim-a8773533/). The site also features a 'dead pixel' easter-egg linking to a re-skinned version of the dino runner game with art I created inspired by a GameStop exclusive Bananya cat plush pillow.",
 			size: Size.md,
 		},
 		{
@@ -121,7 +121,7 @@ export const gamestop: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper and more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with storybook and styled-components and full dark/light mode support.",
+					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by the Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper and more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with Storybook and styled-components featuring full dark/light mode support.",
 					size: Size.md,
 				},
 			],
@@ -198,9 +198,9 @@ export const gamestop: Project = {
 		{
 			type: ContentType.text,
 			text: `One of most exciting perks of this job was the variety of work I was able to do in this position:  
-- worked in Unity 3D to build a game, showcasing the use of nfts as keys for unlockable assets (see [Buckled In: A Bunny in Space](/project/buckled-in))
-- made background music to enrich a number of GameStops own NFT drops  
-- ghost produced the music and built the interactive elements for The Buck Album which sold out the first night of release (3D art by Emily Switzer)`,
+- Built a game in Unity 3D, showcasing the use of nfts as keys for unlockable assets (see [Buckled In: A Bunny in Space](/project/buckled-in))
+- Made background music to enrich a number of GameStops own NFT drops  
+- Ghost produced the music and built the interactive elements for The Buck Album NFT which sold out the first night of release (3D art by [Emily Switzer](https://www.linkedin.com/in/emily-switzer/))`,
 			size: Size.md,
 		},
 		{
@@ -223,52 +223,46 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. While here I've helped to build initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find items close to them that available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
+			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. In my time I worked on initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find items close to them that available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
 			size: Size.md,
 		},
 		{
-			type: ContentType.multimedia,
+			type: ContentType.section,
 			size: Size.md,
-			media: [
+			content: [
 				{
-					type: MediaType.video,
-					src: GSHeaderVid,
-					alt: "gamestop header new",
-					caption: "Header w/ Hiding Sub-Nav and Rotating Dismissable Banners",
-					autoplay: true,
-					posterSrc: GSHeaderPoster,
+					type: ContentType.multimedia,
+					size: Size.md,
+					media: [
+						{
+							type: MediaType.video,
+							src: GSHeaderVid,
+							alt: "gamestop header new",
+							caption: "Header w/ Hiding Sub-Nav and Rotating Dismissable Banners",
+							autoplay: true,
+							posterSrc: GSHeaderPoster,
+						},
+					],
+				},
+				{
+					type: ContentType.multimedia,
+					size: Size.md,
+					media: [
+						{
+							type: MediaType.image,
+							src: GSShopMyStore,
+							alt: "gamestop shop my store",
+							caption: "Shop My Store - Instore Pickup",
+						},
+						{
+							type: MediaType.image,
+							src: GSSameDay,
+							alt: "gamestop same day delivery",
+							caption: "Same Day Delivery",
+						},
+					],
 				},
 			],
 		},
-		{
-			type: ContentType.multimedia,
-			size: Size.md,
-			media: [
-				{
-					type: MediaType.image,
-					src: GSShopMyStore,
-					alt: "gamestop shop my store",
-					caption: "Shop My Store - In-store Pickup",
-				},
-				{
-					type: MediaType.image,
-					src: GSSameDay,
-					alt: "gamestop same day delivery",
-					caption: "Same Day Delivery",
-				},
-			],
-		},
-		// {
-		// 	type: ContentType.multimedia,
-		// 	size: Size.xs,
-		// 	media: [
-		// 		{
-		// 			type: MediaType.iframe,
-		// 			src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&danger=ignored",
-		// 			alt: "iframe",
-		// 			caption: "optional caption",
-		// 		},
-		// 	],
-		// },
 	],
 };

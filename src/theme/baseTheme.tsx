@@ -42,7 +42,7 @@ export const text: ThemeText = {
 	weight: {
 		light: 300,
 		normal: 400,
-		semi_bold: 600,
+		semibold: 600,
 		bold: 700,
 	},
 };

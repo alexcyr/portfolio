@@ -10,7 +10,6 @@ const IframeWrapper = styled.div`
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	position: relative;
-	margin: ${({ theme }) => theme.space.s16};
 `;
 
 const spin = keyframes`   
@@ -36,6 +35,7 @@ const IframeWindow = styled.iframe`
 	max-height: 100%;
 	aspect-ratio: 1/1;
 	border: none;
+	z-index: 1;
 `;
 
 const LoadingWrapper = styled.div`
@@ -46,7 +46,7 @@ const LoadingWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: ${({ theme }) => theme.color.primary1};
+	color: #fff;
 	font-family: ${({ theme }) => theme.text.family.title};
 
 	&::after {
@@ -82,7 +82,7 @@ const LoadIframeButton = styled.button`
 	justify-content: center;
 	position: absolute;
 	inset: 0;
-	color: ${({ theme }) => theme.color.primary1};
+	color: #fff;
 	gap: ${({ theme }) => theme.space.s32};
 
 	svg {
@@ -148,7 +148,7 @@ const IframePoster = styled.img`
 	width: 100%;
 `;
 
-export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
+export const Iframe = ({ src, alt, posterSrc }: IframeProps) => {
 	const { iframeId, setIframeId } = useContext(IframeContext);
 	const [loaded, setLoaded] = useState(false);
 
@@ -163,14 +163,14 @@ export const Iframe = ({ src, alt, preload, posterSrc }: IframeProps) => {
 
 	return (
 		<IframeWrapper ref={ref}>
-			{!preload && !loaded && iframeId === alt && (
+			{!loaded && iframeId === alt && (
 				<LoadingWrapper>
 					<LoaderAnim />
 					Loading
 				</LoadingWrapper>
 			)}
 			{inView ? (
-				iframeId === alt || preload ? (
+				iframeId === alt ? (
 					<IframeWindow
 						loading="lazy"
 						src={src}

@@ -31,7 +31,7 @@ export interface ThemeText {
 	weight: {
 		light: number;
 		normal: number;
-		semi_bold: number;
+		semibold: number;
 		bold: number;
 	};
 }
