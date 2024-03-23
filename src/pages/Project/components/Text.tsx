@@ -39,6 +39,11 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 		color: ${({ theme }) => theme.color.primary2};
 	}
 
+	strong {
+		letter-spacing: 0px;
+		color: ${({ theme }) => theme.color.primary1};
+	}
+
 	ol,
 	ul {
 		padding-inline-start: 24px;
@@ -52,7 +57,7 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 	a {
 		font-weight: ${({ theme }) => theme.text.weight.semi_bold};
 		color: ${({ theme }) => theme.color.primary1};
-		text-decoration: none;
+		text-decoration: underline;
 		text-decoration-thickness: 2px;
 
 		&:hover {

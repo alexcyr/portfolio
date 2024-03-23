@@ -48,7 +48,7 @@ export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
 	description:
-		"Frontend and mobile app developer/designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
+		"**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on a wide variety of projects and deliver impactful solutions. ",
 	previewMedia: {
 		type: MediaType.image,
 		src: ShrineThumb,
@@ -68,7 +68,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Frontend and mobile app developer/designer for a number of local and national clients. It was exciting to work on a wide variety of projects and deliver impactful solutions. Tech focus includes Swift, React JS, React Native",
+			text: "**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on a wide variety of projects and deliver impactful solutions. ",
 			size: Size.lg,
 		},
 		{
@@ -98,7 +98,7 @@ export const shrine: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "[Freightroll](https://www.freightroll.com/) is an ios app to keep shippers and carriers connected. Using gps tracking and in app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. For this project, I worked closely on this app with a senior ios developer, while also maintaining close contact with the client.",
+					text: "Freightroll is an iOS application to keep shippers and carriers connected. Using GPS tracking and in-app messaging, shippers and carriers are kept up-to-date at all times on the progress of a load. While on this project, I got to work closely with a senior iOS developer, while also maintaining close contact with the client.",
 					size: Size.md,
 				},
 				{
@@ -113,20 +113,20 @@ export const shrine: Project = {
 								{
 									type: MediaType.image,
 									src: FreightImg1,
-									alt: "video description",
-									caption: "optional caption",
+									alt: "Live Shipments",
+									caption: "Live Shipments",
 								},
 								{
 									type: MediaType.image,
 									src: FreightImg2,
-									alt: "video description",
-									caption: "optional caption",
+									alt: "chat",
+									caption: "Chat",
 								},
 								{
 									type: MediaType.image,
 									src: FreightImg3,
-									alt: "video description",
-									caption: "optional caption",
+									alt: "Shipment Detail",
+									caption: "Shipment Detail",
 								},
 							],
 						},
@@ -142,7 +142,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "[Wantify](https://www.wantify.com/) provides the inside scoop for all your local shopping needs. On this project I worked on branding, app design, ios development and front-end development. Wantify consists of a consumer side mobile app, and a merchant side web app. Merchants can post news and deals that can be seen in the app. Consumers can add and message merchants. There were a lot of people involved in this project working on everything from back-end api, sign-in with keycloak, a messaging service, stripe integration, and auto adding users through email invites.",
+			text: "Wantify provides the inside scoop for all your local shopping needs. On this project I worked on branding, app design, iOS development and frontend development. Wantify consists of a consumer side mobile app, and a merchant side web app. Merchants can post news and deals that can be seen in the app. Consumers can add and message merchants. There were a lot of people involved in this project working on everything from back-end api, sign-in with keycloak, a messaging service, stripe integration, and auto adding users through email invites.",
 			size: Size.md,
 		},
 		{
@@ -152,19 +152,19 @@ export const shrine: Project = {
 				{
 					type: MediaType.image,
 					src: WantifyImg1,
-					alt: "video description",
-					caption: "Startup",
+					alt: "Wantify App Login",
+					caption: "Login",
 				},
 				{
 					type: MediaType.image,
 					src: WantifyImg2,
-					alt: "video description",
+					alt: "Wantify List View",
 					caption: "List View",
 				},
 				{
 					type: MediaType.image,
 					src: WantifyImg3,
-					alt: "video description",
+					alt: "Wantify Map View",
 					caption: "Map View",
 				},
 			],
@@ -176,7 +176,7 @@ export const shrine: Project = {
 				{
 					type: MediaType.image,
 					src: WantifyFull,
-					alt: "video description",
+					alt: "Merchant Portal & Store Page",
 					caption: "Merchant Portal & Store Page",
 				},
 			],
@@ -198,7 +198,7 @@ export const shrine: Project = {
 				{
 					type: MediaType.video,
 					src: ShrineMenuVid,
-					alt: "shrine menu pages",
+					alt: "Shrine Menu Pages",
 					posterSrc: ShrineMenuPoster,
 					autoplay: true,
 				},
@@ -211,7 +211,7 @@ export const shrine: Project = {
 				{
 					type: MediaType.video,
 					src: ShrineTransitionVid,
-					alt: "shrine transition ",
+					alt: "Shrine Page Transition",
 					posterSrc: ShrineTransitionPoster,
 					autoplay: true,
 				},
@@ -224,7 +224,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Invision Prototype Designs",
+			text: "Invision Prototype Designs for a marijuana delivery service",
 			size: Size.md,
 		},
 		{
@@ -234,20 +234,20 @@ export const shrine: Project = {
 				{
 					type: MediaType.image,
 					src: BudRunner1,
-					alt: "video description",
-					caption: "List View",
+					alt: "BudRunner Store View",
+					caption: "Store View",
 				},
 				{
 					type: MediaType.image,
 					src: BudRunner2,
-					alt: "video description",
-					caption: "Map View",
+					alt: "BudRunner Product Detail",
+					caption: "Product Detail",
 				},
 				{
 					type: MediaType.image,
 					src: BudRunner3,
-					alt: "video description",
-					caption: "Map View",
+					alt: "BudRunner Checkout",
+					caption: "Checkout",
 				},
 			],
 		},
@@ -258,7 +258,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "UI design and React Native development",
+			text: "UX/UI design and React Native development",
 			size: Size.md,
 		},
 		{
@@ -268,20 +268,20 @@ export const shrine: Project = {
 				{
 					type: MediaType.image,
 					src: PlainSight1,
-					alt: "video description",
+					alt: "Plain Sight List",
 					caption: "List View",
 				},
 				{
 					type: MediaType.image,
 					src: PlainSight2,
-					alt: "video description",
-					caption: "Map View",
+					alt: "Plain Sight Detail",
+					caption: "Location Detail",
 				},
 				{
 					type: MediaType.image,
 					src: PlainSight3,
-					alt: "video description",
-					caption: "Map View",
+					alt: "Plain Sight User",
+					caption: "User Profile",
 				},
 			],
 		},
@@ -292,7 +292,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "We were always encouraged to train and improve ourselves at Shrine. Here are some of the mobile app demos I created while training. ",
+			text: "We were always encouraged to train and improve ourselves at Shrine. Here are some of the mobile app demos I created while training: ",
 			size: Size.md,
 		},
 		{

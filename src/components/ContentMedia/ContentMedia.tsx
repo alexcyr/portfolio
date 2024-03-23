@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Video } from "components/Video/Video";
 import { Iframe } from "components/Iframe/Iframe";
 import { Video as VideoType } from "types/video";
+import Markdown from "react-markdown";
 
 const Image = styled.img`
 	width: 100%;
@@ -74,12 +75,20 @@ const FullscreenWrapper = styled.div`
 	}
 `;
 
-const Caption = styled.span`
+const Caption = styled(Markdown)`
 	font-family: ${({ theme }) => theme.text.family.body};
 	font-size: ${({ theme }) => theme.text.size.s14};
 	font-weight: ${({ theme }) => theme.text.weight.light};
 	color: ${({ theme }) => theme.color.primary1};
 	margin: ${({ theme }) => `${theme.space.s4} 0`};
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: ${({ theme }) => theme.color.primary1};
+	}
 `;
 
 export const ContentMedia = (media: Media | VideoType) => {
@@ -105,12 +114,19 @@ export const ContentMedia = (media: Media | VideoType) => {
 		content = <Iframe {...media} />;
 	}
 
+	const handleMediaClick = () => {
+		if (type !== MediaType.iframe && !disable) {
+			if (fullscreenSrc) {
+				window.open(fullscreenSrc, "_blank");
+			} else {
+				setFullscreen((prev) => !prev);
+			}
+		}
+	};
+
 	return (
 		<ContentMediaWrapper>
-			<ContentWrapper
-				disable={disable}
-				onClick={() => type !== MediaType.iframe && !disable && setFullscreen((prev) => !prev)}
-			>
+			<ContentWrapper disable={disable} onClick={() => handleMediaClick()}>
 				{content}
 				{caption && <Caption>{caption}</Caption>}
 			</ContentWrapper>

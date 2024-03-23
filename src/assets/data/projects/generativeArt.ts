@@ -6,6 +6,8 @@ import { Size } from "types/size";
 import GenArtVid from "assets/video/gen-art/banner.mp4";
 import VidPoster from "assets/images/gen-art/banner-poster.jpg";
 
+import Abstract from "assets/images/gen-art/abstract.jpg";
+
 import Block1 from "assets/images/gen-art/block1.webp";
 import Block2 from "assets/images/gen-art/block2.webp";
 import Block3 from "assets/images/gen-art/block3.webp";
@@ -76,22 +78,45 @@ export const generativeArt: Project = {
 			content: [
 				{
 					type: ContentType.multimedia,
+					size: Size.xs,
+					media: [
+						{
+							type: MediaType.image,
+							src: Abstract,
+							alt: "block gen 1",
+						},
+					],
+				},
+			],
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [
+				{
+					type: ContentType.multimedia,
 					size: Size.sm,
 					media: [
 						{
 							type: MediaType.image,
 							src: Block2,
 							alt: "gen block 2",
-						},
-						{
-							type: MediaType.image,
-							src: Block1,
-							alt: "gen block 1",
+							caption:
+								"[#10](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-20597)",
 						},
 						{
 							type: MediaType.image,
 							src: Block3,
 							alt: "gen block 3",
+							caption:
+								"[#24](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-30439)",
+						},
+						{
+							type: MediaType.image,
+							src: Block1,
+							alt: "gen block 1",
+							caption:
+								"[#38](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-515809)",
 						},
 					],
 				},
@@ -108,12 +133,14 @@ export const generativeArt: Project = {
 					src: "https://assets.objkt.media/file/assets-003/QmY9mmMYKrubP2cG6ySXZFpeZbAifNdzdPHTRjEP2spD9s/artifact/index.html?objkt=295121&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "ebb n flow",
 					posterSrc: Ebb,
+					caption: "Ebb and Flow [[Link]](https://objkt.com/tokens/hicetnunc/295121)",
 				},
 				{
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmXaBZhViDRNCt82ErFv67GoRqSvRdV4TeMzGT6qtaU1cE/artifact/index.html?objkt=354199&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "connections",
 					posterSrc: Connections,
+					caption: "Connections [[Link]](https://objkt.com/tokens/hicetnunc/354199)",
 				},
 			],
 		},
@@ -127,12 +154,14 @@ export const generativeArt: Project = {
 					src: "https://assets.objkt.media/file/assets-003/QmYZU8tnD9PpQo2PsmLpX69vkquLsB3hW8GeEAZ3DaDhPA/artifact/index.html?objkt=389808&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "shadowmaker",
 					posterSrc: Shadow,
+					caption: "Shadowmaker 2.0 [[Link]](https://objkt.com/tokens/hicetnunc/389808)",
 				},
 				{
 					type: MediaType.iframe,
 					src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "roy g blob",
 					posterSrc: Blob,
+					caption: "Roy G. Blob [[Link]](https://objkt.com/tokens/hicetnunc/428869)",
 				},
 			],
 		},

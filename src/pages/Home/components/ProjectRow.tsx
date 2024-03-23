@@ -1,6 +1,7 @@
 import ContentMedia from "components/ContentMedia/ContentMedia";
 import { IframeContext } from "pages/Project/Project";
 import { useContext, useEffect, useRef, useState } from "react";
+import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { Project } from "types/project";
@@ -45,6 +46,7 @@ const Title = styled.h3`
 
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
 		font-size: ${theme.text.size.s24};
+		line-height: 26px;
 	`}
 `;
 
@@ -58,7 +60,7 @@ const RowWrapper = styled.div`
 	`}
 `;
 
-const Description = styled.p`
+const Description = styled(Markdown)`
 	/* max-width: calc(100% - ${PREVIEW_WIDTH}); */
 	flex: 2;
 	overflow: hidden;
@@ -67,6 +69,7 @@ const Description = styled.p`
 	color: ${({ theme }) => theme.color.primary2};
 	line-height: 36px;
 	margin: -4px 0 auto;
+	font-weight: ${({ theme }) => theme.text.weight.light};
 
 	// Truncate text
 	display: -webkit-box;
@@ -74,10 +77,26 @@ const Description = styled.p`
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 
+	p {
+		letter-spacing: 1px;
+		color: ${({ theme }) => theme.color.primary2};
+		margin: 0;
+	}
+
+	strong {
+		letter-spacing: 0px;
+		color: ${({ theme }) => theme.color.primary1};
+	}
+
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		font-size: ${theme.text.size.s16};
 		line-height: 24px;
 		max-width: 600px;
+
+		p {
+		letter-spacing: 0.25px;
+		
+		}
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
