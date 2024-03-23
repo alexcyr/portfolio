@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Video } from "components/Video/Video";
 import { Iframe } from "components/Iframe/Iframe";
 import { Video as VideoType } from "types/video";
+import Markdown from "react-markdown";
 
 const Image = styled.img`
 	width: 100%;
@@ -74,7 +75,7 @@ const FullscreenWrapper = styled.div`
 	}
 `;
 
-const Caption = styled.span`
+const Caption = styled(Markdown)`
 	font-family: ${({ theme }) => theme.text.family.body};
 	font-size: ${({ theme }) => theme.text.size.s14};
 	font-weight: ${({ theme }) => theme.text.weight.light};
