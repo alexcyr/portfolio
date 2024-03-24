@@ -31,7 +31,7 @@ const ContentWrapper = styled.div<{ disable: boolean }>`
 
 	${({ theme }) => theme.flexCenter};
 
-	gap: ${({ theme }) => theme.space.s16};
+	gap: ${({ theme }) => theme.space.s8};
 
 	${({ disable }) =>
 		disable
@@ -42,6 +42,10 @@ const ContentWrapper = styled.div<{ disable: boolean }>`
 		}
 	`
 			: ""}
+`;
+
+const ContentClickWrapper = styled.div`
+	width: 100%;
 `;
 
 const FullscreenWrapper = styled.div`
@@ -85,6 +89,7 @@ const Caption = styled(Markdown)`
 	font-weight: ${({ theme }) => theme.text.weight.light};
 	color: ${({ theme }) => theme.color.primary1};
 	margin: ${({ theme }) => `${theme.space.s4} 0`};
+	text-align: center;
 
 	p {
 		margin: 0;
@@ -130,8 +135,8 @@ export const ContentMedia = (media: Media | VideoType) => {
 
 	return (
 		<ContentMediaWrapper>
-			<ContentWrapper disable={disable} onClick={() => handleMediaClick()}>
-				{content}
+			<ContentWrapper disable={disable}>
+				<ContentClickWrapper onClick={() => handleMediaClick()}>{content}</ContentClickWrapper>
 				{caption && <Caption>{caption}</Caption>}
 			</ContentWrapper>
 
