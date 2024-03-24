@@ -130,13 +130,13 @@ const SocialWrapper = styled.div`
 `;
 
 export const NavBar = () => {
-	const [isChecked, setIsChecked] = useState(false);
+	const [isChecked, setIsChecked] = useState<boolean | null>(null);
 	const { pathname, hash } = useLocation();
 
 	useScrollToAnchor();
 
 	const closeMenu = useCallback(() => {
-		setIsChecked(false);
+		setIsChecked((prev) => (prev === null ? null : false));
 		document.body.style.overflow = "unset";
 	}, []);
 
@@ -169,8 +169,8 @@ export const NavBar = () => {
 					name="menu-toggle"
 					id="menu-toggle"
 					type="checkbox"
-					checked={isChecked}
-					onClick={() => handleClick()}
+					checked={!!isChecked}
+					onChange={() => handleClick()}
 				/>
 
 				<HamburgerToggleIcon isChecked={isChecked} />
