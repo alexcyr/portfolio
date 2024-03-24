@@ -20,6 +20,7 @@ const NavBarWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: unset;
 `;
 
 const StyleLink = styled(Link)`
@@ -27,7 +28,6 @@ const StyleLink = styled(Link)`
 	flex-shrink: 0;
 
 	&:hover {
-		text-decoration: underline;
 		text-decoration-color: ${({ theme }) => theme.color.primary1};
 	}
 `;
@@ -36,6 +36,12 @@ const SiteName = styled.h1`
 	color: ${({ theme }) => theme.color.primary1};
 	font-family: ${({ theme }) => theme.text.family.title};
 	font-size: ${({ theme }) => theme.text.size.s42};
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+		text-decoration-color: ${({ theme }) => theme.color.primary1};
+	}
 `;
 
 const MenuWrapper = styled.div<{ isChecked: boolean }>`
@@ -57,7 +63,7 @@ const MenuWrapper = styled.div<{ isChecked: boolean }>`
 		justify-content: space-between;
 		box-sizing: border-box;
 		padding-top: 36px;
-		z-index: 1;
+		z-index: 10;
 	`}
 
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -75,6 +81,12 @@ const PageLink = styled(StyleLink)`
 	font-weight: 400;
 	padding: ${({ theme }) => theme.text.size.s8};
 	margin-right: ${({ theme }) => theme.text.size.s24};
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 2.5px;
+		text-decoration-color: ${({ theme }) => theme.color.primary1};
+	}
 `;
 
 const IconLink = styled(Link)`

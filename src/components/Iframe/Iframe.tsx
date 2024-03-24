@@ -84,6 +84,7 @@ const LoadIframeButton = styled.button`
 	inset: 0;
 	color: #fff;
 	gap: ${({ theme }) => theme.space.s32};
+	width: 100%;
 
 	svg {
 		z-index: 2;

@@ -110,6 +110,7 @@ const Description = styled(Markdown)`
 	strong {
 		letter-spacing: 0px;
 		color: ${({ theme }) => theme.color.primary1};
+		font-weight: ${({ theme }) => theme.text.weight.semibold};
 	}
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
