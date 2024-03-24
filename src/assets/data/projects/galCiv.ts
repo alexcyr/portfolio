@@ -16,7 +16,7 @@ import Thumb from "assets/images/gal-civ/galciv-thumb.gif";
 export const galCiv: Project = {
 	id: "gal-civ",
 	title: "Galactic Civilizations III: Ship Builder",
-	description: `In collaboration with Stardock game studios, my team and I had the privilege of adapting the ship editor from Galactic Civilizations III for a mobile iPad application as part of our college capstone course. Over a three-month span, my role as a UI designer was centered on refining the shipbuilding process. Key enhancements include highlighting essential elements, clear indicators for attaching parts, and an intuitive touch-based rotate UI, ensuring an optimal and immersive editing experience on the iPad.`,
+	description: `In collaboration with **Stardock game studios**, my team and I had the privilege of adapting the **ship editor** from Galactic Civilizations III for a **mobile iPad application** as part of our **college capstone course**. `,
 	previewMedia: {
 		type: MediaType.image,
 		src: Thumb,
@@ -34,7 +34,7 @@ export const galCiv: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `In collaboration with Stardock game studios, my team and I had the privilege of adapting the ship editor from Galactic Civilizations III for a mobile iPad application as part of our college capstone course. `,
+			text: `In collaboration with **Stardock game studios**, my team and I had the privilege of adapting the **ship editor** from Galactic Civilizations III for a **mobile iPad application** as part of our **college capstone course**. `,
 			size: Size.lg,
 		},
 		{
@@ -51,6 +51,11 @@ export const galCiv: Project = {
 			],
 		},
 		{
+			type: ContentType.text,
+			text: `Team: **Xavier Durand-Hollis** - *Designer & Developer*, **Alex Cyr** - *Designer*, **Mike Ware** - *Designer*, **Michael Dale** - *Artist*, **Christopher Cheaney** - *Developer*, **Sean Heider** - *Developer*`,
+			size: Size.lg,
+		},
+		{
 			type: ContentType.multimedia,
 			size: Size.xs,
 			media: [
@@ -65,6 +70,11 @@ export const galCiv: Project = {
 			type: ContentType.text,
 			text: `Over a three-month span, my role as a UI designer was centered on refining the shipbuilding process. Key enhancements include highlighting essential elements, clear indicators for attaching parts, and an intuitive touch-based rotate UI, ensuring an optimal and immersive editing experience on the iPad.`,
 			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
 		},
 		{
 			type: ContentType.multimedia,

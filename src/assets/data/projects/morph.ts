@@ -18,7 +18,7 @@ import MorphThumb from "assets/video/morph/morph-thumb.mp4";
 export const morph: Project = {
 	id: "morph",
 	title: "Morph",
-	description: `Experience the thrill of Morph, a game where quick thinking and reflexes are paramount. In this 5-week project, race down challenging slopes, collecting coins and morphing between shapes—a ball for rolling, a cone for jumping, a cube for breaking obstacles, and a star for gliding through the air. Dash through hoops and loops, aiming for the fastest time while collecting coins for the highest score.`,
+	description: `Experience the thrill of Morph, a game where **quick thinking** and **reflexes are paramount**. In this **5-week** project, race down challenging slopes, **collecting coins** and **morphing between shapes**—a ball for **rolling**, a cone for **jumping**, a cube for **breaking obstacles**, and a star for **gliding** through the air. Dash through **hoops and loops**, aiming for the **fastest time** while collecting coins for the **highest score**.`,
 	previewMedia: {
 		type: MediaType.video,
 		src: MorphThumb,
@@ -36,7 +36,7 @@ export const morph: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `Experience the thrill of Morph, a game where quick thinking and reflexes are paramount. In this 5-week project, race down challenging slopes, collecting coins and morphing between shapes—a ball for rolling, a cone for jumping, a cube for breaking obstacles, and a star for gliding through the air. Dash through hoops and loops, aiming for the fastest time while collecting coins for the highest score.`,
+			text: `Experience the thrill of Morph, a game where **quick thinking** and **reflexes are paramount**. In this **5-week** project, race down challenging slopes, **collecting coins** and **morphing between shapes**—a ball for **rolling**, a cone for **jumping**, a cube for **breaking obstacles**, and a star for **gliding** through the air. Dash through **hoops and loops**, aiming for the **fastest time** while collecting coins for the **highest score**.`,
 			size: Size.lg,
 		},
 		{
@@ -51,6 +51,11 @@ export const morph: Project = {
 					disable: true,
 				},
 			],
+		},
+		{
+			type: ContentType.text,
+			text: `Team: **Greg Kozma** - *Designer*, **Xavier Durand-Hollis** - *Designer & Developer*, **Anthony Kazyaka** - *Developer*, **Alex Cyr** - *Artist*`,
+			size: Size.lg,
 		},
 		{
 			type: ContentType.section,

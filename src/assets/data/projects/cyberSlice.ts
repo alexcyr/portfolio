@@ -19,7 +19,7 @@ import Thumb from "assets/video/cyber/cyber-thumb.mp4";
 export const cyberSlice: Project = {
 	id: "cyber-slice",
 	title: "Cyber Slice",
-	description: `Whether playing solo or with friends, players tackle 18 holes filled with traps, jumps, teleporters, and diverse obstacles, demanding precision and strategic finesse. In a mere 5 weeks, Cyber Slice took shape as a contemporary miniature golf adventure. In my role as artist and designer, I crafted 3D assets and meticulously determined the flow of each hole and level.`,
+	description: `Whether playing **solo or with friends**, players tackle **18 holes** filled with **traps**, **jumps**, **teleporters**, and **diverse obstacles**, demanding precision and strategic finesse. In a mere **5 weeks**, Cyber Slice took shape as a contemporary **miniature golf adventure**. In my role as **artist** and **designer**, I crafted 3D assets and meticulously determined the flow of each hole and level.`,
 	previewMedia: {
 		type: MediaType.video,
 		src: Thumb,
@@ -37,7 +37,7 @@ export const cyberSlice: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `Whether playing solo or with friends, players tackle 18 holes filled with traps, jumps, teleporters, and diverse obstacles, demanding precision and strategic finesse. In a mere 5 weeks, Cyber Slice took shape as a contemporary miniature golf adventure. In my role as artist and designer, I crafted 3D assets and meticulously determined the flow of each hole and level.`,
+			text: `Whether playing **solo or with friends**, players tackle **18 holes** filled with **traps**, **jumps**, **teleporters**, and **diverse obstacles**, demanding precision and strategic finesse. In a mere **5 weeks**, Cyber Slice took shape as a contemporary **miniature golf adventure**. In my role as **artist** and **designer**, I crafted 3D assets and meticulously determined the flow of each hole and level.`,
 			size: Size.lg,
 		},
 		{
@@ -54,12 +54,17 @@ export const cyberSlice: Project = {
 			],
 		},
 		{
+			type: ContentType.text,
+			text: `Team: **Kyle Ghafari** - *Designer*, **Alex Cyr** - *Designer*, **Michael Ware** - *Artist & Music*, **Jose Sanchez** - *Artist*, **Anthony Kazyaka** - *Developer*, **David Ward** - *Developer*`,
+			size: Size.lg,
+		},
+		{
 			type: ContentType.multimedia,
 			size: Size.sm,
 			media: [
 				{
 					type: MediaType.embed,
-					src: `<iframe src="https://player.vimeo.com/video/65090057?h=578481765a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`,
+					src: `<iframe style="width: 100%;" src="https://player.vimeo.com/video/65090057?h=578481765a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`,
 					alt: "cyber slice trailer",
 				},
 			],

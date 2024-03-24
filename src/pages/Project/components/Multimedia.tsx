@@ -14,6 +14,12 @@ const MultimediaWrapper = styled.div<{
 	gap: ${({ theme }) => theme.space.s16};
 
 	${({ size, theme }) => {
+		if (size === Size.xxs) {
+			return `
+				${theme.pageWidth};
+        		max-width: 400px;
+      		`;
+		}
 		if (size === Size.xs) {
 			return `
 				${theme.pageWidth};

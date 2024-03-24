@@ -20,7 +20,7 @@ import BlackstarThumb from "assets/video/black-star/blackstar-thumb.mp4";
 export const blackStar: Project = {
 	id: "black-star",
 	title: "Black Star",
-	description: `"Black Star" is a prototype for a mobile game built with Unity where players draw cards featuring colored shapes. The objective is to strategically place cards on a grid, creating three-in-a-row sequences of matching colors and shapes, similar to tic-tac-toe. With strategic removal cards and wildcard black stars, the game combines skill and surprise for a dynamic and challenging experience. `,
+	description: `A **mobile game prototype** built with **Unity** where players draw cards featuring colored shapes. The objective is to **strategically place cards** on a grid, creating **three-in-a-row sequences** of matching colors and shapes, similar to **tic-tac-toe**. With **strategic removal cards** and **wildcard black stars**, the game combines skill and surprise for a dynamic and challenging experience. `,
 	previewMedia: {
 		type: MediaType.video,
 		src: BlackstarThumb,
@@ -38,7 +38,7 @@ export const blackStar: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `"Black Star" is a prototype for a mobile game built with Unity where players draw cards featuring colored shapes. The objective is to strategically place cards on a grid, creating three-in-a-row sequences of matching colors and shapes, similar to tic-tac-toe. With strategic removal cards and wildcard black stars, the game combines skill and surprise for a dynamic and challenging experience. `,
+			text: `A **mobile game prototype** built with **Unity** where players draw cards featuring colored shapes. The objective is to **strategically place cards** on a grid, creating **three-in-a-row sequences** of matching colors and shapes, similar to **tic-tac-toe**. With **strategic removal cards** and **wildcard black stars**, the game combines skill and surprise for a dynamic and challenging experience. `,
 			size: Size.lg,
 		},
 		{

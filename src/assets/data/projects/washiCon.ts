@@ -18,7 +18,7 @@ export const washiCon: Project = {
 	id: "washi-con",
 	title: "Washi Con",
 	description:
-		"For four consecutive years (2016-2019), I had the honor of contributing unique illustrations for Washi Con, an anime convention hosted at Eastern Michigan University. Each illustration was crafted for the official event T-shirt, revolving around the convention's mascots: Washi (eagle in Japanese), Mountain, and Eggplant.",
+		"For four consecutive years (**2016 - 2019**), I had the honor of contributing **unique illustrations** for Washi Con, an **anime convention** hosted at **Eastern Michigan University**. Each illustration was crafted for the **official event T-shirt**, revolving around the convention's mascots: **Washi** (eagle in Japanese), **Mountain**, and **Eggplant**.",
 	previewMedia: {
 		type: MediaType.image,
 		src: WashiThumb,
@@ -36,7 +36,7 @@ export const washiCon: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "For four consecutive years (2016-2019), I had the honor of contributing unique illustrations for Washi Con, an anime convention hosted at Eastern Michigan University. Each illustration was crafted for the official event T-shirt, revolving around the convention's mascots: Washi (eagle in Japanese), Mountain, and Eggplant.",
+			text: "For four consecutive years (**2016 - 2019**), I had the honor of contributing **unique illustrations** for Washi Con, an **anime convention** hosted at **Eastern Michigan University**. Each illustration was crafted for the **official event T-shirt**, revolving around the convention's mascots: **Washi** (eagle in Japanese), **Mountain**, and **Eggplant**.",
 			size: Size.lg,
 		},
 		{
@@ -53,9 +53,15 @@ export const washiCon: Project = {
 			],
 		},
 		{
-			type: ContentType.text,
-			text: "The designs were meant to capture the spirit of the convention, blending elements of Japanese culture with the whimsical nature of anime. Through vibrant and imaginative compositions, the illustrations aimed to interest attendees and become a memorable emblem of each Washi Con edition.",
+			type: ContentType.section,
 			size: Size.md,
+			content: [
+				{
+					type: ContentType.text,
+					text: "The designs were meant to capture the spirit of the convention, blending elements of Japanese culture with the whimsical nature of anime. Through vibrant and imaginative compositions, the illustrations aimed to interest attendees and become a memorable emblem of each Washi Con edition.",
+					size: Size.md,
+				},
+			],
 		},
 		{
 			type: ContentType.multimedia,

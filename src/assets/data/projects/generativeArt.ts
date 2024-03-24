@@ -24,7 +24,7 @@ export const generativeArt: Project = {
 	id: "generative-art",
 	title: "Generative Art",
 	description:
-		"Experiments in creating generative art powered by p5.js, where algorithms feel alive as unique visual experiences, blending code and creativity. Explore procedurally generated pieces, dynamic flow fields, and interactive artworks. Each creation is minted as an NFT on the Tezos blockchain.",
+		"Experiments in creating generative art with **p5.js**, and minting as **NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
 	previewMedia: {
 		type: MediaType.video,
 		src: GenThumb,
@@ -44,7 +44,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Experiments in creating generative art powered by p5.js, where algorithms feel alive as unique visual experiences, blending code and creativity. Explore procedurally generated pieces, dynamic flow fields, and interactive artworks. Each creation is minted as an NFT on the Tezos blockchain.",
+			text: "Experiments in creating generative art with **p5.js**, and minting as **NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
 			size: Size.lg,
 		},
 		{
@@ -78,7 +78,7 @@ export const generativeArt: Project = {
 			content: [
 				{
 					type: ContentType.multimedia,
-					size: Size.xs,
+					size: Size.xxs,
 					media: [
 						{
 							type: MediaType.image,
