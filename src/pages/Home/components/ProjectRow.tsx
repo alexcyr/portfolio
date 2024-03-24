@@ -15,12 +15,36 @@ const PreviewWrapper = styled.div`
 	max-height: 0;
 	flex: 1;
 	overflow: hidden;
+	position: relative;
+	aspect-ratio: 3 / 2;
+	width: 100vw;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		max-width: 150px;
-		aspect-ratio: 3 / 2;
-		width: unset;
+		
 	`}
+
+	div {
+		z-index: 1;
+	}
+
+	img {
+		z-index: 0;
+	}
+`;
+
+const RelativePreviewBlock = styled.div`
+	position: relative;
+	display: block;
+	width: 100%;
+	aspect-ratio: 3 / 2;
+`;
+
+const MediaWrapper = styled.div`
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
 `;
 
 const DescriptionWrapper = styled.div`
@@ -157,15 +181,17 @@ const ImagePoster = styled.img`
 	height: 200px; */
 	/* object-fit: cover; */
 	width: 100%;
-	position: relative;
+	position: absolute;
+	height: auto;
+	aspect-ratio: 3 / 2;
+	object-fit: contain;
+	top: 0;
+	left: 0;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		width: 100%;
 		max-width: 150px;
 
-		height: auto;
-		aspect-ratio: 3 / 2;
-		object-fit: contain;
 	`}
 `;
 
@@ -211,10 +237,12 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 					<RowWrapper>
 						{previewMedia && (
 							<PreviewWrapper>
-								{!hovered ? (
-									<ImagePoster src={previewMedia.posterSrc} />
-								) : (
-									<ContentMedia {...previewMedia} />
+								<ImagePoster src={previewMedia.posterSrc} />
+								<RelativePreviewBlock />
+								{hovered && (
+									<MediaWrapper>
+										<ContentMedia {...previewMedia} />
+									</MediaWrapper>
 								)}
 							</PreviewWrapper>
 						)}
