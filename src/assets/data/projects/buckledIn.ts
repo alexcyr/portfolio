@@ -55,7 +55,7 @@ export const buckledIn: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `Team: **Jason Morano** - *Developer*, **Griffin Park** - *Developer*, **Alex Cyr** - *Developer & Music*, **Antoine Bonnin** - *Designer*, **Emily Switzer** - *Artist*, **Annie Nguyen** - *Content Writer*`,
+			text: `Team: **Chris Bell** - *Project Manager*, **Jason Morano** - *Developer*, **Griffin Park** - *Developer*, **Alex Cyr** - *Developer & Music*, **Antoine Bonnin** - *Designer*, **Emily Switzer** - *Artist*, **Annie Nguyen** - *Content Writer*`,
 			size: Size.lg,
 		},
 		{

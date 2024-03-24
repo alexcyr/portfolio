@@ -5,17 +5,31 @@ import NavBar from "components/NavBar/NavBar";
 import { Project } from "pages/Project/Project";
 import { Footer } from "components/Footer/Footer";
 import About from "pages/About/About";
+import styled from "styled-components";
 
+const PageWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+`;
+
+const MainContent = styled.div`
+	flex: 1;
+`;
 export const AppRouter = () => (
 	<BrowserRouter>
-		<NavBar />
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="project/:id" element={<Project />} />
-			<Route path="about" element={<About />} />
-		</Routes>
-		<ScrollToTop />
-		<Footer />
+		<PageWrapper>
+			<NavBar />
+			<MainContent>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="project/:id" element={<Project />} />
+					<Route path="about" element={<About />} />
+				</Routes>
+			</MainContent>
+			<ScrollToTop />
+			<Footer />
+		</PageWrapper>
 	</BrowserRouter>
 );
 

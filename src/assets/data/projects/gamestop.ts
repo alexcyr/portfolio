@@ -28,7 +28,7 @@ import AlbumPoster from "assets/images/gamestop/album-poster.jpg";
 
 export const gamestop: Project = {
 	id: "gamestop",
-	title: "GameStop - Web3 and Ecommerce",
+	title: "GameStop - Web3 & Ecommerce",
 	description:
 		"**Frontend developer** focused on delivering new features for **gamestop.com** and **GameStop mobile app**, as well as bootstrapping the **GameStop NFT marketplace**. Tech stack includes **Salesforce Commerce Cloud** on the web, **React Native** for mobile, and **React** for the nft marketplace.",
 	previewMedia: {
@@ -46,7 +46,7 @@ export const gamestop: Project = {
 	pageContent: [
 		{
 			type: ContentType.title,
-			title: "GameStop - Web3 and Ecommerce",
+			title: "GameStop - Web3 & Ecommerce",
 			size: Size.lg,
 		},
 		{
