@@ -170,7 +170,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `Simply put, "It's a random bunch of blocks. So what?!", but there's also something delicate about the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. Block x Block was minted on fxHash in November 2021, and has 40 unique editions.`,
+			text: `Simply put, "It's a random bunch of blocks. So what?!", but there's also a delicate balance in the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. Block x Block was minted on fxHash in November 2021, and has 40 unique editions.`,
 			size: Size.md,
 		},
 		{
