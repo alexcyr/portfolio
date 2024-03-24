@@ -94,7 +94,7 @@ const placeholder = keyframes`
       }
 `;
 
-const StyledSvg = styled.svg<{ isChecked: boolean }>`
+const StyledSvg = styled.svg<{ isChecked: boolean | null }>`
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -106,7 +106,9 @@ const StyledSvg = styled.svg<{ isChecked: boolean }>`
 		fill: ${({ theme }) => theme.color.primary1};
 
 		${({ isChecked }) =>
-			isChecked
+			isChecked === null
+				? ""
+				: isChecked
 				? css`
 						animation: ${middleRow} 0.25s linear forwards;
 				  `
@@ -117,7 +119,9 @@ const StyledSvg = styled.svg<{ isChecked: boolean }>`
 
 	& rect:first-child {
 		${({ isChecked }) =>
-			isChecked
+			isChecked === null
+				? ""
+				: isChecked
 				? css`
 						animation: ${topRow} 0.25s linear forwards;
 				  `
@@ -128,7 +132,9 @@ const StyledSvg = styled.svg<{ isChecked: boolean }>`
 
 	& rect:last-child {
 		${({ isChecked }) =>
-			isChecked
+			isChecked === null
+				? ""
+				: isChecked
 				? css`
 						animation: ${bottomRow} 0.25s linear forwards;
 				  `
