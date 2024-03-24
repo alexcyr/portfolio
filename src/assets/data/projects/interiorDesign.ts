@@ -20,7 +20,7 @@ export const interiorDesign: Project = {
 	id: "interior-design",
 	title: "interiordesignideasforho.me",
 	description:
-		"Embarking on the mission to turn an idea into a passive income stream through affiliate marketing led to the creation of interiordesignideasforho.me. This unique website offers an immersive exploration of interior design styles, seamlessly connecting users with carefully selected products from Wayfair through affiliate links.",
+		"Embarking on the mission to turn an idea into a **passive income** stream through **affiliate marketing** led to the creation of interiordesignideasforho.me. This unique website offers an **immersive exploration** of **interior design styles**, seamlessly connecting users with carefully selected products from **Wayfair** through **affiliate links**.",
 	previewMedia: {
 		type: MediaType.video,
 		src: InteriorThumb,
@@ -41,7 +41,7 @@ export const interiorDesign: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Embarking on the mission to turn an idea into a passive income stream through affiliate marketing led to the creation of interiordesignideasforho.me. This unique website offers an immersive exploration of interior design styles, seamlessly connecting users with carefully selected products from Wayfair through affiliate links.",
+			text: "Embarking on the mission to turn an idea into a **passive income** stream through **affiliate marketing** led to the creation of interiordesignideasforho.me. This unique website offers an **immersive exploration** of **interior design styles**, seamlessly connecting users with carefully selected products from **Wayfair** through **affiliate links**.",
 			size: Size.lg,
 		},
 		{
@@ -83,7 +83,7 @@ export const interiorDesign: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Establishing the rooms with hoverable items presented an intriguing challenge, defining the boundaries when hovering and easily updating product information and attributes. To address this, an editor mode was developed, offering a solution that involves drawing polygonal shapes to outline active regions on items within images. This editor not only facilitates the easy management of item data but also leverages Firebase for storing and retrieving relevant information.",
+			text: "Creating the rooms with hoverable items presented an intriguing challenge. Each product needed to have defined boundaries when hovering and easily updated product information and attributes. To address this, an editor tool was developed, offering a solution that involves drawing polygonal shapes to outline active regions on items within images. This editor not only facilitates the easy management of item data, but also leverages Firebase for storing and retrieving relevant information.",
 			size: Size.md,
 		},
 		{

@@ -75,6 +75,10 @@ const FullscreenWrapper = styled.div`
 	}
 `;
 
+const Embed = styled.div`
+	width: 100%;
+`;
+
 const Caption = styled(Markdown)`
 	font-family: ${({ theme }) => theme.text.family.body};
 	font-size: ${({ theme }) => theme.text.size.s14};
@@ -109,7 +113,7 @@ export const ContentMedia = (media: Media | VideoType) => {
 	} else if (type === MediaType.video) {
 		content = <Video {...media} />;
 	} else if (type === MediaType.embed) {
-		content = <div dangerouslySetInnerHTML={{ __html: src }} />;
+		content = <Embed dangerouslySetInnerHTML={{ __html: src }} />;
 	} else {
 		content = <Iframe {...media} />;
 	}

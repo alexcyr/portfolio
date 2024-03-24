@@ -204,6 +204,11 @@ export const gamestop: Project = {
 			size: Size.md,
 		},
 		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
+		},
+		{
 			type: ContentType.multimedia,
 			size: Size.xs,
 			media: [

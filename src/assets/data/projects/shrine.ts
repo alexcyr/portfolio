@@ -48,7 +48,7 @@ export const shrine: Project = {
 	id: "shrine",
 	title: "Shrine Development - Web & App Dev Studio",
 	description:
-		"**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on a wide variety of projects and deliver impactful solutions. ",
+		"**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on such a wide variety of projects and deliver creative solutions.",
 	previewMedia: {
 		type: MediaType.image,
 		src: ShrineThumb,
@@ -68,7 +68,7 @@ export const shrine: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on a wide variety of projects and deliver impactful solutions. ",
+			text: "**Frontend** and **mobile app developer/designer** for a number of local and national clients, working with tech such as **Swift iOS**, **React**, and **React Native**. It was exciting to work on such a wide variety of projects and deliver creative solutions.",
 			size: Size.lg,
 		},
 		{

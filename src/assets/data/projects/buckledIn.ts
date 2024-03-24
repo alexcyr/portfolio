@@ -19,8 +19,7 @@ import BuckThumb from "assets/video/buck/buck-thumb.mp4";
 export const buckledIn: Project = {
 	id: "buckled-in",
 	title: "Buckled In: A Bunny in Space",
-	description:
-		'In "Buckled In: A Bunny in Space," I was one of three team members working on a unique project highlighting the potential of digital ownership in gaming. My multifaceted role included creating collectible power-ups, implementing special effects particles, designing sound systems, crafting UI menus, and developing a system for selecting and swapping sprites. These sprites, representing purchasable NFT character outfits, were available on our dedicated marketplace.',
+	description: `An **endless runner game** featuring **Buck the Bunny** built for **GameStop NFT Marketplace** to explore the **utility and potential** of **digital ownership** in gaming. Run, jump, and power up to collect as many coins as possible for as long as you can.`,
 	previewMedia: {
 		type: MediaType.video,
 		src: BuckThumb,
@@ -38,7 +37,7 @@ export const buckledIn: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: 'In "Buckled In: A Bunny in Space," I was one of three team members working on a unique project highlighting the potential of digital ownership in gaming.',
+			text: "An **endless runner game** featuring **Buck the Bunny** built for **GameStop NFT Marketplace** to explore the **utility and potential** of **digital ownership** in gaming. Run, jump, and power up to collect as many coins as possible for as long as you can.",
 			size: Size.lg,
 		},
 		{
@@ -53,6 +52,11 @@ export const buckledIn: Project = {
 					disable: true,
 				},
 			],
+		},
+		{
+			type: ContentType.text,
+			text: `Team: **Jason Morano** - *Developer*, **Griffin Park** - *Developer*, **Alex Cyr** - *Developer & Music*, **Antoine Bonnin** - *Designer*, **Emily Switzer** - *Artist*, **Annie Nguyen** - *Content Writer*`,
+			size: Size.lg,
 		},
 		{
 			type: ContentType.multimedia,
@@ -70,8 +74,13 @@ export const buckledIn: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "My multifaceted role included creating collectible power-ups, implementing special effects particles, designing sound systems, crafting UI menus, and developing a system for selecting and swapping sprites. These sprites, representing purchasable NFT character outfits, were available on our dedicated marketplace.",
+			text: "My multifaceted role included creating collectible power-ups, implementing special effects particles, music and sound systems, crafting UI menus, and developing a system for selecting and swapping sprites. These sprites, representing purchasable NFT character outfits, were available on our dedicated marketplace.",
 			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
 		},
 		// {
 		// 	type: ContentType.text,
@@ -95,6 +104,11 @@ export const buckledIn: Project = {
 			type: ContentType.text,
 			text: `Despite work being halted on the game, our team's efforts made a substantial impact, resulting in more than 60 ETH in primary sales for GameStop through the sale of in-game assets.`,
 			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [],
 		},
 		{
 			type: ContentType.multimedia,
