@@ -74,9 +74,9 @@ export function About() {
 				<h1>about</h1>
 				<Bio>
 					Welcome to my portfolio site. I graduated from Michigan State with a degree in graphic
-					design. Since then I&apos;ve worked hard to become a full-stack and video game developer,
+					design. Since then I&apos;ve worked hard to become a fullstack and video game developer,
 					working professionally and on personal projects. Currently based in the Detroit area
-					working remotely for Gamestop on a blockchain project.
+					working remotely for GameStop.
 				</Bio>
 				<Bio>
 					Email: <a href="mailto:cyr.alexander@gmail.com">cyr.alexander@gmail.com</a>

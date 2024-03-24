@@ -41,7 +41,7 @@ const webpackConfig = (env): Configuration => ({
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./public/index.html",
+			template: "./src/index.html",
 		}),
 		new webpack.DefinePlugin({
 			"process.env.PRODUCTION": env.production || !env.development,
@@ -51,7 +51,7 @@ const webpackConfig = (env): Configuration => ({
 		new ForkTsCheckerWebpackPlugin(),
 		new ESLintPlugin({ files: "./src/**/*.{ts,tsx,js,jsx}" }),
 		new CopyPlugin({
-			patterns: [{ from: "public", to: "dist" }],
+			patterns: [{ from: "public", to: "" }],
 		}),
 	],
 	devServer,
