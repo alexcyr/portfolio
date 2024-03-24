@@ -24,7 +24,7 @@ export const generativeArt: Project = {
 	id: "generative-art",
 	title: "Generative Art",
 	description:
-		"Experiments in creating generative art with **p5.js**, and minting as **NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
+		"Experiments in **creating generative art** with **p5.js** and **minting NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
 	previewMedia: {
 		type: MediaType.video,
 		src: GenThumb,
@@ -44,7 +44,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Experiments in creating generative art with **p5.js**, and minting as **NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
+			text: "Experiments in **creating generative art** with **p5.js** and **minting NFTs** on the **Tezos blockchain**. Explore **procedurally generated** pieces, **dynamic flow fields**, and **interactive artworks**. Algorithms feel alive as organic visual experiences, blending code and creativity. ",
 			size: Size.lg,
 		},
 		{
@@ -62,67 +62,37 @@ export const generativeArt: Project = {
 				},
 			],
 		},
+
 		{
 			type: ContentType.title,
-			title: "Deterministic",
+			title: "The Nature of Code",
 			size: Size.md,
 		},
 		{
 			type: ContentType.text,
-			text: "Experiments in creating generative art powered by p5.js, where algorithms feel alive as unique visual experiences, blending code and creativity. Explore procedurally generated pieces, dynamic flow fields, and interactive artworks. Each creation is minted as an NFT on the Tezos blockchain.",
+			text: "An incredibly exciting youtube series by Daniel Shiffman aka The Coding Train, [The Nature of Code](https://www.youtube.com/watch?v=70MQ-FugwbI) explores coding representations of natural phenomena and I can't recommend enough. What fascinates me most about generative art is how lively and organic art can feel from something that is rigidly procedural and directive.",
+			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.sm,
+			content: [],
+		},
+		{
+			type: ContentType.text,
+			text: `These projects I've created offer unique energetic visual experiences and interactivity: 
+- **Ebb and Flow** features vibrant flocking patterns generated within a six-layer Perlin noise flow field
+- **Connections** celebrates community growth through swirling particles each representing Twitter followers
+- **Shadowmaker 2.0** allows users to manipulate dynamic shadows
+- **Roy G. Blob** provides interactive control over RGB color blobs
+`,
 			size: Size.md,
 		},
 		{
 			type: ContentType.section,
 			size: Size.md,
-			content: [
-				{
-					type: ContentType.multimedia,
-					size: Size.xxs,
-					media: [
-						{
-							type: MediaType.image,
-							src: Abstract,
-							alt: "block gen 1",
-						},
-					],
-				},
-			],
+			content: [],
 		},
-		{
-			type: ContentType.section,
-			size: Size.md,
-			content: [
-				{
-					type: ContentType.multimedia,
-					size: Size.sm,
-					media: [
-						{
-							type: MediaType.image,
-							src: Block2,
-							alt: "gen block 2",
-							caption:
-								"[#10](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-20597)",
-						},
-						{
-							type: MediaType.image,
-							src: Block3,
-							alt: "gen block 3",
-							caption:
-								"[#24](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-30439)",
-						},
-						{
-							type: MediaType.image,
-							src: Block1,
-							alt: "gen block 1",
-							caption:
-								"[#38](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-515809)",
-						},
-					],
-				},
-			],
-		},
-
 		{
 			type: ContentType.multimedia,
 			size: Size.md,
@@ -161,7 +131,79 @@ export const generativeArt: Project = {
 					src: "https://assets.objkt.media/file/assets-003/QmVvvWaUYJf4arvTrmrSDxdHaTd7DZfpHCKmHdJRet75KE/artifact/index.html?objkt=428869&creator=tz1irpd3STXLP7PYLJz9xhS77vSYzHiyxSDA&viewer=null&danger=ignored",
 					alt: "roy g blob",
 					posterSrc: Blob,
-					caption: "Roy G. Blob [[Link]](https://objkt.com/tokens/hicetnunc/428869)",
+					caption: "Roy G. Blob (WASD) [[Link]](https://objkt.com/tokens/hicetnunc/428869)",
+				},
+			],
+		},
+		{
+			type: ContentType.title,
+			title: "Block x Block",
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: "While learning about p5.js, I soon discovered the style of long form generative art, made popular by NFT sites such as Art Blocks. There is an art to crafting a single chunk of code that can generate an an entire collection of thematically similar yet distinctly unique art pieces.",
+			size: Size.md,
+		},
+		{
+			type: ContentType.text,
+			text: "Around the same time I was getting into generative art, I was also playing around with MagicaVoxel making 3D voxel art. I developed of style of creating 2D art from 3D blocks, which then evolved to take on a more abstract feel. This next piece is the source of my inspiration for Block x Block:",
+			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [
+				{
+					type: ContentType.multimedia,
+					size: Size.xxs,
+					media: [
+						{
+							type: MediaType.image,
+							src: Abstract,
+							alt: "abstract block gen 1",
+							caption: "Handmade block by block in MagicaVoxel",
+						},
+					],
+				},
+			],
+		},
+		{
+			type: ContentType.text,
+			text: `Simply put, "It's a random bunch of blocks. So what?!", but there's also something delicate about the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. Block x Block was minted on fxHash in November 2021, and has 40 unique editions.`,
+			size: Size.md,
+		},
+		{
+			type: ContentType.section,
+			size: Size.md,
+			content: [
+				{
+					type: ContentType.multimedia,
+					size: Size.sm,
+					isGrid: true,
+					media: [
+						{
+							type: MediaType.image,
+							src: Block2,
+							alt: "gen block 2",
+							caption:
+								"[#10](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-20597)",
+						},
+						{
+							type: MediaType.image,
+							src: Block1,
+							alt: "gen block 1",
+							caption:
+								"[#38](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-515809)",
+						},
+						{
+							type: MediaType.image,
+							src: Block3,
+							alt: "gen block 3",
+							caption:
+								"[#24](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-30439)",
+						},
+					],
 				},
 			],
 		},

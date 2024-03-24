@@ -18,7 +18,7 @@ const MultimediaWrapper = styled.div<{
 			return `
 				${theme.pageWidth};
         		max-width: 400px;
-      		`;
+      `;
 		}
 		if (size === Size.xs) {
 			return `
@@ -74,7 +74,8 @@ const MultimediaWrapper = styled.div<{
 `
 			: ""}
 
-	${({ theme }) => theme.mediaWidth.upToSmall`
+	${({ theme, size }) => theme.mediaWidth.upToSmall`
+		${size === Size.xxs ? "max-width: 80%;" : ""}
 		margin: 16px auto;
 
 		flex-direction: ${({ column }) => (column ? "column" : "row")};
