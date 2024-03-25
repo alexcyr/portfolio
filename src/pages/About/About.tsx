@@ -7,6 +7,7 @@ const AboutWrapper = styled.div`
 	display: flex;
 	gap: ${({ theme }) => theme.space.s72};
 	align-items: center;
+	justify-content: center;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
         gap: ${theme.space.s48};

@@ -16,12 +16,14 @@ const STRINGS = {
 };
 
 const NavBarWrapper = styled.div`
+	display: block;
+`;
+
+const NavBarInnerWrapper = styled.div`
 	${({ theme }) => theme.pageWidth};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	box-sizing: border-box;
 `;
 
 const StyleLink = styled(Link)`
@@ -173,47 +175,49 @@ export const NavBar = () => {
 
 	return (
 		<NavBarWrapper>
-			<StyleLink to="/">
-				<SiteName>{STRINGS.siteName}</SiteName>
-			</StyleLink>
+			<NavBarInnerWrapper>
+				<StyleLink to="/">
+					<SiteName>{STRINGS.siteName}</SiteName>
+				</StyleLink>
 
-			<MenuToggleLabel htmlFor="menu-toggle">
-				<Checkbox
-					name="menu-toggle"
-					id="menu-toggle"
-					type="checkbox"
-					checked={!!isChecked}
-					onChange={() => handleClick()}
-				/>
+				<MenuToggleLabel htmlFor="menu-toggle">
+					<Checkbox
+						name="menu-toggle"
+						id="menu-toggle"
+						type="checkbox"
+						checked={!!isChecked}
+						onChange={() => handleClick()}
+					/>
 
-				<HamburgerToggleIcon isChecked={isChecked} />
-			</MenuToggleLabel>
+					<HamburgerToggleIcon isChecked={isChecked} />
+				</MenuToggleLabel>
 
-			<MenuWrapper isChecked={isChecked}>
-				<LinksWrapper>
-					<HoverMenu>
-						<PageLink to="/" onClick={() => closeMenu()}>
-							{STRINGS.work}
-						</PageLink>
-					</HoverMenu>
-					<PageLink to={`/${STRINGS.about}`}>{STRINGS.about}</PageLink>
-				</LinksWrapper>
-				<RowWrapper>
-					<SocialWrapper>
-						<IconLink
-							to="https://www.linkedin.com/in/alexander-cyr/"
-							target="blank"
-							title="LinkedIn"
-						>
-							<LinkedInIcon />
-						</IconLink>
-						<IconLink to="https://github.com/alexcyr" target="blank" title="Github">
-							<GithubIcon />
-						</IconLink>
-					</SocialWrapper>
-					<ThemeToggle />
-				</RowWrapper>
-			</MenuWrapper>
+				<MenuWrapper isChecked={isChecked}>
+					<LinksWrapper>
+						<HoverMenu>
+							<PageLink to="/" onClick={() => closeMenu()}>
+								{STRINGS.work}
+							</PageLink>
+						</HoverMenu>
+						<PageLink to={`/${STRINGS.about}`}>{STRINGS.about}</PageLink>
+					</LinksWrapper>
+					<RowWrapper>
+						<SocialWrapper>
+							<IconLink
+								to="https://www.linkedin.com/in/alexander-cyr/"
+								target="blank"
+								title="LinkedIn"
+							>
+								<LinkedInIcon />
+							</IconLink>
+							<IconLink to="https://github.com/alexcyr" target="blank" title="Github">
+								<GithubIcon />
+							</IconLink>
+						</SocialWrapper>
+						<ThemeToggle />
+					</RowWrapper>
+				</MenuWrapper>
+			</NavBarInnerWrapper>
 		</NavBarWrapper>
 	);
 };
