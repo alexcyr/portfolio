@@ -109,7 +109,7 @@ const MenuToggleLabel = styled.label`
 	width: 32px;
 	height: 32px;
 	position: relative;
-	z-index: 2;
+	z-index: 11;
 	display: none;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
