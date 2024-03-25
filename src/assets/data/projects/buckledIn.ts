@@ -8,7 +8,7 @@ import BuckBuy from "assets/video/buck/buck-buy.mp4";
 import BuckBuyPoster from "assets/images/buck/buy-poster.jpg";
 
 import BuckCoin from "assets/video/buck/buck-coin-wall.mp4";
-import BuckCoinPoster from "assets/images/buck/buck-coin-wall-poster.jpeg";
+import BuckCoinPoster from "assets/images/buck/buck-coin-wall-poster.jpg";
 
 import BuckFlip from "assets/video/buck/buck-flip.mp4";
 import BuckFlipPoster from "assets/images/buck/flip-poster.jpg";
