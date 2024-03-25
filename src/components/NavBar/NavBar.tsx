@@ -20,7 +20,8 @@ const NavBarWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: unset;
+	width: 100%;
+	box-sizing: border-box;
 `;
 
 const StyleLink = styled(Link)`
