@@ -65,6 +65,26 @@ const StyledText = styled(Markdown)<{ size: Size }>`
 			text-decoration: underline;
 		}
 	}
+
+	${({ theme, size }) => theme.mediaWidth.upToSmall`
+		${
+			size === Size.md
+				? `
+		font-size: ${theme.text.size.s16};
+		line-height: ${theme.space.s24};
+		`
+				: ""
+		}
+
+		${
+			size === Size.lg
+				? `
+		font-size: 24px;
+		line-height: ${theme.space.s36};
+		`
+				: ""
+		}
+	`}
 `;
 
 export const Text = ({ text, size }: TextProps) => {
