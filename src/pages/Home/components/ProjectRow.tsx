@@ -64,6 +64,12 @@ const Title = styled.h3`
 	word-break: break-word;
 	margin: 0;
 
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		text-decoration-thickness: 4px;
+	}
+
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		font-size: ${theme.text.size.s32};
 	`}
@@ -71,16 +77,6 @@ const Title = styled.h3`
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
 		font-size: ${theme.text.size.s24};
 		line-height: 26px;
-	`}
-`;
-
-const RowWrapper = styled.div`
-	display: flex;
-	gap: ${({ theme }) => theme.space.s32};
-	margin-top: ${({ theme }) => theme.space.s16};
-
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		gap: ${theme.space.s16};
 	`}
 `;
 
@@ -162,7 +158,6 @@ const StyleLink = styled(Link)`
 	text-decoration: none;
 	outline: none;
 
-	&:hover,
 	&:focus {
 		${descriptionHoverStyle}
 
@@ -196,8 +191,26 @@ const ImagePoster = styled.img`
 	`}
 `;
 
+const RowWrapper = styled.div<{ hovered: boolean }>`
+	display: flex;
+	gap: ${({ theme }) => theme.space.s32};
+	margin-top: ${({ theme }) => theme.space.s16};
+
+	${({ hovered }) =>
+		hovered
+			? `
+		${descriptionHoverStyle}
+
+	`
+			: ""};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		gap: ${theme.space.s16};
+	`}
+`;
+
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
-	const ref = useRef<HTMLAnchorElement>(null);
+	const ref = useRef<HTMLDivElement>(null);
 	const [hovered, setHovered] = useState(false);
 	const { iframeId, setIframeId } = useContext(IframeContext);
 
@@ -232,10 +245,10 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 
 	return (
 		<ProjectRowWrapper>
-			<StyleLink to={`project/${id}`} ref={ref}>
+			<StyleLink to={`project/${id}`}>
 				<TextWrapper>
-					<Title>{title}</Title>
-					<RowWrapper>
+					<Title ref={ref}>{title}</Title>
+					<RowWrapper hovered={hovered}>
 						{previewMedia && (
 							<PreviewWrapper>
 								<ImagePoster src={previewMedia.posterSrc} />
