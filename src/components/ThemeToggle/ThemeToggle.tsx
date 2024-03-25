@@ -15,7 +15,8 @@ const StyledButton = styled.button`
 	flex-shrink: 0;
 	margin-left: 4px;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		outline: 1px solid ${({ theme }) => theme.color.primary1};
 	}
 `;
