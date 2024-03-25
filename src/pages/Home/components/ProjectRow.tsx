@@ -65,7 +65,8 @@ const Title = styled.h3`
 	margin: 0;
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		text-decoration: underline;
 		text-decoration-thickness: 4px;
 	}
@@ -169,6 +170,7 @@ const StyleLink = styled(Link)`
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		${descriptionHoverStyle}
+		
 	`}
 `;
 
@@ -210,7 +212,7 @@ const RowWrapper = styled.div<{ hovered: boolean }>`
 `;
 
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
-	const ref = useRef<HTMLDivElement>(null);
+	const headerRef = useRef<HTMLDivElement>(null);
 	const [hovered, setHovered] = useState(false);
 	const { iframeId, setIframeId } = useContext(IframeContext);
 
@@ -221,7 +223,7 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 	}, [iframeId, id]);
 
 	useEffect(() => {
-		const current = ref.current;
+		const current = headerRef.current;
 		if (current) {
 			const onMouseEnter = () => setHovered(true);
 			const onMouseLeave = () => setHovered(false);
@@ -244,10 +246,10 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 	}, [id, setIframeId]);
 
 	return (
-		<ProjectRowWrapper>
+		<ProjectRowWrapper ref={window.innerWidth <= 768 ? headerRef : null}>
 			<StyleLink to={`project/${id}`}>
 				<TextWrapper>
-					<Title ref={ref}>{title}</Title>
+					<Title ref={window.innerWidth > 768 ? headerRef : null}>{title}</Title>
 					<RowWrapper hovered={hovered}>
 						{previewMedia && (
 							<PreviewWrapper>
