@@ -93,7 +93,7 @@ export const ford: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "The existing method for booking rooms required employees to use their email client to manually check room availability one room at a time, so we wanted ease friction by letting employees choose from a list of available rooms. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was nowhere near scalable for all the buildings in Ford. Later we added integration with Office 365 so that room availability requests happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
+					text: "The existing method for booking rooms was cumbersome and required employees to use their email client to manually check room availability one room at a time, so we set out to ease friction by creating a tool to make booking easier. Our first solution was to run a processor to fetch room availability and book rooms on behalf of users. This worked as an MVP, but was nowhere near scalable for all the buildings in Ford. Later we added integration with Office 365 so that room availability requests happened from an employee's client as needed, and had up-to-date availability status. The added benefit was that the bookings were now generated and owned by the employee.",
 					size: Size.md,
 				},
 			],
