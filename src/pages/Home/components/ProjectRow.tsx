@@ -63,12 +63,7 @@ const Title = styled.h3`
 	font-size: ${({ theme }) => theme.text.size.s48};
 	word-break: break-word;
 	margin: 0;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-		text-decoration-thickness: 4px;
-	}
+	pointer-events: auto;
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		font-size: ${theme.text.size.s32};
@@ -77,6 +72,16 @@ const Title = styled.h3`
 	${({ theme }) => theme.mediaWidth.upToExtraSmall`
 		font-size: ${theme.text.size.s24};
 		line-height: 26px;
+	`}
+`;
+
+const RowWrapper = styled.div`
+	display: flex;
+	gap: ${({ theme }) => theme.space.s32};
+	margin-top: ${({ theme }) => theme.space.s16};
+
+	${({ theme }) => theme.mediaWidth.upToSmall`
+		gap: ${theme.space.s16};
 	`}
 `;
 
@@ -157,7 +162,9 @@ const descriptionHoverStyle = css`
 const StyleLink = styled(Link)`
 	text-decoration: none;
 	outline: none;
+	pointer-events: none;
 
+	&:hover,
 	&:focus {
 		${descriptionHoverStyle}
 
@@ -169,6 +176,7 @@ const StyleLink = styled(Link)`
 
 	${({ theme }) => theme.mediaWidth.upToSmall`
 		${descriptionHoverStyle}
+		pointer-events: auto;
 	`}
 `;
 
@@ -191,26 +199,8 @@ const ImagePoster = styled.img`
 	`}
 `;
 
-const RowWrapper = styled.div<{ hovered: boolean }>`
-	display: flex;
-	gap: ${({ theme }) => theme.space.s32};
-	margin-top: ${({ theme }) => theme.space.s16};
-
-	${({ hovered }) =>
-		hovered
-			? `
-		${descriptionHoverStyle}
-
-	`
-			: ""};
-
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		gap: ${theme.space.s16};
-	`}
-`;
-
 export const ProjectRow = ({ id, previewMedia, title, description }: Project) => {
-	const ref = useRef<HTMLDivElement>(null);
+	const ref = useRef<HTMLAnchorElement>(null);
 	const [hovered, setHovered] = useState(false);
 	const { iframeId, setIframeId } = useContext(IframeContext);
 
@@ -245,10 +235,10 @@ export const ProjectRow = ({ id, previewMedia, title, description }: Project) =>
 
 	return (
 		<ProjectRowWrapper>
-			<StyleLink to={`project/${id}`}>
+			<StyleLink to={`project/${id}`} ref={ref}>
 				<TextWrapper>
-					<Title ref={ref}>{title}</Title>
-					<RowWrapper hovered={hovered}>
+					<Title>{title}</Title>
+					<RowWrapper>
 						{previewMedia && (
 							<PreviewWrapper>
 								<ImagePoster src={previewMedia.posterSrc} />

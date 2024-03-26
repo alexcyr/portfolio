@@ -147,7 +147,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Around the same time I was getting into generative art, I was also playing around with MagicaVoxel making 3D voxel art. I developed of style of creating 2D art from 3D blocks, which then evolved to take on a more abstract feel. This next piece is the source of my inspiration for Block x Block:",
+			text: "Around the same time I was getting into generative art, I was also playing with MagicaVoxel making 3D voxel art. I developed a style of creating 2D art from 3D blocks, which then evolved to take on a more abstract feel. This next piece became the source of my inspiration for Block x Block:",
 			size: Size.md,
 		},
 		{
@@ -170,7 +170,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `Simply put, "It's a random bunch of blocks. So what?!", but there's also a delicate balance in the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. Block x Block was minted on fxHash in November 2021, and has 40 unique editions.`,
+			text: `"It's a random bunch of blocks. So what?!" But there's also a delicate balance in the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. [Block x Block](https://www.fxhash.xyz/generative/slug/block-x-block) was minted on fxHash in November 2021, and has 40 unique editions.`,
 			size: Size.md,
 		},
 		{

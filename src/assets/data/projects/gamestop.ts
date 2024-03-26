@@ -24,7 +24,7 @@ import GSSameDay from "assets/images/gamestop/gs-same-day-delivery.jpg";
 import GSThumb from "assets/video/gamestop/gs-thumb.mp4";
 import GSThumbPoster from "assets/images/gamestop/gs-thumb-poster.jpg";
 
-import AlbumPoster from "assets/images/gamestop/album-poster.jpg";
+import AlbumPoster from "assets/images/gamestop/buck-album-cover.jpg";
 
 export const gamestop: Project = {
 	id: "gamestop",
@@ -216,7 +216,7 @@ export const gamestop: Project = {
 					type: MediaType.iframe,
 					src: "https://www.gstop-content.com/ipfs/QmSzmoQCZbQZXdEH5EKnj9MZrT2sCiauVVXLH5ULt4HkYr",
 					alt: "Buck: The Album",
-					caption: "Buck: The Album",
+					caption: `Buck: The Album [[Link]](https://nft.gamestop.com/token/0x0c589fcd20f99a4a1fe031f50079cfc630015184/0x57f2d99e4ba4bb2283b698e89116851f7b06fa8431548e8bae1791fde14ee982)`,
 					posterSrc: AlbumPoster,
 				},
 			],
@@ -228,7 +228,7 @@ export const gamestop: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. In my time I worked on initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find items close to them that available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
+			text: "Soon after scaling back the nft marketplace efforts, I was pulled in to help with the gamestop.com website and mobile app. In my time I worked on initiatives to help boost sales margins such as Shop My Store which boosted in-store pickups from 15% to over 40%, and Shop Same Day to help customers find products close to them that are available for same-day delivery, as well as numerous other UX improvements across the web and mobile apps.",
 			size: Size.md,
 		},
 		{
