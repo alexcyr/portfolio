@@ -52,10 +52,6 @@ const FullscreenWrapper = styled.div`
 	${({ theme }) => theme.flexCenter};
 	z-index: 10;
 
-	${({ theme }) => theme.mediaWidth.upToSmall`
-		margin: 16px auto;
-	`}
-
 	flex-direction: column;
 	position: fixed;
 	width: 100vw;
@@ -75,7 +71,6 @@ const FullscreenWrapper = styled.div`
 		object-fit: contain;
 		max-width: 90vw;
 		max-height: 90vh;
-		width: auto;
 	}
 `;
 
