@@ -122,22 +122,6 @@ export const midniteOil: Project = {
 					src: KKITG1,
 					alt: "keeping kids in the game cover",
 				},
-
-				// {
-				// 	type: MediaType.image,
-				// 	src: KKITG2,
-				// 	alt: "keeping kids innner spread 1",
-				// },
-				// {
-				// 	type: MediaType.image,
-				// 	src: KKITG3,
-				// 	alt: "keeping kids innner spread 2",
-				// },
-				// {
-				// 	type: MediaType.image,
-				// 	src: KKITG4,
-				// 	alt: "keeping kids in the game schedule",
-				// },
 			],
 		},
 		{
@@ -159,11 +143,6 @@ export const midniteOil: Project = {
 					src: Paws1,
 					alt: "paws prints spring 2017",
 				},
-				// {
-				// 	type: MediaType.image,
-				// 	src: Paws2,
-				// 	alt: "paws prints fall 2017",
-				// },
 			],
 		},
 
@@ -237,17 +216,17 @@ export const midniteOil: Project = {
 				{
 					type: MediaType.image,
 					src: BaggerDaves,
-					alt: "D&B tech",
+					alt: "Bagger Daves",
 				},
 				{
 					type: MediaType.image,
 					src: RoakLive,
-					alt: "D&B tech",
+					alt: "Roak - Table Tent",
 				},
 				{
 					type: MediaType.image,
 					src: RoakPowerboat,
-					alt: "D&B Times square ad",
+					alt: "Roak Powerboat ad",
 				},
 			],
 		},

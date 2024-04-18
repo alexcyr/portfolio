@@ -12,6 +12,7 @@ import { MultiMedia as MultiMediaProps } from "types/multimedia";
 import { Section as SectionProps } from "types/section";
 import { Section } from "./components/Section";
 import { createContext, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const ProjectWrapper = styled.div``;
 
@@ -51,6 +52,12 @@ export function Project() {
 
 	return (
 		<ProjectWrapper>
+			<Helmet>
+				<title>{projectInfo.title} | alex cyr</title>
+				<meta name="description" content={projectInfo.description} />
+				<meta property="og:title" content={projectInfo.title} />
+				<meta property="og:description" content={projectInfo.description} />
+			</Helmet>
 			<IframeContext.Provider
 				value={{ iframeId: activeIframe, setIframeId: (activeId) => setActiveIframe(activeId) }}
 			>
