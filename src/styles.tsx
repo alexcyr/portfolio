@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: ${({ theme }) => theme.color.surface1};
     -webkit-font-smoothing: antialiased;
+    overflow-anchor: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
