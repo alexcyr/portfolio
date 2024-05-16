@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import { DARK_THEME, LIGHT_THEME } from "@gamestop/nft-web-components";
 import { css, DefaultTheme } from "styled-components";
 import { darkTheme } from "./darkTheme";
 import { lightTheme } from "./lightTheme";
