@@ -1,0 +1,12 @@
+{
+    "entrypoints": [
+        "main.f5251e46.css",
+        "main.aad5b2cb.js"
+    ],
+    "files": {
+        "index.html": "index.html",
+        "main.css": "main.f5251e46.css",
+        "main.js": "main.aad5b2cb.js",
+        "static/media/Poppins-Black.ttf": "Poppins-Black.c78fe16aec75b2fc38d0.ttf"
+    }
+}

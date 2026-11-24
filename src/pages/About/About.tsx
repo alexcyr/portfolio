@@ -76,8 +76,8 @@ export function About() {
 				<Bio>
 					Welcome to my portfolio site. I graduated from Michigan State with a degree in graphic
 					design. Since then I&apos;ve worked hard to become a web and game developer, working
-					professionally and on personal projects. Currently based in the Detroit area working
-					remotely for GameStop.
+					professionally and on personal projects. Currently based in the Detroit area working for
+					Ford Motor Company.
 				</Bio>
 				<Bio>
 					Email: <a href="mailto:cyr.alexander@gmail.com">cyr.alexander@gmail.com</a>
