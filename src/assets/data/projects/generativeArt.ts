@@ -170,7 +170,7 @@ export const generativeArt: Project = {
 		},
 		{
 			type: ContentType.text,
-			text: `"It's a random bunch of blocks. So what?!" But there's also a delicate balance in the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. [Block x Block](https://www.fxhash.xyz/generative/slug/block-x-block) was minted on fxHash in November 2021, and has 40 unique editions.`,
+			text: `"It's a random bunch of blocks. So what?!" But there's also a delicate balance in the distribution of color and variation in scale and depth. Building from the background-forward, each unit within the <x,y,z> space evaluates whether it should render a block or not based on a deterministic 3D smooth random noise. There is a fun push and pull of code and artistic adjustment to get all the weightings for block size and color just right. [Block x Block](https://objkt.com/collections/fxhash/projects/131) was minted on fxHash in November 2021, and has 40 unique editions.`,
 			size: Size.md,
 		},
 		{
@@ -186,22 +186,19 @@ export const generativeArt: Project = {
 							type: MediaType.image,
 							src: Block2,
 							alt: "gen block 2",
-							caption:
-								"[#10](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-20597)",
+							caption: "#10",
 						},
 						{
 							type: MediaType.image,
 							src: Block1,
 							alt: "gen block 1",
-							caption:
-								"[#38](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-515809)",
+							caption: "#38",
 						},
 						{
 							type: MediaType.image,
 							src: Block3,
 							alt: "gen block 3",
-							caption:
-								"[#24](https://www.fxhash.xyz/gentk/KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE-30439)",
+							caption: "#24",
 						},
 					],
 				},

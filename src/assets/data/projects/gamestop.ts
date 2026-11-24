@@ -121,7 +121,7 @@ export const gamestop: Project = {
 				},
 				{
 					type: ContentType.text,
-					text: "The [GameStop NFT Marketplace](https://nft.gamestop.com) is a website to enable the buying and selling of digital collectibles, secured by the Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper and more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with Storybook and styled-components featuring full dark/light mode support.",
+					text: "The GameStop NFT Marketplace was a website to enable the buying and selling of digital collectibles, secured by the Ethereum blockchain. While layer 1 fees can be expensive, the GameStop marketplace was built using Loopring and Immutable X layer 2 technologies to make web3 cheaper and more accessible for a wider audience. Working on the NFT marketplace was my first foray into the world of web3 development, offering many interesting challenges and opportunities to learn. There's too many work examples to list but out of all of them, connecting to wallets, the creator minting flow, and the product detail pages were the most exciting to work on. The site features a custom component library built with Storybook and styled-components featuring full dark/light mode support.",
 					size: Size.md,
 				},
 			],
@@ -179,22 +179,6 @@ export const gamestop: Project = {
 				},
 			],
 		},
-
-		// {
-		// 	type: ContentType.title,
-		// 	title: "Internal Tools",
-		// 	size: Size.md,
-		// },
-		// {
-		// 	type: ContentType.text,
-		// 	text: "After the initial launch we needed a way to screen nfts minted by our creators as content was being minted in breach of our Terms of Service. We ended up building a pipeline for the content team to moderate nfts as were created, allowing them to flag or reject certain fields before they were minted. Soon after that, we realized it wasn't scalable to have devs updating the homepage manually, so we built a portal to do timed update releases of featured content on the homepage.",
-		// 	size: Size.md,
-		// },
-		// {
-		// 	type: ContentType.title,
-		// 	title: "Cool Mentions",
-		// 	size: Size.md,
-		// },
 		{
 			type: ContentType.text,
 			text: `One of most exciting perks of this job was the variety of work I was able to do in this position:  
@@ -214,9 +198,9 @@ export const gamestop: Project = {
 			media: [
 				{
 					type: MediaType.iframe,
-					src: "https://www.gstop-content.com/ipfs/QmSzmoQCZbQZXdEH5EKnj9MZrT2sCiauVVXLH5ULt4HkYr",
+					src: "./buck-the-album/index.html",
 					alt: "Buck: The Album",
-					caption: `Buck: The Album [[Link]](https://nft.gamestop.com/token/0x0c589fcd20f99a4a1fe031f50079cfc630015184/0x57f2d99e4ba4bb2283b698e89116851f7b06fa8431548e8bae1791fde14ee982)`,
+					caption: `Buck: The Album`,
 					posterSrc: AlbumPoster,
 				},
 			],

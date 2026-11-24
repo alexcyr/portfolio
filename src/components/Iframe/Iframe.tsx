@@ -178,7 +178,7 @@ export const Iframe = ({ src, alt, posterSrc }: IframeProps) => {
 						title={alt}
 						onLoad={() => setLoaded(true)}
 						allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;"
-						sandbox="allow-scripts allow-downloads"
+						sandbox="allow-scripts allow-downloads allow-same-origin"
 						scrolling=""
 					/>
 				) : (

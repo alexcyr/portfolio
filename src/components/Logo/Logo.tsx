@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-var perlin = require("perlin-noise");
+const perlin = require("perlin-noise");
 const noise = perlin.generatePerlinNoise(300, 300);
 
 import styled from "styled-components";
